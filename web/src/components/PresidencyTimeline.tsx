@@ -143,7 +143,7 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
   };
 
   return (
-    <div className="mt-5 ml-2">
+    <div className="mt-5 ml-2 mr-2 md:mr-0">
       <div className="flex items-center justify-between mb-3">
         {isInteractive && selectedRange && (
         <>
@@ -183,7 +183,7 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
                   backgroundColor: isInSelectedRange ? period.color : period.color + '40',
                   color: '#002147'
                 }}
-                onMouseEnter={(e) => handleMouseEnter(period, e)}
+                onMouseEnter={(e) => !isInteractive && handleMouseEnter(period, e)}
                 onMouseMove={handleTooltipMouseMove}
                 onMouseLeave={handleMouseLeave}
               >
@@ -194,8 +194,8 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
                   </div>
                   {isInteractive && (
                     <>
-                        <div className="hidden sm:inline text-xs opacity-80">{period.party}</div>
-                        <div className="hidden sm:inline text-xs opacity-60">{String(period.startYear).slice(-2)}-{String(period.endYear).slice(-2)}</div>
+                        <div className="hidden sm:block text-xs opacity-80">{period.party}</div>
+                        <div className="hidden sm:block text-xs opacity-60">{String(period.startYear).slice(-2)}-{String(period.endYear).slice(-2)}</div>
                     </>
                   )}
                 </div>
