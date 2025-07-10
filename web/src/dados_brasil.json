@@ -165,9 +165,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 2947.732772483,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 1621,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 8.1972364845005,
@@ -403,9 +403,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 432.786661926461,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 472.7,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 8.67763659887868,
@@ -641,9 +641,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 951.962053052818,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 1119.1,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 10.8683116605935,
@@ -879,9 +879,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 1927.38079016026,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 2477.1,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 10.5032716554144,
@@ -1117,9 +1117,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 2075.88839757325,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 916.4,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 9.51307642702004,
@@ -1355,9 +1355,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 66.0070335542481,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 22.4,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 7.52887503847073,
@@ -1593,9 +1593,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 15.7576656002606,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 9.6,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 6.73020968312685,
@@ -1831,9 +1831,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.92671251629154,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.2,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 6.98364957530895,
@@ -2069,9 +2069,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 3.19507629280052,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 1.7,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 7.03050033871807,
@@ -2307,9 +2307,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 4.85844749902667,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 8.9,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 9.5648982609794,
@@ -2545,9 +2545,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 7.04414105947266,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 6,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 10.1880480043795,
@@ -2783,9 +2783,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.84035902487523,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 7.7,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 12.37171066993,
@@ -3021,9 +3021,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 8.45016437708331,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 12.5,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 14.2305902713775,
@@ -3259,9 +3259,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 14.7149197228147,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 9.3,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 15.1807837086861,
@@ -3497,9 +3497,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.59718509985963,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 7.6,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 16.5457615119353,
@@ -3735,9 +3735,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.86953720898964,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.7,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 15.2438292665623,
@@ -3973,9 +3973,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 4.18356812896909,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 3.1,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 14.3743163038801,
@@ -4211,9 +4211,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 3.64127299102652,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 4.5,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 13.3276751040789,
@@ -4449,9 +4449,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 5.67859390284168,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.9,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 13.5340005128387,
@@ -4687,9 +4687,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 4.88803479876799,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 4.3,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 10.8513711347491,
@@ -4955,9 +4955,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 5.03872690108075,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.9,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 10.8655847752557,
@@ -5223,9 +5223,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.6364496221309,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 6.5,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 11.5825126785455,
@@ -5491,9 +5491,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 5.40349914036997,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.8,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 11.8775390704316,
@@ -5759,9 +5759,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.20431066640101,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.9,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 11.7422306460189,
@@ -6027,9 +6027,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 6.32904015516139,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 6.4,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 11.0119428190539,
@@ -6295,9 +6295,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 9.02990102416136,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 10.7,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 12.900191418386,
@@ -6563,9 +6563,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 8.73914352329393,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 6.3,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 12.4666790429968,
@@ -6831,9 +6831,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 3.44637335032669,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 2.9,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 12.5189678698768,
@@ -7099,9 +7099,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 3.66485028376729,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 3.7,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 14.6349994955075,
@@ -7367,9 +7367,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 3.73297621216894,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 4.3,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 14.1229191913178,
@@ -7640,9 +7640,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 3.21176803803376,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 4.5,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 16.4535520094071,
@@ -7913,9 +7913,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 8.30165975585673,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 10.1,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 19.1094303688709,
@@ -8186,9 +8186,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 9.28010608956873,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 5.8,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 19.6307650034371,
@@ -8479,9 +8479,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 4.59356282283204,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 4.6,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 17.9693243032741,
@@ -8597,9 +8597,9 @@
           "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (World Bank)"
         },
         "inflation": {
-          "value": 4.36746407652337,
-          "title": "Inflação, preços ao consumidor (variação anual %)",
-          "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG (World Bank)"
+          "value": 4.8,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)"
         },
         "exports_gdp": {
           "value": 18.0146799833275,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine } from 'recharts';
 import { ChartDataPoint, ToggleOption, PresidencyPeriod } from '../types';
 
@@ -10,7 +10,28 @@ interface ChartProps {
 }
 
 const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }) => {
+  const [isLogScale, setIsLogScale] = useState(false);
   const enabledToggles = toggles.filter(toggle => toggle.enabled);
+
+  // Check if current data has negative values (incompatible with log scale)
+  const hasNegativeValues = () => {
+    return data.some(point => 
+      enabledToggles.some(toggle => {
+        const value = point[toggle.key] as number;
+        return typeof value === 'number' && !isNaN(value) && value < 0;
+      })
+    );
+  };
+
+  // Auto-disable log scale if negative values are present
+  const canUseLogScale = !hasNegativeValues();
+  
+  // Reset to linear scale if log scale becomes invalid
+  React.useEffect(() => {
+    if (isLogScale && !canUseLogScale) {
+      setIsLogScale(false);
+    }
+  }, [isLogScale, canUseLogScale]);
 
   // Get the party color for a specific year
   const getPartyColorForYear = (year: number): string => {
@@ -178,12 +199,13 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
           <YAxis 
             stroke="#fff"
             fontSize={12}
-            domain={getYAxisDomain()}
+            domain={isLogScale ? ['auto', 'auto'] : getYAxisDomain()}
+            scale={isLogScale ? 'log' : 'linear'}
             axisLine={{ stroke: '#fff', strokeWidth: 2 }}
             tickLine={{ stroke: '#fff', strokeWidth: 1 }}
             tick={{ fill: '#fff', fontSize: 12 }}
             tickFormatter={(value) => {
-              if (value === 0) return '0'; // Always show zero clearly
+              if (!isLogScale && value === 0) return '0'; // Always show zero clearly in linear scale
               if (value >= 1000000000) {
                 return (value / 1000000000).toFixed(1) + 'B';
               } else if (value >= 1000000) {
@@ -195,23 +217,25 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
             }}
           />
           
-          {/* Prominent zero reference line */}
-          <ReferenceLine 
-            y={0} 
-            stroke="#FFEB3B" 
-            strokeWidth={3} 
-            strokeDasharray="5 5"
-            label={{ 
-              value: "ZERO", 
-              position: "left", 
-              style: { 
-                fill: '#FFEB3B', 
-                fontWeight: 'bold', 
-                fontSize: '12px',
-                textShadow: '0 0 3px rgba(0,0,0,0.8)'
-              } 
-            }}
-          />
+          {/* Prominent zero reference line - only in linear scale */}
+          {!isLogScale && (
+            <ReferenceLine 
+              y={0} 
+              stroke="#FFEB3B" 
+              strokeWidth={3} 
+              strokeDasharray="5 5"
+              label={{ 
+                value: "ZERO", 
+                position: "left", 
+                style: { 
+                  fill: '#FFEB3B', 
+                  fontWeight: 'bold', 
+                  fontSize: '12px',
+                  textShadow: '0 0 3px rgba(0,0,0,0.8)'
+                } 
+              }}
+            />
+          )}
           
           <Tooltip content={<CustomTooltip />} />
           <Legend 
@@ -233,6 +257,21 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
           ))}
         </LineChart>
       </ResponsiveContainer>
+      
+      {/* Logarithmic Scale Toggle Button - only show if no negative values */}
+      {canUseLogScale && (
+        <button
+          onClick={() => setIsLogScale(!isLogScale)}
+          className={`absolute bottom-2 right-2 px-3 py-1 text-xs font-medium rounded-lg border transition-all duration-200 z-20 ${
+            isLogScale 
+              ? 'bg-brazil-yellow-400 text-brazil-navy border-brazil-yellow-400 hover:bg-brazil-yellow-300' 
+              : 'bg-white/10 text-white border-white/30 hover:bg-white/20'
+          }`}
+          title={isLogScale ? 'Trocar para escala linear' : 'Trocar para escala logarítmica'}
+        >
+          {isLogScale ? 'LOG' : 'LIN'}
+        </button>
+      )}
     </div>
   );
 };
