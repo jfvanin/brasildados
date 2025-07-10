@@ -68,10 +68,34 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
     setIsDragging(handle);
   }, [isInteractive, onRangeChange]);
 
-  const handleMouseMove = useCallback((e: MouseEvent) => {
+  // Touch event handlers for mobile support
+  const handleTouchStart = useCallback((handle: 'start' | 'end', e: React.TouchEvent) => {
+    if (!isInteractive || !onRangeChange) return;
+    
+    e.preventDefault();
+    setIsDragging(handle);
+  }, [isInteractive, onRangeChange]);
+
+  const getClientXFromEvent = useCallback((e: MouseEvent | TouchEvent): number => {
+    if ('touches' in e && e.touches.length > 0) {
+      return e.touches[0].clientX;
+    } else if ('changedTouches' in e && e.changedTouches.length > 0) {
+      return e.changedTouches[0].clientX;
+    } else {
+      return (e as MouseEvent).clientX;
+    }
+  }, []);
+
+  const handleMouseMove = useCallback((e: MouseEvent | TouchEvent) => {
     if (!isDragging || !onRangeChange || !selectedRange) return;
 
-    const newYear = getYearFromPosition(e.clientX);
+    // Prevent default for touch events to avoid scrolling
+    if ('touches' in e) {
+      e.preventDefault();
+    }
+
+    const clientX = getClientXFromEvent(e);
+    const newYear = getYearFromPosition(clientX);
     
     if (isDragging === 'start') {
       const newStartYear = Math.min(newYear, selectedRange.endYear - 1);
@@ -86,7 +110,7 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
         endYear: Math.min(endYear, newEndYear)
       });
     }
-  }, [isDragging, onRangeChange, selectedRange, getYearFromPosition, startYear, endYear]);
+  }, [isDragging, onRangeChange, selectedRange, getYearFromPosition, startYear, endYear, getClientXFromEvent]);
 
   const handleMouseUp = useCallback(() => {
     setIsDragging(null);
@@ -95,12 +119,17 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
 
   React.useEffect(() => {
     if (isDragging) {
+      // Add both mouse and touch event listeners
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleMouseMove, { passive: false });
+      document.addEventListener('touchend', handleMouseUp);
       
       return () => {
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
+        document.removeEventListener('touchmove', handleMouseMove);
+        document.removeEventListener('touchend', handleMouseUp);
       };
     }
   }, [isDragging, handleMouseMove, handleMouseUp]);
@@ -154,16 +183,19 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
                   backgroundColor: isInSelectedRange ? period.color : period.color + '40',
                   color: '#002147'
                 }}
-                onMouseEnter={(e) => !isInteractive && handleMouseEnter(period, e)}
+                onMouseEnter={(e) => handleMouseEnter(period, e)}
                 onMouseMove={handleTooltipMouseMove}
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="text-center px-1">
-                  <div className="font-bold truncate">{period.presidentNick}</div>
+                  <div className="font-bold truncate">
+                    <span className="hidden sm:inline">{period.presidentNick}</span>
+                    <span className="inline sm:hidden">{period.presidentNick.charAt(0)}</span>
+                  </div>
                   {isInteractive && (
                     <>
-                        <div className="text-xs opacity-80">{period.party}</div>
-                        <div className="text-xs opacity-60">{period.startYear}-{period.endYear}</div>
+                        <div className="hidden sm:inline text-xs opacity-80">{period.party}</div>
+                        <div className="hidden sm:inline text-xs opacity-60">{String(period.startYear).slice(-2)}-{String(period.endYear).slice(-2)}</div>
                     </>
                   )}
                 </div>
@@ -188,11 +220,13 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
           <>
             {/* Start handle */}
             <div
-              className="absolute top-0 w-4 h-16 bg-brazil-yellow-400 rounded-l cursor-ew-resize shadow-lg transform -translate-x-2 hover:bg-brazil-yellow-300 transition-colors duration-200 z-10"
+              className="absolute top-0 w-4 h-16 bg-brazil-yellow-400 rounded-l cursor-ew-resize shadow-lg transform -translate-x-2 hover:bg-brazil-yellow-300 transition-colors duration-200 z-10 touch-manipulation"
               style={{
                 left: `${getHandlePosition(selectedRange.startYear)}%`,
+                minWidth: '22px', // Small increase for touch (was 16px = w-4)
               }}
               onMouseDown={(e) => handleMouseDown('start', e)}
+              onTouchStart={(e) => handleTouchStart('start', e)}
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-1 h-8 bg-brazil-navy rounded"></div>
@@ -204,11 +238,13 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
 
             {/* End handle */}
             <div
-              className="absolute top-0 w-4 h-16 bg-brazil-yellow-400 rounded-r cursor-ew-resize shadow-lg transform -translate-x-4 hover:bg-brazil-yellow-300 transition-colors duration-200 z-10"
+              className="absolute top-0 w-4 h-16 bg-brazil-yellow-400 rounded-r cursor-ew-resize shadow-lg transform -translate-x-4 hover:bg-brazil-yellow-300 transition-colors duration-200 z-10 touch-manipulation"
               style={{
                 left: `${getEndHandlePosition(selectedRange.endYear)}%`,
+                minWidth: '22px', // Small increase for touch (was 16px = w-4)
               }}
               onMouseDown={(e) => handleMouseDown('end', e)}
+              onTouchStart={(e) => handleTouchStart('end', e)}
             >
               <div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -291,10 +327,6 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
                 <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
                 {hoveredPeriod.startYear} - {hoveredPeriod.endYear}
                 <span className="text-gray-400">({hoveredPeriod.endYear - hoveredPeriod.startYear + 1} anos)</span>
-              </p>
-              {/* Debug info - remove later */}
-              <p className="text-xs text-gray-400 mt-1">
-                Debug: x:{tooltipPosition.x}, y:{tooltipPosition.y}
               </p>
             </div>
           </div>

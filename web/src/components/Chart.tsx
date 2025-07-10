@@ -123,7 +123,7 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
   return (
     <div className="w-full h-96 md:h-[500px] relative">
       {/* Presidency period indicators above the chart */}
-      <div className="absolute top-0 h-3 z-10" style={{ left: '40px', right: '30px' }}>
+      <div className="absolute top-0 h-3 z-10" style={{ left: '30px', right: '10px' }}>
         {presidencyPeriods.map((period, index) => {
           const chartStartYear = data[0]?.year || period.startYear;
           const chartEndYear = data[data.length - 1]?.year || period.endYear;
@@ -160,7 +160,7 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
       </div>
       
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 20, right: 30, left: 40, bottom: 60 }}>
+        <LineChart data={data} margin={{ top: 20, right: 30, left: 1, bottom: 60 }}>
           {/* Custom grid with party colors */}
           <CartesianGrid stroke="rgba(255,255,255,0.1)" strokeDasharray="2 2" />
           

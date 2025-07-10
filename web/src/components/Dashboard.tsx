@@ -112,7 +112,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-brazil-gradient">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-0 sm:px-4 py-8">
         {/* Header */}
         <header className="text-center mb-12 fade-in">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-white to-brazil-yellow-200 bg-clip-text text-transparent">
@@ -127,8 +127,8 @@ const Dashboard: React.FC = () => {
         </header>
 
         {/* Master Timeline for Year Range Selection */}
-        <div className="mb-12 fade-in">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-4 border border-white/20 shadow-2xl">            
+        <div className="mb-8 sm:mb-12 fade-in">
+          <div className="bg-white/10 backdrop-blur-sm md:rounded-2xl p-2 sm:p-4 md:p-4 md:border md:border-white/20 shadow-2xl">            
             <YearRangeControls
               selectedRange={selectedYearRange}
               totalRange={{ startYear, endYear }}
@@ -152,8 +152,8 @@ const Dashboard: React.FC = () => {
 
         {/* Charts */}
         {chartConfigs.map((config, chartIndex) => (
-          <div key={chartIndex} className="mb-16 fade-in" style={{animationDelay: `${chartIndex * 0.2}s`}}>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300">
+          <div key={chartIndex} className="mb-8 sm:mb-16 fade-in" style={{animationDelay: `${chartIndex * 0.2}s`}}>
+            <div className="bg-white/10 backdrop-blur-sm md:rounded-2xl p-3 sm:p-6 md:p-8 md:border md:border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <div className="w-2 h-8 bg-gradient-to-b from-brazil-yellow-400 to-brazil-green-500 rounded-full"></div>
                 {config.title}
@@ -172,7 +172,7 @@ const Dashboard: React.FC = () => {
               />
 
               {/* Chart */}
-              <div className="mb-6 bg-black/20 rounded-xl p-4">
+              <div className="mb-6 bg-black/20 rounded-xl py-4 p-0 md:px-4">
                 <Chart
                   data={getChartData(chartIndex)}
                   toggles={chartStates[chartIndex]}
@@ -194,8 +194,8 @@ const Dashboard: React.FC = () => {
         ))}
 
         {/* Sources */}
-        <footer className="mt-16 fade-in">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20">
+        <footer className="mt-8 sm:mt-16 fade-in">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 sm:p-6 md:p-8 border border-white/20">
             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <div className="w-2 h-6 bg-gradient-to-b from-brazil-green-500 to-brazil-yellow-400 rounded-full"></div>
               Fontes dos Dados
