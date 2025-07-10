@@ -190,12 +190,13 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
                 <div className="text-center px-1">
                   <div className="font-bold truncate">
                     <span className="hidden sm:inline">{period.presidentNick}</span>
-                    <span className="inline sm:hidden">{period.presidentNick.charAt(0)}</span>
+                    <span className="inline sm:hidden">{period.endYear - period.startYear >= 3 ? period.presidentNick.slice(0,4) : period.presidentNick.charAt(0)}</span>
                   </div>
                   {isInteractive && (
                     <>
                         <div className="hidden sm:block text-xs opacity-80">{period.party}</div>
                         <div className="hidden sm:block text-xs opacity-60">{String(period.startYear).slice(-2)}-{String(period.endYear).slice(-2)}</div>
+                        <div className="block sm:hidden text-xs opacity-60">{String(period.startYear).slice(-2)}</div>
                     </>
                   )}
                 </div>

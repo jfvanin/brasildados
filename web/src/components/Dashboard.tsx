@@ -76,16 +76,26 @@ const Dashboard: React.FC = () => {
 
   // Year range filtering state
   const [selectedYearRange, setSelectedYearRange] = useState<YearRange>({
-    startYear,
+    startYear: 2000,
     endYear
   });
 
   const handleToggle = (chartIndex: number, key: string) => {
     setChartStates(prevStates => {
       const newStates = [...prevStates];
-      newStates[chartIndex] = newStates[chartIndex].map(toggle =>
-        toggle.key === key ? { ...toggle, enabled: !toggle.enabled } : toggle
-      );
+      
+      if (chartIndex === 0) {
+        // First chart (Indicadores Econômicos Principais) - allow multiple selections
+        newStates[chartIndex] = newStates[chartIndex].map(toggle =>
+          toggle.key === key ? { ...toggle, enabled: !toggle.enabled } : toggle
+        );
+      } else {
+        // All other charts - exclusive toggles (only one can be selected at a time)
+        newStates[chartIndex] = newStates[chartIndex].map(toggle =>
+          toggle.key === key ? { ...toggle, enabled: true } : { ...toggle, enabled: false }
+        );
+      }
+      
       return newStates;
     });
   };
