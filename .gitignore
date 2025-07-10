@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+web/node_modules/
+
+# Build outputs
+dist/
+build/
+web/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data outputs (if any)
+data/*.json
+!data/*.csv
+
+# Env files
+.env
+.env.*
+
+# Vite cache
+web/.vite
+
+# Misc
+*.swp
+*.swo 
