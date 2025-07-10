@@ -25,9 +25,11 @@ const Dashboard: React.FC = () => {
         { key: 'gdp_capita', title: dataService.getIndicatorTitle('gdp_capita'), enabled: false, color: '#66BB6A' },
         { key: 'exports_gdp', title: dataService.getIndicatorTitle('exports_gdp'), enabled: false, color: '#FDD835' },
         { key: 'imports_gdp', title: dataService.getIndicatorTitle('imports_gdp'), enabled: false, color: '#FFEB3B' },
-        { key: 'gnipc', title: dataService.getIndicatorTitle('gnipc'), enabled: false, color: '#81C784' }
+        { key: 'gnipc', title: dataService.getIndicatorTitle('gnipc'), enabled: false, color: '#81C784' },
+        { key: 'public_debt_gross', title: dataService.getIndicatorTitle('public_debt_gross'), enabled: false, color: '#D32F2F' },
+        { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#FBC02D' }
       ],
-      dataKeys: ['gdp', 'gdp_capita', 'exports_gdp', 'imports_gdp', 'gnipc']
+      dataKeys: ['gdp', 'gdp_capita', 'exports_gdp', 'imports_gdp', 'gnipc', 'selic_rate', 'public_debt_gross']
     },
     {
       title: 'Desenvolvimento Humano',

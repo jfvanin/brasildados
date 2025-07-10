@@ -249,8 +249,8 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
               dataKey={toggle.key}
               stroke={toggle.color}
               strokeWidth={3}
-              dot={{ fill: toggle.color, strokeWidth: 2, r: 5 }}
-              activeDot={{ r: 8, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
+              dot={{ fill: toggle.color, strokeWidth: 2, r: 2.5 }}
+              activeDot={{ r: 4, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
               name={toggle.title}
               connectNulls={false}
             />

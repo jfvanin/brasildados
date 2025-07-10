@@ -2395,6 +2395,11 @@
           "value": "17259",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "19",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -2633,6 +2638,11 @@
           "value": "18226",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "15.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -2871,6 +2881,11 @@
           "value": "18165",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "19",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3109,6 +3124,11 @@
           "value": "21650",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3347,6 +3367,11 @@
           "value": "25396",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "16.5",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3585,6 +3610,11 @@
           "value": "27772",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "17.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3823,6 +3853,11 @@
           "value": "19014",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "18",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4061,6 +4096,16 @@
           "value": "14286",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "13.25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "55.48",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4299,6 +4344,16 @@
           "value": "11651",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "11.25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "56.72",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4537,6 +4592,16 @@
           "value": "12911",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "13.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "55.98",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4775,6 +4840,16 @@
           "value": "7464",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "8.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "59.21",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5043,6 +5118,16 @@
           "value": "7000",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "10.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "51.77",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5311,6 +5396,16 @@
           "value": "6418",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "11",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "51.27",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5579,6 +5674,16 @@
           "value": "4571",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "7.25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "53.67",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5847,6 +5952,16 @@
           "value": "5891",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "10",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "51.54",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6115,6 +6230,16 @@
           "value": "5012",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "11.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "56.28",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6383,6 +6508,16 @@
           "value": "6207",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "14.25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "65.5",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6651,6 +6786,16 @@
           "value": "7893",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "13.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "69.84",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6919,6 +7064,16 @@
           "value": "6947",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "7",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "73.72",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -7187,6 +7342,16 @@
           "value": "7536",
           "title": "Desmatamento na Amazônia Legal (km²)",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "6.5",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "75.27",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -7460,6 +7625,16 @@
           "value": 197618,
           "title": "Número de focos de incêndio registrados no Brasil",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "4.5",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "74.44",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -7733,6 +7908,16 @@
           "value": 222780,
           "title": "Número de focos de incêndio registrados no Brasil",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "2",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "86.94",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8006,6 +8191,16 @@
           "value": 184071,
           "title": "Número de focos de incêndio registrados no Brasil",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "9.25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "77.31",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8279,6 +8474,16 @@
           "value": 200748,
           "title": "Número de focos de incêndio registrados no Brasil",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "13.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "71.68",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8572,6 +8777,16 @@
           "value": 189892,
           "title": "Número de focos de incêndio registrados no Brasil",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "11.75",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "73.83",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8685,6 +8900,16 @@
           "value": 278279,
           "title": "Número de focos de incêndio registrados no Brasil",
           "source": "https://terrabrasilis.dpi.inpe.br (INPE)"
+        },
+        "selic_rate": {
+          "value": "12.25",
+          "title": "Taxa Básica de Juros (Selic) (%)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "public_debt_gross": {
+          "value": "76.5",
+          "title": "Dívida Bruta do Governo Geral (% PIB)",
+          "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         }
       },
       "government": {

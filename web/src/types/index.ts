@@ -65,7 +65,7 @@ export const PARTY_COLORS = {
     'PMDB': '#FFDE21', // Light Green
     'PSDB': '#FFEA99', // Yellow
     'PT': '#43A047', // Dark Green
-    'PT - PMDB': '#FFDE21', // Dark Green
+    'PT - PMDB': '#82A903', // Dark Green
     'MDB': '#FFDE21', // Light Green (same as PMDB)
     'PSL/PL': '#E0BC00', // Bright Yellow
     'PL': '#E0BC00', // Bright Yellow
