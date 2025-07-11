@@ -269,7 +269,7 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
           }`}
           title={isLogScale ? 'Trocar para escala linear' : 'Trocar para escala logarítmica'}
         >
-          {isLogScale ? 'LOG' : 'LIN'}
+          {isLogScale ? 'Logarítmico' : 'Linear'}
         </button>
       )}
     </div>
