@@ -12,7 +12,7 @@ const ToggleSection: React.FC<ToggleSectionProps> = ({ title, toggles, onToggle 
     <div className="mb-6">
       <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
       <div className="flex flex-wrap gap-3">
-        {toggles.map((toggle) => (
+        {toggles.map((toggle) => !toggle.hidden && (
           <button
             key={toggle.key}
             onClick={() => onToggle(toggle.key)}

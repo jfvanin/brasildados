@@ -43,27 +43,37 @@ async function fetchCO2Data() {
     const co2Index = headers.indexOf('co2');
     
     const brazilData = {};
+    const brazilDataPerCapita = {};
     
     // Processar dados linha por linha
     for (let i = 1; i < lines.length; i++) {
       const row = lines[i].split(',');
       
-      if (row[countryIndex] === 'Brazil' && row[yearIndex] && row[co2PerCapitaIndex]) {
+      if (row[countryIndex] === 'Brazil' && row[yearIndex]) {
         const year = row[yearIndex];
         const co2PerCapita = parseFloat(row[co2PerCapitaIndex]);
-        
-        if (!isNaN(co2PerCapita) && year >= 1990) {
-          brazilData[year] = {
+        const co2Total = parseFloat(row[co2Index]);
+
+        if (row[co2PerCapitaIndex] && !isNaN(co2PerCapita) && year >= 1990) {
+          brazilDataPerCapita[year] = {
             value: co2PerCapita.toFixed(2),
             title: 'Emissões de CO2 per capita (toneladas)',
-            source: 'Our World in Data - Global Carbon Atlas'
+            source: 'https://ourworldindata.org (Our World in Data - Global Carbon Atlas)'
+          };
+        }
+          
+        if (row[co2Index] && !isNaN(co2Total) && year >= 1990) {
+          brazilData[year] = {
+            value: co2Total.toFixed(2),
+            title: 'Emissões de CO2 total (toneladas)',
+            source: 'https://ourworldindata.org (Our World in Data - Global Carbon Atlas)'
           };
         }
       }
     }
     
     console.log(`✅ ${Object.keys(brazilData).length} anos de dados de CO2 obtidos`);
-    return { 'co2_per_capita': brazilData };
+    return { 'co2_per_capita': brazilDataPerCapita, 'co2': brazilData };
     
   } catch (error) {
     console.log(`❌ Erro ao buscar dados de CO2:`, error.message);
@@ -73,7 +83,7 @@ async function fetchCO2Data() {
 
 // Função para integrar ao dados_brasil.json
 function integrateData(environmentalData) {
-  const filePath = path.join(__dirname, 'src', 'dados_brasil.json');
+  const filePath = path.join(__dirname, '../web/src', 'dados_brasil.json');
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   
   let totalAdded = 0;

@@ -29,12 +29,16 @@ export interface ToggleOption {
     title: string;
     enabled: boolean;
     color: string;
+    hidden?: boolean; // Optional property to hide the toggle
+    isGroup?: boolean; // Indicates if this toggle is umbrella of toggle group
 }
 
 export interface ChartConfig {
     title: string;
+    type: 'multiple' | 'exclusive';
     toggles: ToggleOption[];
     dataKeys: string[];
+    groups?: Record<string, string[] | undefined>; // For exclusive toggles, group keys to toggle
 }
 
 export interface PresidencyPeriod {
@@ -76,7 +80,7 @@ export const presidentNicks: Record<string, string> = {
     'Fernando Henrique Cardoso': 'FHC',
     'Luiz Inácio Lula da Silva': 'Lula',
     'Dilma Rousseff': 'Dilma',
-    'Dilma Rousseff - Michel Temer': 'Temer', // Transition year
+    'Dilma Rousseff - Michel Temer': 'D-T', // Transition year
     'Michel Temer': 'Temer',
     'Jair Messias Bolsonaro': 'Bolsonaro',
     'Itamar Franco': 'Itamar',

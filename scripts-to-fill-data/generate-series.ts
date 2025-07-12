@@ -75,6 +75,7 @@ const prefixTitleMap: Record<string, string> = {
     unemployment: 'Taxa de desemprego (% da força de trabalho)',
     gini: 'Índice de Gini',
     income_share_20: 'Participação da renda dos 20% mais pobres',
+    poverty_3dollar: 'Pobreza - população vivendo com menos de $3,20/dia (PPP 2011) (%)',
 };
 
 // Mapping from column prefixes to data source
@@ -101,6 +102,7 @@ prefixSourceMap['forest_area'] = 'https://data.worldbank.org/indicator/AG.LND.FR
 prefixSourceMap['unemployment'] = 'https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS (World Bank)';
 prefixSourceMap['gini'] = 'https://data.worldbank.org/indicator/SI.POV.GINI (World Bank)';
 prefixSourceMap['income_share_20'] = 'https://data.worldbank.org/indicator/SI.DST.FRST.20 (World Bank)';
+prefixSourceMap['poverty_3dollar'] = 'https://data.worldbank.org/indicator/SI.POV.DDAY (World Bank)';
 
 // Helper to get the Portuguese title for a column
 function getTitle(col: string): string {
@@ -153,6 +155,7 @@ const apiIndicatorsToWbCode: Record<string, string> = {
     unemployment: 'SL.UEM.TOTL.ZS',
     gini: 'SI.POV.GINI',
     income_share_20: 'SI.DST.FRST.20',
+    poverty_3dollar: 'SI.POV.DDAY',
 };
 
 // List of CSV columns to always exclude (repeated indicators)

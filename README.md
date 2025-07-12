@@ -1,6 +1,6 @@
-# brasildados
+# BrasilDados
 
-**brasildados** is an interactive dashboard presenting key information and indicators about Brazil, bringing together socioeconomic, environmental, and political data from official and international sources.
+**BrasilDados** is an interactive dashboard presenting key information and indicators about Brazil, bringing together socioeconomic, environmental, and political data from official and international sources.
 
 ## Project Structure
 

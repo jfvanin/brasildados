@@ -10,8 +10,8 @@ interface ChartProps {
 }
 
 const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }) => {
-  const [isLogScale, setIsLogScale] = useState(false);
-  const enabledToggles = toggles.filter(toggle => toggle.enabled);
+  const [isLogScale, setIsLogScale] = useState(true);
+  const enabledToggles = toggles.filter(toggle => toggle.enabled && !toggle.isGroup);
 
   // Check if current data has negative values (incompatible with log scale)
   const hasNegativeValues = () => {

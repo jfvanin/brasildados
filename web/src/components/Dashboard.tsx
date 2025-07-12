@@ -11,41 +11,35 @@ const Dashboard: React.FC = () => {
   const chartConfigs: ChartConfig[] = useMemo(() => [
     {
       title: 'Indicadores Econômicos Principais',
+      type: 'multiple',
       toggles: [
         { key: 'gdp_growth', title: dataService.getIndicatorTitle('gdp_growth'), enabled: true, color: '#43A047' },
-        { key: 'inflation', title: dataService.getIndicatorTitle('inflation'), enabled: false, color: '#FBC02D' },
-        { key: 'unemployment', title: dataService.getIndicatorTitle('unemployment'), enabled: false, color: '#FF7043' }
+        { key: 'inflation', title: dataService.getIndicatorTitle('inflation'), enabled: true, color: '#FBC02D' },
+        { key: 'unemployment', title: dataService.getIndicatorTitle('unemployment'), enabled: true, color: '#FF7043' },
+        { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#77CBDA' }
       ],
-      dataKeys: ['gdp_growth', 'inflation', 'unemployment']
-    },
-    {
-      title: 'Dados Financeiros',
-      toggles: [
-        { key: 'gdp', title: dataService.getIndicatorTitle('gdp'), enabled: true, color: '#43A047' },
-        { key: 'gdp_capita', title: dataService.getIndicatorTitle('gdp_capita'), enabled: false, color: '#66BB6A' },
-        { key: 'exports_gdp', title: dataService.getIndicatorTitle('exports_gdp'), enabled: false, color: '#FDD835' },
-        { key: 'imports_gdp', title: dataService.getIndicatorTitle('imports_gdp'), enabled: false, color: '#FFEB3B' },
-        { key: 'gnipc', title: dataService.getIndicatorTitle('gnipc'), enabled: false, color: '#81C784' },
-        { key: 'public_debt_gross', title: dataService.getIndicatorTitle('public_debt_gross'), enabled: false, color: '#D32F2F' },
-        { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#FBC02D' }
-      ],
-      dataKeys: ['gdp', 'gdp_capita', 'exports_gdp', 'imports_gdp', 'gnipc', 'selic_rate', 'public_debt_gross']
+      dataKeys: ['gdp_growth', 'inflation', 'unemployment', 'selic_rate']
     },
     {
       title: 'Desenvolvimento Humano',
+      type: 'exclusive',
       toggles: [
-        { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: true, color: '#43A047' },
+        { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C' },
+        { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: false, color: '#43A047' },
         { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D' },
+        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA' },
         { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A' },
-        { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: false, color: '#388E3C' },
-        { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50' }
+        { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50' },
+        { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D' },
       ],
-      dataKeys: ['population', 'gini', 'life_expectancy', 'hdi', 'literacy']
+      dataKeys: [ 'hdi', 'population', 'gini', 'poverty_3dollar', 'life_expectancy', 'literacy']
     },
     {
       title: 'Meio Ambiente',
+      type: 'exclusive',
       toggles: [
-        { key: 'co2_per_capita', title: dataService.getIndicatorTitle('co2_per_capita'), enabled: true, color: '#FBC02D' },
+        { key: 'co2', title: dataService.getIndicatorTitle('co2'), enabled: true, color: '#FBC02D' },
+        { key: 'co2_per_capita', title: dataService.getIndicatorTitle('co2_per_capita'), enabled: false, color: '#898989' },
         { key: 'forest_area', title: dataService.getIndicatorTitle('forest_area'), enabled: false, color: '#43A047' },
         { key: 'amazon_deforestation', title: dataService.getIndicatorTitle('amazon_deforestation'), enabled: false, color: '#D32F2F' },
         { key: 'wildfires', title: dataService.getIndicatorTitle('wildfires'), enabled: false, color: '#FF7043' }
@@ -53,14 +47,46 @@ const Dashboard: React.FC = () => {
       dataKeys: ['co2_per_capita', 'forest_area', 'amazon_deforestation', 'wildfires']
     },
     {
-      title: 'Outros Indicadores',
+      title: 'Dados Financeiros',
+      type: 'exclusive',
       toggles: [
-        { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: true, color: '#FBC02D' },
+        { key: 'gdp', title: dataService.getIndicatorTitle('gdp'), enabled: true, color: '#43A047' },
+        { key: 'gdp_capita', title: dataService.getIndicatorTitle('gdp_capita'), enabled: false, color: '#66BB6A' },
+        { key: 'trade_balance', title: 'Balança Comercial', enabled: false, color: '#FDD835', isGroup: true },
+        { key: 'exports_gdp', title: dataService.getIndicatorTitle('exports_gdp'), enabled: false, color: '#43A047', hidden: true },
+        { key: 'imports_gdp', title: dataService.getIndicatorTitle('imports_gdp'), enabled: false, color: '#FDD835', hidden: true },
+        { key: 'gnipc', title: dataService.getIndicatorTitle('gnipc'), enabled: false, color: '#81C784' },
+        { key: 'public_debt_gross', title: dataService.getIndicatorTitle('public_debt_gross'), enabled: false, color: '#D32F2F' },
+        { key: 'external_debt', title: dataService.getIndicatorTitle('external_debt'), enabled: false, color: '#FF7043' }
+      ],
+      groups: {
+        'trade_balance': ['exports_gdp', 'imports_gdp']
+      },
+      dataKeys: ['gdp', 'gdp_capita', 'gnipc', 'public_debt_gross', 'trade_balance']
+    },
+    {
+      title: 'Outros Indicadores',
+      type: 'exclusive',
+      toggles: [
+        { key: 'mys', title: dataService.getIndicatorTitle('mys'), enabled: true, color: '#388E3C' },
         { key: 'health_expenditure', title: dataService.getIndicatorTitle('health_expenditure'), enabled: false, color: '#66BB6A' },
         { key: 'gov_edu_expenditure', title: dataService.getIndicatorTitle('gov_edu_expenditure'), enabled: false, color: '#81C784' },
-        { key: 'mys', title: dataService.getIndicatorTitle('mys'), enabled: false, color: '#388E3C' }
+        { key: 'se', title: 'Mulheres e Homens na Educação', enabled: false, color: '#FDD835', isGroup: true },
+        { key: 'se_f', title: dataService.getIndicatorTitle('se_f'), enabled: false, color: '#FDD835', hidden: true},
+        { key: 'se_m', title: dataService.getIndicatorTitle('se_m'), enabled: false, color: '#77CBDA', hidden: true },
+        { key: 'pr', title: 'Mulheres e Homens no Parlamento', enabled: false, color: '#FDD835', isGroup: true },
+        { key: 'pr_f', title: dataService.getIndicatorTitle('pr_f'), enabled: false, color: '#FDD835', hidden: true },
+        { key: 'pr_m', title: dataService.getIndicatorTitle('pr_m'), enabled: false, color: '#77CBDA', hidden: true },
+        { key: 'lfpr', title: 'Mulheres e Homens na Força de Trabalho', enabled: false, color: '#FDD835', isGroup: true },
+        { key: 'lfpr_f', title: dataService.getIndicatorTitle('lfpr_f'), enabled: false, color: '#FDD835', hidden: true},
+        { key: 'lfpr_m', title: dataService.getIndicatorTitle('lfpr_m'), enabled: false, color: '#77CBDA', hidden: true},
       ],
-      dataKeys: ['under5_mortality', 'health_expenditure', 'gov_edu_expenditure', 'mys']
+      groups: {
+        'se': ['se_m', 'se_f'],
+        'pr': ['pr_m', 'pr_f'],
+        'lfpr': ['lfpr_m', 'lfpr_f']
+      },
+      dataKeys: ['health_expenditure', 'gov_edu_expenditure', 'mys']
     }
   ], []);
 
@@ -74,7 +100,7 @@ const Dashboard: React.FC = () => {
   const availableYears = useMemo(() => dataService.getAvailableYears(), []);
   
   const startYear = availableYears[0] || 1990;
-  const endYear = availableYears[availableYears.length - 1] || 2022;
+  const endYear = availableYears[availableYears.length - 1] || 2024;
 
   // Year range filtering state
   const [selectedYearRange, setSelectedYearRange] = useState<YearRange>({
@@ -83,19 +109,22 @@ const Dashboard: React.FC = () => {
   });
 
   const handleToggle = (chartIndex: number, key: string) => {
+  
     setChartStates(prevStates => {
       const newStates = [...prevStates];
       
-      if (chartIndex === 0) {
+      if (chartConfigs[chartIndex].type === 'multiple') {
         // First chart (Indicadores Econômicos Principais) - allow multiple selections
         newStates[chartIndex] = newStates[chartIndex].map(toggle =>
           toggle.key === key ? { ...toggle, enabled: !toggle.enabled } : toggle
         );
       } else {
-        // All other charts - exclusive toggles (only one can be selected at a time)
-        newStates[chartIndex] = newStates[chartIndex].map(toggle =>
-          toggle.key === key ? { ...toggle, enabled: true } : { ...toggle, enabled: false }
-        );
+        const group = chartConfigs[chartIndex].groups?.[key] || []; 
+        newStates[chartIndex] = newStates[chartIndex]
+          .map(toggle => ({
+          ...toggle,
+          enabled: toggle.key === key || group.includes(toggle.key)
+        }));
       }
       
       return newStates;
@@ -112,7 +141,7 @@ const Dashboard: React.FC = () => {
 
   const getChartData = (chartIndex: number) => {
     const enabledKeys = chartStates[chartIndex]
-      .filter(toggle => toggle.enabled)
+      .filter(toggle => toggle.enabled && !toggle.isGroup)
       .map(toggle => toggle.key);
     
     return dataService.getChartDataWithRange(
@@ -126,7 +155,7 @@ const Dashboard: React.FC = () => {
     <div className="min-h-screen bg-brazil-gradient">
       <div className="container mx-auto px-0 sm:px-4 py-8">
         {/* Header */}
-        <header className="text-center mb-12 fade-in">
+        <header className="text-center mb-8 fade-in">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-white to-brazil-yellow-200 bg-clip-text text-transparent">
             <b className='text-green-600'>Brasil</b><b className='text-yellow-300'>Dados</b>
           </h1>
@@ -207,7 +236,7 @@ const Dashboard: React.FC = () => {
 
         {/* Sources */}
         <footer className="mt-8 sm:mt-16 fade-in">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 sm:p-6 md:p-8 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm md:rounded-2xl p-3 sm:p-6 md:p-8 md:border md:border-white/20">
             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <div className="w-2 h-6 bg-gradient-to-b from-brazil-green-500 to-brazil-yellow-400 rounded-full"></div>
               Fontes dos Dados
