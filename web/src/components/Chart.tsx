@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine } from 'recharts';
 import { ChartDataPoint, ToggleOption, PresidencyPeriod } from '../types';
+import { ChartExportButton } from './ChartExportButton';
 
 interface ChartProps {
   data: ChartDataPoint[];
@@ -12,6 +13,9 @@ interface ChartProps {
 const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }) => {
   const [isLogScale, setIsLogScale] = useState(true);
   const enabledToggles = toggles.filter(toggle => toggle.enabled && !toggle.isGroup);
+  
+  // Generate unique chart ID for export
+  const chartId = `chart-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${Date.now()}`;
 
   // Check if current data has negative values (incompatible with log scale)
   const hasNegativeValues = () => {
@@ -142,9 +146,16 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
   };
 
   return (
-    <div className="w-full h-96 md:h-[500px] relative">
+    <div id={chartId} className="w-full h-96 md:h-[500px] relative">
+      {/* Export Button */}
+      <ChartExportButton 
+        chartId={chartId}
+        chartData={{ data, toggles: enabledToggles, title }}
+        fileName={`brasil-dados-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+      />
+      
       {/* Presidency period indicators above the chart */}
-      <div className="absolute top-0 h-3 z-10" style={{ left: '30px', right: '10px' }}>
+      <div className="absolute top-0 h-3 z-10" style={{ left: '60px', right: '20px' }}>
         {presidencyPeriods.map((period, index) => {
           const chartStartYear = data[0]?.year || period.startYear;
           const chartEndYear = data[data.length - 1]?.year || period.endYear;
@@ -168,14 +179,20 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
           return (
             <div
               key={index}
-              className="absolute top-0 h-3 border-l-2 border-r-2 border-white/30"
+              className="absolute top-0 h-3 border-l-2 border-r-2 border-white/30 font-semibold text-blue-950 flex items-center justify-center"
               style={{
                 left: `${left}%`,
                 width: `${width}%`,
                 backgroundColor: period.color,
               }}
               title={`${period.president} (${period.party}) - ${period.startYear}-${period.endYear}`}
-            />
+            >
+              {period.presidentNick !== 'D-T' ? 
+                (<span className="text-[8px]">{period.presidentNick}</span>)
+                :
+                (<span className="text-[4px] sm:text-[8px]">{period.presidentNick}</span>
+                )}
+            </div>
           );
         })}
       </div>
@@ -261,6 +278,7 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
       {/* Logarithmic Scale Toggle Button - only show if no negative values */}
       {canUseLogScale && (
         <button
+          data-export-button
           onClick={() => setIsLogScale(!isLogScale)}
           className={`absolute bottom-2 right-2 px-3 py-1 text-xs font-medium rounded-lg border transition-all duration-200 z-20 ${
             isLogScale 
