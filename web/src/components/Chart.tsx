@@ -147,13 +147,6 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
 
   return (
     <div id={chartId} className="w-full h-96 md:h-[500px] relative">
-      {/* Export Button */}
-      <ChartExportButton 
-        chartId={chartId}
-        chartData={{ data, toggles: enabledToggles, title }}
-        fileName={`brasil-dados-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-      />
-      
       {/* Presidency period indicators above the chart */}
       <div className="absolute top-0 h-3 z-10" style={{ left: '60px', right: '20px' }}>
         {presidencyPeriods.map((period, index) => {
@@ -274,6 +267,13 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
           ))}
         </LineChart>
       </ResponsiveContainer>
+
+      {/* Export Button */}
+      <ChartExportButton 
+        chartId={chartId}
+        chartData={{ data, toggles: enabledToggles, title }}
+        fileName={`brasil-dados-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+      />
       
       {/* Logarithmic Scale Toggle Button - only show if no negative values */}
       {canUseLogScale && (
