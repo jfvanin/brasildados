@@ -2,6 +2,7 @@ export interface DataPoint {
     value: string | number | null;
     title: string;
     source: string;
+    global_average_value?: string | number | null;
 }
 
 export interface GovernmentInfo {
@@ -31,6 +32,7 @@ export interface ToggleOption {
     color: string;
     hidden?: boolean; // Optional property to hide the toggle
     isGroup?: boolean; // Indicates if this toggle is umbrella of toggle group
+    showGlobalAverage?: boolean; // Indicates if this toggle should show global average
 }
 
 export interface ChartConfig {

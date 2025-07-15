@@ -32,7 +32,7 @@ export const ChartExportButton: React.FC<ChartExportButtonProps> = ({
         onClick={handleExport}
         disabled={isExporting}
         className={`
-          absolute -top-20 right-2 z-10
+          absolute -top-20 right-5 z-10
           bg-brazil-navy border border-blue-900 rounded-lg shadow-sm
           hover:bg-blue-900 hover:shadow-md
           disabled:opacity-50 disabled:cursor-not-allowed

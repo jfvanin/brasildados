@@ -1380,6 +1380,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 40.8
+        },
+        "brl_to_usd": {
+          "value": 0.844,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -1653,6 +1658,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 39.3
+        },
+        "brl_to_usd": {
+          "value": 0.972,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -1926,6 +1936,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 38
+        },
+        "brl_to_usd": {
+          "value": 1.039,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -2199,6 +2214,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 37.6
+        },
+        "brl_to_usd": {
+          "value": 1.115,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -2472,6 +2492,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 37.8
+        },
+        "brl_to_usd": {
+          "value": 1.207,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -2750,6 +2775,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 37.3
+        },
+        "brl_to_usd": {
+          "value": 1.7897,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3028,6 +3058,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 36.3
+        },
+        "brl_to_usd": {
+          "value": 1.956,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3306,6 +3341,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 35.3
+        },
+        "brl_to_usd": {
+          "value": 2.315,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3584,6 +3624,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 33.8
+        },
+        "brl_to_usd": {
+          "value": 3.533,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -3862,6 +3907,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 32.3
+        },
+        "brl_to_usd": {
+          "value": 2.888,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4140,6 +4190,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 30.4
+        },
+        "brl_to_usd": {
+          "value": 2.654,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4418,6 +4473,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 28.4
+        },
+        "brl_to_usd": {
+          "value": 2.2739,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4701,6 +4761,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 27
+        },
+        "brl_to_usd": {
+          "value": 2.1293,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -4984,6 +5049,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 25.3
+        },
+        "brl_to_usd": {
+          "value": 1.7743,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5267,6 +5337,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 24.2
+        },
+        "brl_to_usd": {
+          "value": 2.3074,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5550,6 +5625,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 23.1
+        },
+        "brl_to_usd": {
+          "value": 1.7277,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -5863,6 +5943,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 21
+        },
+        "brl_to_usd": {
+          "value": 1.668,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6176,6 +6261,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 19.1
+        },
+        "brl_to_usd": {
+          "value": 1.8798,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6489,6 +6579,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 17.9
+        },
+        "brl_to_usd": {
+          "value": 2.043,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -6802,6 +6897,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 15.5
+        },
+        "brl_to_usd": {
+          "value": 2.36,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -7115,6 +7215,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 14.4
+        },
+        "brl_to_usd": {
+          "value": 2.656,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -7428,6 +7533,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 13.3
+        },
+        "brl_to_usd": {
+          "value": 3.9,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -7741,6 +7851,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 12.5
+        },
+        "brl_to_usd": {
+          "value": 3.256,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8054,6 +8169,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 11.7
+        },
+        "brl_to_usd": {
+          "value": 3.311,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8367,6 +8487,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 11.1
+        },
+        "brl_to_usd": {
+          "value": 3.875,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -8685,6 +8810,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": null
+        },
+        "brl_to_usd": {
+          "value": 4.025,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -9003,6 +9133,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 11.2
+        },
+        "brl_to_usd": {
+          "value": 5.1966,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -9321,6 +9456,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 11
+        },
+        "brl_to_usd": {
+          "value": 5.662,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -9639,6 +9779,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 10.5
+        },
+        "brl_to_usd": {
+          "value": 5.2785,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -9802,11 +9947,6 @@
           "value": "73.1",
           "title": "% de participação masculina na força de trabalho",
           "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
-        },
-        "rankdiff_hdi_phdi": {
-          "value": "7",
-          "title": "rankdiff_hdi_phdi_",
-          "source": ""
         },
         "phdi": {
           "value": "0.702",
@@ -9977,6 +10117,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 10.2
+        },
+        "brl_to_usd": {
+          "value": 4.8413,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {
@@ -10130,6 +10275,191 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": null
+        },
+        "hdi_rank": {
+          "value": null,
+          "title": "Índice de Desenvolvimento Humano (IDH)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "hdi": {
+          "value": null,
+          "title": "Índice de Desenvolvimento Humano (IDH)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "eys": {
+          "value": null,
+          "title": "Anos esperados de escolaridade",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "mys": {
+          "value": null,
+          "title": "Média de anos de escolaridade",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gnipc": {
+          "value": null,
+          "title": "Renda Nacional Bruta per capita (PPP $)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gdi_group": {
+          "value": null,
+          "title": "Índice de Desenvolvimento de Gênero (IDG)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gdi": {
+          "value": null,
+          "title": "Índice de Desenvolvimento de Gênero (IDG)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "hdi_f": {
+          "value": null,
+          "title": "IDH (feminino)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "eys_f": {
+          "value": null,
+          "title": "Anos esperados de escolaridade (feminino)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "mys_f": {
+          "value": null,
+          "title": "Média de anos de escolaridade (feminino)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gni_pc_f": {
+          "value": null,
+          "title": "Renda Nacional Bruta per capita (feminino, PPP $)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "hdi_m": {
+          "value": null,
+          "title": "IDH (masculino)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "eys_m": {
+          "value": null,
+          "title": "Anos esperados de escolaridade (masculino)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "mys_m": {
+          "value": null,
+          "title": "Média de anos de escolaridade (masculino)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gni_pc_m": {
+          "value": null,
+          "title": "Renda Nacional Bruta per capita (masculino, PPP $)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "ihdi": {
+          "value": null,
+          "title": "IDH ajustado à desigualdade (IHDI)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "coef_ineq": {
+          "value": null,
+          "title": "Coeficiente de desigualdade humana (%)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "loss": {
+          "value": null,
+          "title": "Perda no IDH devido à desigualdade (%)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "ineq_le": {
+          "value": null,
+          "title": "Desigualdade na expectativa de vida (%)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "ineq_edu": {
+          "value": null,
+          "title": "Desigualdade na educação (%)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "ineq_inc": {
+          "value": null,
+          "title": "Desigualdade na renda (%)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gii_rank": {
+          "value": null,
+          "title": "Índice de Desigualdade de Gênero (IDG)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "gii": {
+          "value": null,
+          "title": "Índice de Desigualdade de Gênero (IDG)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "mmr": {
+          "value": null,
+          "title": "Razão de mortalidade materna (por 100 mil)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "abr": {
+          "value": null,
+          "title": "Taxa de natalidade na adolescência (por 1.000)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "se_f": {
+          "value": null,
+          "title": "% de mulheres no ensino secundário",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "se_m": {
+          "value": null,
+          "title": "% de homens no ensino secundário",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "pr_f": {
+          "value": null,
+          "title": "% de cadeiras parlamentares ocupadas por mulheres",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "pr_m": {
+          "value": null,
+          "title": "% de cadeiras parlamentares ocupadas por homens",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "lfpr_f": {
+          "value": null,
+          "title": "% de participação feminina na força de trabalho",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "lfpr_m": {
+          "value": null,
+          "title": "% de participação masculina na força de trabalho",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "phdi": {
+          "value": null,
+          "title": "IDH ajustado a pressões planetárias (PHDI)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "diff_hdi_phdi": {
+          "value": null,
+          "title": "Diferença entre IDH e PHDI",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "mf": {
+          "value": null,
+          "title": "Pegada material per capita (toneladas)",
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+        },
+        "co2_per_capita": {
+          "value": null,
+          "title": "Emissões de CO2 per capita (toneladas)",
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+        },
+        "co2": {
+          "value": null,
+          "title": "Emissões de CO2 total (toneladas)",
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+        },
+        "brl_to_usd": {
+          "value": 6.179,
+          "title": "Real x Dólar (Valor em fechamento do ano)",
+          "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
         }
       },
       "government": {

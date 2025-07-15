@@ -252,19 +252,43 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
             wrapperStyle={{ color: '#fff', paddingTop: '20px' }}
           />
           
-          {enabledToggles.map((toggle) => (
-            <Line
-              key={toggle.key}
-              type="monotone"
-              dataKey={toggle.key}
-              stroke={toggle.color}
-              strokeWidth={3}
-              dot={{ fill: toggle.color, strokeWidth: 2, r: 2.5 }}
-              activeDot={{ r: 4, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
-              name={toggle.title}
-              connectNulls={false}
-            />
-          ))}
+          {enabledToggles.map((toggle) => {
+            // Check if global average data exists for this indicator
+            const hasGlobalData = toggle.showGlobalAverage && data.some(point => point[`${toggle.key}_global`] !== undefined);
+            
+            return (
+              <React.Fragment key={toggle.key}>
+                {/* Main indicator line */}
+                <Line
+                  type="monotone"
+                  dataKey={toggle.key}
+                  stroke={toggle.color}
+                  strokeWidth={3}
+                  dot={{ fill: toggle.color, strokeWidth: 2, r: 2.5 }}
+                  activeDot={{ r: 4, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
+                  name={toggle.title}
+                  connectNulls={true}
+                />
+                
+                {/* Global average line (dashed) if data exists */}
+                {hasGlobalData && (
+                  <Line
+                    type="monotone"
+                    dataKey={`${toggle.key}_global`}
+                    stroke={toggle.color}
+                    strokeWidth={1.5}
+                    strokeDasharray="8 4"
+                    dot={false}
+                    activeDot={{ r: 3, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
+                    name={`${toggle.title} (Média Global)`}
+                    connectNulls={true}
+                    legendType='plainline'
+                  />
+                  // plainline' | 'line' | 'square' | 'rect' | 'circle' | 'cross' | 'diamond' | 'star' | 'triangle' | 'wye' | 'none'
+                )}
+              </React.Fragment>
+            );
+          })}
         </LineChart>
       </ResponsiveContainer>
 

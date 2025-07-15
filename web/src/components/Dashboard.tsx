@@ -13,7 +13,7 @@ const Dashboard: React.FC = () => {
       title: 'Indicadores Econômicos Principais',
       type: 'multiple',
       toggles: [
-        { key: 'gdp_growth', title: dataService.getIndicatorTitle('gdp_growth'), enabled: true, color: '#43A047' },
+        { key: 'gdp_growth', title: dataService.getIndicatorTitle('gdp_growth'), enabled: true, color: '#43A047', showGlobalAverage: true },
         { key: 'inflation', title: dataService.getIndicatorTitle('inflation'), enabled: true, color: '#FBC02D' },
         { key: 'unemployment', title: dataService.getIndicatorTitle('unemployment'), enabled: true, color: '#FF7043' },
         { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#77CBDA' }
@@ -24,13 +24,13 @@ const Dashboard: React.FC = () => {
       title: 'Desenvolvimento Humano',
       type: 'exclusive',
       toggles: [
-        { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C' },
+        { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C', showGlobalAverage: true },
         { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: false, color: '#43A047' },
-        { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D' },
-        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA' },
-        { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A' },
-        { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50' },
-        { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D' },
+        { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
+        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true },
+        { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
+        { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50', showGlobalAverage: true },
+        { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
       ],
       dataKeys: [ 'hdi', 'population', 'gini', 'poverty_3dollar', 'life_expectancy', 'literacy']
     },
@@ -39,8 +39,8 @@ const Dashboard: React.FC = () => {
       type: 'exclusive',
       toggles: [
         { key: 'co2', title: dataService.getIndicatorTitle('co2'), enabled: true, color: '#FBC02D' },
-        { key: 'co2_per_capita', title: dataService.getIndicatorTitle('co2_per_capita'), enabled: false, color: '#898989' },
-        { key: 'forest_area', title: dataService.getIndicatorTitle('forest_area'), enabled: false, color: '#43A047' },
+        { key: 'co2_per_capita', title: dataService.getIndicatorTitle('co2_per_capita'), enabled: false, color: '#898989', showGlobalAverage: true },
+        { key: 'forest_area', title: dataService.getIndicatorTitle('forest_area'), enabled: false, color: '#43A047', showGlobalAverage: true },
         { key: 'amazon_deforestation', title: dataService.getIndicatorTitle('amazon_deforestation'), enabled: false, color: '#D32F2F' },
         { key: 'wildfires', title: dataService.getIndicatorTitle('wildfires'), enabled: false, color: '#FF7043' }
       ],
@@ -51,7 +51,8 @@ const Dashboard: React.FC = () => {
       type: 'exclusive',
       toggles: [
         { key: 'gdp', title: dataService.getIndicatorTitle('gdp'), enabled: true, color: '#43A047' },
-        { key: 'gdp_capita', title: dataService.getIndicatorTitle('gdp_capita'), enabled: false, color: '#66BB6A' },
+        { key: 'gdp_capita', title: dataService.getIndicatorTitle('gdp_capita'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
+        { key: 'brl_to_usd', title: dataService.getIndicatorTitle('brl_to_usd'), enabled: false, color: '#FDD835' },
         { key: 'trade_balance', title: 'Balança Comercial', enabled: false, color: '#FDD835', isGroup: true },
         { key: 'exports_gdp', title: dataService.getIndicatorTitle('exports_gdp'), enabled: false, color: '#43A047', hidden: true },
         { key: 'imports_gdp', title: dataService.getIndicatorTitle('imports_gdp'), enabled: false, color: '#FDD835', hidden: true },
@@ -69,8 +70,8 @@ const Dashboard: React.FC = () => {
       type: 'exclusive',
       toggles: [
         { key: 'mys', title: dataService.getIndicatorTitle('mys'), enabled: true, color: '#388E3C' },
-        { key: 'health_expenditure', title: dataService.getIndicatorTitle('health_expenditure'), enabled: false, color: '#66BB6A' },
-        { key: 'gov_edu_expenditure', title: dataService.getIndicatorTitle('gov_edu_expenditure'), enabled: false, color: '#81C784' },
+        { key: 'health_expenditure', title: dataService.getIndicatorTitle('health_expenditure'), enabled: false, color: '#66BB6A', showGlobalAverage: true  },
+        { key: 'gov_edu_expenditure', title: dataService.getIndicatorTitle('gov_edu_expenditure'), enabled: false, color: '#81C784', showGlobalAverage: true  },
         { key: 'se', title: 'Mulheres e Homens na Educação', enabled: false, color: '#FDD835', isGroup: true },
         { key: 'se_f', title: dataService.getIndicatorTitle('se_f'), enabled: false, color: '#FDD835', hidden: true},
         { key: 'se_m', title: dataService.getIndicatorTitle('se_m'), enabled: false, color: '#77CBDA', hidden: true },

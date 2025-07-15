@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil Data Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section h2 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+            font-family: monospace;
+        }
+        
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #218838;
+        }
+        
+        button.secondary {
+            background: #6c757d;
+        }
+        
+        button.secondary:hover {
+            background: #545b62;
+        }
+        
+        button.danger {
+            background: #dc3545;
+        }
+        
+        button.danger:hover {
+            background: #c82333;
+        }
+        
+        .file-upload {
+            border: 2px dashed #FFD700;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: #FFF;
+        }
+        
+        .output {
+            background: #000;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        
+        .success {
+            color: #28a745;
+        }
+        
+        .error {
+            color: #dc3545;
+        }
+        
+        .info {
+            color: #17a2b8;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇧🇷 Brasil Data Manager</h1>
+        
+        <!-- File Upload Section -->
+        <div class="section">
+            <h2>📁 Carregar dados_brasil.json</h2>
+            <div class="file-upload">
+                <input type="file" id="fileInput" accept=".json" style="display: none;">
+                <p>Arraste o arquivo dados_brasil.json aqui ou <button onclick="document.getElementById('fileInput').click()">clique para selecionar</button></p>
+            </div>
+            <div class="stats" id="dataStats" style="display: none;">
+                <div class="stat-card">
+                    <div class="stat-number" id="yearsCount">0</div>
+                    <div>Anos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="indicatorsCount">0</div>
+                    <div>Indicadores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="globalAveragesCount">0</div>
+                    <div>Médias Globais</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add New Indicator Section -->
+        <div class="section">
+            <h2>➕ Adicionar Novo Indicador</h2>
+            <div class="form-group">
+                <label for="newIndicatorKey">Chave do Indicador:</label>
+                <input type="text" id="newIndicatorKey" placeholder="ex: new_indicator">
+            </div>
+            <div class="form-group">
+                <label for="newIndicatorTitle">Título:</label>
+                <input type="text" id="newIndicatorTitle" placeholder="ex: Novo Indicador">
+            </div>
+            <div class="form-group">
+                <label for="newIndicatorSource">Fonte:</label>
+                <input type="text" id="newIndicatorSource" placeholder="ex: https://example.com (Fonte)">
+            </div>
+            <div class="two-column">
+                <div class="form-group">
+                    <label for="newIndicatorValue">Valor (mesmo para todos os anos):</label>
+                    <input type="text" id="newIndicatorValue" placeholder="ex: 100 ou null">
+                </div>
+                <div class="form-group">
+                    <label for="newIndicatorGlobalValue">Média Global (mesma para todos):</label>
+                    <input type="text" id="newIndicatorGlobalValue" placeholder="ex: 50 ou null">
+                </div>
+            </div>
+            <button onclick="addNewIndicator()">Adicionar Indicador</button>
+        </div>
+        
+        <!-- CSV Import Section -->
+        <div class="section">
+            <h2>📊 Importar Dados CSV</h2>
+            <div class="form-group">
+                <label for="csvIndicatorKey">Chave do Indicador (existente ou novo):</label>
+                <input type="text" id="csvIndicatorKey" placeholder="ex: gdp_growth">
+            </div>
+            <div class="form-group">
+                <label for="csvIndicatorTitle">Título (apenas se for novo indicador):</label>
+                <input type="text" id="csvIndicatorTitle" placeholder="ex: Crescimento do PIB">
+            </div>
+            <div class="form-group">
+                <label for="csvIndicatorSource">Fonte (apenas se for novo indicador):</label>
+                <input type="text" id="csvIndicatorSource" placeholder="ex: https://example.com (Fonte)">
+            </div>
+            <div class="form-group">
+                <label for="csvData">Dados CSV (formato: ANO;VALOR;MEDIA_GLOBAL):</label>
+                <textarea id="csvData" placeholder="1990;5.2;3.1
+1991;3.8;2.9
+1992;1.2;2.5"></textarea>
+            </div>
+            <button onclick="importCSVData()">Importar Dados CSV</button>
+        </div>
+        
+        <!-- Copy Indicators Section -->
+        <div class="section">
+            <h2>📋 Copiar Indicadores Entre Anos</h2>
+            <div class="two-column">
+                <div class="form-group">
+                    <label for="sourceYear">Ano Origem:</label>
+                    <select id="sourceYear"></select>
+                </div>
+                <div class="form-group">
+                    <label for="targetYear">Ano Destino:</label>
+                    <select id="targetYear"></select>
+                </div>
+            </div>
+            <button onclick="copyIndicators()">Copiar Indicadores Faltantes</button>
+            <p style="font-size: 12px; opacity: 0.8; margin-top: 10px;">
+                ℹ️ Copia todos os indicadores do ano origem para o ano destino, adicionando apenas os que estão faltando com valores null.
+            </p>
+        </div>
+        
+        <!-- Export Section -->
+        <div class="section">
+            <h2>💾 Exportar Dados</h2>
+            <button onclick="downloadJSON()">Baixar JSON Atualizado</button>
+            <button onclick="copyToClipboard()" class="secondary">Copiar JSON para Clipboard</button>
+            <button onclick="showJSON()" class="secondary">Mostrar JSON</button>
+            <div class="output" id="jsonOutput" style="display: none;"></div>
+        </div>
+        
+        <!-- Console Section -->
+        <div class="section">
+            <h2>🖥️ Console</h2>
+            <div class="output" id="console"></div>
+        </div>
+    </div>
+
+    <script>
+        let brasilData = null;
+        
+        // Console functionality
+        function log(message, type = 'info') {
+            const console = document.getElementById('console');
+            const timestamp = new Date().toLocaleTimeString();
+            const className = type === 'error' ? 'error' : type === 'success' ? 'success' : 'info';
+            console.innerHTML += `<span class="${className}">[${timestamp}] ${message}</span>\n`;
+            console.scrollTop = console.scrollHeight;
+        }
+        
+        // File handling
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+        
+        // Drag and drop
+        const fileUpload = document.querySelector('.file-upload');
+        fileUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#FFF';
+        });
+        
+        fileUpload.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#FFD700';
+        });
+        
+        fileUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUpload.style.borderColor = '#FFD700';
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+        
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+        
+        function handleFile(file) {
+            if (!file.name.endsWith('.json')) {
+                log('Erro: Por favor selecione um arquivo JSON.', 'error');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    brasilData = JSON.parse(e.target.result);
+                    log(`Arquivo ${file.name} carregado com sucesso!`, 'success');
+                    updateStats();
+                    updateYearSelects();
+                } catch (error) {
+                    log(`Erro ao analisar JSON: ${error.message}`, 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        function updateStats() {
+            if (!brasilData) return;
+            
+            const years = Object.keys(brasilData.years || {});
+            const yearsCount = years.length;
+            
+            let indicatorsSet = new Set();
+            let globalAveragesCount = 0;
+            
+            years.forEach(year => {
+                const yearData = brasilData.years[year];
+                if (yearData && yearData.data) {
+                    Object.keys(yearData.data).forEach(key => {
+                        indicatorsSet.add(key);
+                        if (yearData.data[key].global_average_value !== undefined && 
+                            yearData.data[key].global_average_value !== null) {
+                            globalAveragesCount++;
+                        }
+                    });
+                }
+            });
+            
+            document.getElementById('yearsCount').textContent = yearsCount;
+            document.getElementById('indicatorsCount').textContent = indicatorsSet.size;
+            document.getElementById('globalAveragesCount').textContent = globalAveragesCount;
+            document.getElementById('dataStats').style.display = 'grid';
+        }
+        
+        function updateYearSelects() {
+            if (!brasilData) return;
+            
+            const years = Object.keys(brasilData.years || {}).sort();
+            const sourceSelect = document.getElementById('sourceYear');
+            const targetSelect = document.getElementById('targetYear');
+            
+            sourceSelect.innerHTML = '';
+            targetSelect.innerHTML = '';
+            
+            years.forEach(year => {
+                sourceSelect.innerHTML += `<option value="${year}">${year}</option>`;
+                targetSelect.innerHTML += `<option value="${year}">${year}</option>`;
+            });
+        }
+        
+        function addNewIndicator() {
+            if (!brasilData) {
+                log('Erro: Nenhum arquivo JSON carregado.', 'error');
+                return;
+            }
+            
+            const key = document.getElementById('newIndicatorKey').value.trim();
+            const title = document.getElementById('newIndicatorTitle').value.trim();
+            const source = document.getElementById('newIndicatorSource').value.trim();
+            const value = document.getElementById('newIndicatorValue').value.trim();
+            const globalValue = document.getElementById('newIndicatorGlobalValue').value.trim();
+            
+            if (!key || !title || !source) {
+                log('Erro: Preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            const processedValue = value === 'null' || value === '' ? null : (isNaN(value) ? value : Number(value));
+            const processedGlobalValue = globalValue === 'null' || globalValue === '' ? null : (isNaN(globalValue) ? globalValue : Number(globalValue));
+            
+            let addedCount = 0;
+            
+            Object.keys(brasilData.years).forEach(year => {
+                if (!brasilData.years[year].data[key]) {
+                    brasilData.years[year].data[key] = {
+                        value: processedValue,
+                        title: title,
+                        source: source
+                    };
+                    
+                    if (processedGlobalValue !== null) {
+                        brasilData.years[year].data[key].global_average_value = processedGlobalValue;
+                    }
+                    
+                    addedCount++;
+                }
+            });
+            
+            log(`Indicador "${key}" adicionado a ${addedCount} anos.`, 'success');
+            updateStats();
+            
+            // Clear form
+            document.getElementById('newIndicatorKey').value = '';
+            document.getElementById('newIndicatorTitle').value = '';
+            document.getElementById('newIndicatorSource').value = '';
+            document.getElementById('newIndicatorValue').value = '';
+            document.getElementById('newIndicatorGlobalValue').value = '';
+        }
+        
+        function importCSVData() {
+            if (!brasilData) {
+                log('Erro: Nenhum arquivo JSON carregado.', 'error');
+                return;
+            }
+            
+            const key = document.getElementById('csvIndicatorKey').value.trim();
+            const title = document.getElementById('csvIndicatorTitle').value.trim();
+            const source = document.getElementById('csvIndicatorSource').value.trim();
+            const csvData = document.getElementById('csvData').value.trim();
+            
+            if (!key || !csvData) {
+                log('Erro: Chave do indicador e dados CSV são obrigatórios.', 'error');
+                return;
+            }
+            
+            const lines = csvData.split('\n').filter(line => line.trim());
+            let updatedCount = 0;
+            let createdCount = 0;
+            
+            lines.forEach((line, index) => {
+                const parts = line.split(';');
+                if (parts.length < 2) {
+                    log(`Erro na linha ${index + 1}: formato inválido (esperado: ANO;VALOR;MEDIA_GLOBAL)`, 'error');
+                    return;
+                }
+                
+                const year = parts[0].trim();
+                const value = parts[1].trim();
+                const globalValue = parts.length > 2 ? parts[2].trim() : null;
+                
+                if (!brasilData.years[year]) {
+                    log(`Aviso: Ano ${year} não existe nos dados.`, 'error');
+                    return;
+                }
+                
+                const processedValue = value === 'null' || value === '' ? null : (isNaN(value) ? value : Number(value));
+                const processedGlobalValue = globalValue === 'null' || globalValue === '' || globalValue === null ? null : (isNaN(globalValue) ? globalValue : Number(globalValue));
+                
+                const isNewIndicator = !brasilData.years[year].data[key];
+                
+                if (isNewIndicator && (!title || !source)) {
+                    log('Erro: Para novo indicador, título e fonte são obrigatórios.', 'error');
+                    return;
+                }
+                
+                if (!brasilData.years[year].data[key]) {
+                    brasilData.years[year].data[key] = {
+                        value: processedValue,
+                        title: title,
+                        source: source
+                    };
+                    createdCount++;
+                } else {
+                    brasilData.years[year].data[key].value = processedValue;
+                    updatedCount++;
+                }
+                
+                if (processedGlobalValue !== null) {
+                    brasilData.years[year].data[key].global_average_value = processedGlobalValue;
+                }
+            });
+            
+            log(`CSV importado: ${createdCount} novos registros, ${updatedCount} atualizados.`, 'success');
+            updateStats();
+            
+            // Clear form
+            document.getElementById('csvData').value = '';
+        }
+        
+        function copyIndicators() {
+            if (!brasilData) {
+                log('Erro: Nenhum arquivo JSON carregado.', 'error');
+                return;
+            }
+            
+            const sourceYear = document.getElementById('sourceYear').value;
+            const targetYear = document.getElementById('targetYear').value;
+            
+            if (!sourceYear || !targetYear) {
+                log('Erro: Selecione os anos origem e destino.', 'error');
+                return;
+            }
+            
+            if (sourceYear === targetYear) {
+                log('Erro: Ano origem e destino não podem ser iguais.', 'error');
+                return;
+            }
+            
+            const sourceData = brasilData.years[sourceYear];
+            const targetData = brasilData.years[targetYear];
+            
+            if (!sourceData || !targetData) {
+                log('Erro: Anos selecionados não existem nos dados.', 'error');
+                return;
+            }
+            
+            let copiedCount = 0;
+            
+            Object.keys(sourceData.data).forEach(key => {
+                if (!targetData.data[key]) {
+                    targetData.data[key] = {
+                        value: null,
+                        title: sourceData.data[key].title,
+                        source: sourceData.data[key].source
+                    };
+                    
+                    if (sourceData.data[key].global_average_value !== undefined) {
+                        targetData.data[key].global_average_value = null;
+                    }
+                    
+                    copiedCount++;
+                }
+            });
+            
+            log(`${copiedCount} indicadores copiados de ${sourceYear} para ${targetYear}.`, 'success');
+            updateStats();
+        }
+        
+        function downloadJSON() {
+            if (!brasilData) {
+                log('Erro: Nenhum arquivo JSON carregado.', 'error');
+                return;
+            }
+            
+            const dataStr = JSON.stringify(brasilData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'dados_brasil_updated.json';
+            link.click();
+            URL.revokeObjectURL(url);
+            
+            log('Arquivo JSON baixado com sucesso!', 'success');
+        }
+        
+        function copyToClipboard() {
+            if (!brasilData) {
+                log('Erro: Nenhum arquivo JSON carregado.', 'error');
+                return;
+            }
+            
+            const dataStr = JSON.stringify(brasilData, null, 2);
+            navigator.clipboard.writeText(dataStr).then(() => {
+                log('JSON copiado para clipboard!', 'success');
+            }).catch(err => {
+                log('Erro ao copiar para clipboard: ' + err.message, 'error');
+            });
+        }
+        
+        function showJSON() {
+            if (!brasilData) {
+                log('Erro: Nenhum arquivo JSON carregado.', 'error');
+                return;
+            }
+            
+            const output = document.getElementById('jsonOutput');
+            output.textContent = JSON.stringify(brasilData, null, 2);
+            output.style.display = output.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // Initialize
+        log('Brasil Data Manager iniciado. Carregue o arquivo dados_brasil.json para começar.', 'info');
+    </script>
+</body>
+</html>

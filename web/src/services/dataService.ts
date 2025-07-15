@@ -56,6 +56,15 @@ class DataService {
                         dataPoint[indicator] = value;
                     }
                 }
+
+                // Add global average if available
+                if (yearData?.data[indicator]?.global_average_value !== null &&
+                    yearData?.data[indicator]?.global_average_value !== undefined) {
+                    const globalValue = parseFloat(yearData.data[indicator].global_average_value!.toString());
+                    if (!isNaN(globalValue)) {
+                        dataPoint[`${indicator}_global`] = globalValue;
+                    }
+                }
             });
 
             return dataPoint;
@@ -156,6 +165,18 @@ class DataService {
     // Get main dashboard subtitle/description
     getMainSubtitle(): string {
         return 'Visualização interativa de indicadores econômicos, sociais e ambientais do Brasil';
+    }
+
+    // Check if indicator has global average values
+    hasGlobalAverage(indicator: string): boolean {
+        const years = Object.keys(this.data.years);
+        for (const year of years) {
+            const data = this.data.years[year].data[indicator];
+            if (data && data.global_average_value !== null && data.global_average_value !== undefined) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 
