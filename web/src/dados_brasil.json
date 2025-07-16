@@ -25,9 +25,10 @@
     "1990": {
       "data": {
         "hdi": {
-          "value": "0.641",
+          "value": 0.641,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.608
         },
         "eys": {
           "value": "14.09510857",
@@ -299,9 +300,10 @@
     "1991": {
       "data": {
         "hdi": {
-          "value": "0.645",
+          "value": 0.645,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.611
         },
         "eys": {
           "value": "14.14414616",
@@ -573,9 +575,10 @@
     "1992": {
       "data": {
         "hdi": {
-          "value": "0.648",
+          "value": 0.648,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.614
         },
         "eys": {
           "value": "14.19335435",
@@ -847,9 +850,10 @@
     "1993": {
       "data": {
         "hdi": {
-          "value": "0.654",
+          "value": 0.654,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.617
         },
         "eys": {
           "value": "14.24273375",
@@ -1121,9 +1125,10 @@
     "1994": {
       "data": {
         "hdi": {
-          "value": "0.659",
+          "value": 0.659,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.62
         },
         "eys": {
           "value": "14.29228494",
@@ -1400,9 +1405,10 @@
     "1995": {
       "data": {
         "hdi": {
-          "value": "0.666",
+          "value": 0.666,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.625
         },
         "eys": {
           "value": "14.34200852",
@@ -1679,9 +1685,10 @@
     "1996": {
       "data": {
         "hdi": {
-          "value": "0.671",
+          "value": 0.671,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.631
         },
         "eys": {
           "value": "14.39190509",
@@ -1958,9 +1965,10 @@
     "1997": {
       "data": {
         "hdi": {
-          "value": "0.676",
+          "value": 0.676,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.636
         },
         "eys": {
           "value": "14.44197525",
@@ -2237,9 +2245,10 @@
     "1998": {
       "data": {
         "hdi": {
-          "value": "0.68",
+          "value": 0.68,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.641
         },
         "eys": {
           "value": "14.49221961",
@@ -2516,9 +2525,10 @@
     "1999": {
       "data": {
         "hdi": {
-          "value": "0.684",
+          "value": 0.684,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.646
         },
         "eys": {
           "value": "14.54263877",
@@ -2800,9 +2810,10 @@
     "2000": {
       "data": {
         "hdi": {
-          "value": "0.69",
+          "value": 0.69,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.651
         },
         "eys": {
           "value": "14.59323334",
@@ -3084,9 +3095,10 @@
     "2001": {
       "data": {
         "hdi": {
-          "value": "0.694",
+          "value": 0.694,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.657
         },
         "eys": {
           "value": "14.64400393",
@@ -3368,9 +3380,10 @@
     "2002": {
       "data": {
         "hdi": {
-          "value": "0.7",
+          "value": 0.7,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.662
         },
         "eys": {
           "value": "14.69495116",
@@ -3652,9 +3665,10 @@
     "2003": {
       "data": {
         "hdi": {
-          "value": "0.705",
+          "value": 0.705,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.669
         },
         "eys": {
           "value": "14.74607564",
@@ -3936,9 +3950,10 @@
     "2004": {
       "data": {
         "hdi": {
-          "value": "0.712",
+          "value": 0.712,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.675
         },
         "eys": {
           "value": "14.79737798",
@@ -4220,9 +4235,10 @@
     "2005": {
       "data": {
         "hdi": {
-          "value": "0.718",
+          "value": 0.718,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.681
         },
         "eys": {
           "value": "14.8488588",
@@ -4504,9 +4520,10 @@
     "2006": {
       "data": {
         "hdi": {
-          "value": "0.725",
+          "value": 0.725,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.688
         },
         "eys": {
           "value": "14.90051873",
@@ -4793,9 +4810,10 @@
     "2007": {
       "data": {
         "hdi": {
-          "value": "0.732",
+          "value": 0.732,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.694
         },
         "eys": {
           "value": "14.95235838",
@@ -5082,9 +5100,10 @@
     "2008": {
       "data": {
         "hdi": {
-          "value": "0.739",
+          "value": 0.739,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.698
         },
         "eys": {
           "value": "15.00437839",
@@ -5371,9 +5390,10 @@
     "2009": {
       "data": {
         "hdi": {
-          "value": "0.742",
+          "value": 0.742,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.701
         },
         "eys": {
           "value": "15.05657938",
@@ -5660,9 +5680,10 @@
     "2010": {
       "data": {
         "hdi": {
-          "value": "0.748",
+          "value": 0.748,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.707
         },
         "eys": {
           "value": "15.10896198",
@@ -5979,9 +6000,10 @@
     "2011": {
       "data": {
         "hdi": {
-          "value": "0.753",
+          "value": 0.753,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.713
         },
         "eys": {
           "value": "15.16152681",
@@ -6298,9 +6320,10 @@
     "2012": {
       "data": {
         "hdi": {
-          "value": "0.758",
+          "value": 0.758,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.717
         },
         "eys": {
           "value": "15.21427453",
@@ -6617,9 +6640,10 @@
     "2013": {
       "data": {
         "hdi": {
-          "value": "0.762",
+          "value": 0.762,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.721
         },
         "eys": {
           "value": "15.24518967",
@@ -6936,9 +6960,10 @@
     "2014": {
       "data": {
         "hdi": {
-          "value": "0.765",
+          "value": 0.765,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.726
         },
         "eys": {
           "value": "15.36814022",
@@ -7255,9 +7280,10 @@
     "2015": {
       "data": {
         "hdi": {
-          "value": "0.764",
+          "value": 0.764,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.731
         },
         "eys": {
           "value": "15.24540043",
@@ -7574,9 +7600,10 @@
     "2016": {
       "data": {
         "hdi": {
-          "value": "0.765",
+          "value": 0.765,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.735
         },
         "eys": {
           "value": "15.29432011",
@@ -7893,9 +7920,10 @@
     "2017": {
       "data": {
         "hdi": {
-          "value": "0.77",
+          "value": 0.77,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.739
         },
         "eys": {
           "value": "15.40701962",
@@ -8212,9 +8240,10 @@
     "2018": {
       "data": {
         "hdi": {
-          "value": "0.774",
+          "value": 0.774,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.741
         },
         "eys": {
           "value": "15.50376034",
@@ -8531,9 +8560,10 @@
     "2019": {
       "data": {
         "hdi": {
-          "value": "0.776",
+          "value": 0.776,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.745
         },
         "eys": {
           "value": "15.44937038",
@@ -8855,9 +8885,10 @@
     "2020": {
       "data": {
         "hdi": {
-          "value": "0.77",
+          "value": 0.77,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.742
         },
         "eys": {
           "value": "15.44596004",
@@ -9179,9 +9210,10 @@
     "2021": {
       "data": {
         "hdi": {
-          "value": "0.768",
+          "value": 0.768,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.742
         },
         "eys": {
           "value": "15.5788002",
@@ -9503,9 +9535,10 @@
     "2022": {
       "data": {
         "hdi": {
-          "value": "0.78",
+          "value": 0.78,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.752
         },
         "eys": {
           "value": "15.7927103",
@@ -9832,9 +9865,10 @@
           "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
         },
         "hdi": {
-          "value": "0.786",
+          "value": 0.786,
           "title": "Índice de Desenvolvimento Humano (IDH)",
-          "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
+          "source": "https://hdr.undp.org/ (Human Development Report - ONU)",
+          "global_average_value": 0.756
         },
         "eys": {
           "value": "15.7927103",
