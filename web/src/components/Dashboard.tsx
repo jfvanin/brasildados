@@ -25,14 +25,14 @@ const Dashboard: React.FC = () => {
       type: 'exclusive',
       toggles: [
         { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C', showGlobalAverage: true },
-        { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: false, color: '#43A047' },
         { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
         { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true },
         { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
         { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50', showGlobalAverage: true },
         { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
+        { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: false, color: '#43A047' },
       ],
-      dataKeys: [ 'hdi', 'population', 'gini', 'poverty_3dollar', 'life_expectancy', 'literacy']
+      dataKeys: [ 'hdi', 'gini', 'poverty_3dollar', 'life_expectancy', 'literacy', 'population']
     },
     {
       title: 'Meio Ambiente',

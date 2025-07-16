@@ -255,7 +255,7 @@
           "value": 60.5,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 38.14545455
         },
         "income_share_20": {
           "value": 2.3,
@@ -266,7 +266,8 @@
         "co2_per_capita": {
           "value": "1.47",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.266109
         },
         "amazon_deforestation": {
           "value": "13730",
@@ -528,7 +529,7 @@
           "value": null,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 37.94
         },
         "income_share_20": {
           "value": null,
@@ -539,7 +540,8 @@
         "co2_per_capita": {
           "value": "1.51",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.278877
         },
         "amazon_deforestation": {
           "value": "11030",
@@ -801,7 +803,7 @@
           "value": 53.1,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 39.01
         },
         "income_share_20": {
           "value": 2.9,
@@ -812,7 +814,8 @@
         "co2_per_capita": {
           "value": "1.51",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.091575
         },
         "amazon_deforestation": {
           "value": "13786",
@@ -1074,7 +1077,7 @@
           "value": 60.1,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.5125
         },
         "income_share_20": {
           "value": 2.4,
@@ -1085,7 +1088,8 @@
         "co2_per_capita": {
           "value": "1.56",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.069678
         },
         "amazon_deforestation": {
           "value": "14896",
@@ -1347,7 +1351,7 @@
           "value": null,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 37.98421053
         },
         "income_share_20": {
           "value": null,
@@ -1358,7 +1362,8 @@
         "co2_per_capita": {
           "value": "1.59",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.051227
         },
         "amazon_deforestation": {
           "value": "14896",
@@ -1625,7 +1630,7 @@
           "value": 59.5,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 40.32307692
         },
         "income_share_20": {
           "value": 2.5,
@@ -1636,7 +1641,8 @@
         "co2_per_capita": {
           "value": "1.66",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.0862265
         },
         "amazon_deforestation": {
           "value": "29059",
@@ -1903,7 +1909,7 @@
           "value": 59.8,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 40.64117647
         },
         "income_share_20": {
           "value": 2.3,
@@ -1914,7 +1920,8 @@
         "co2_per_capita": {
           "value": "1.76",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.152334
         },
         "amazon_deforestation": {
           "value": "18161",
@@ -2181,7 +2188,7 @@
           "value": 59.8,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 41.485
         },
         "income_share_20": {
           "value": 2.3,
@@ -2192,7 +2199,8 @@
         "co2_per_capita": {
           "value": "1.84",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.118613
         },
         "amazon_deforestation": {
           "value": "13227",
@@ -2459,7 +2467,7 @@
           "value": 59.6,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 39.89545455
         },
         "income_share_20": {
           "value": 2.4,
@@ -2470,7 +2478,8 @@
         "co2_per_capita": {
           "value": "1.88",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.0458646
         },
         "amazon_deforestation": {
           "value": "17383",
@@ -2737,7 +2746,7 @@
           "value": 59,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 37.69545455
         },
         "income_share_20": {
           "value": 2.5,
@@ -2748,7 +2757,8 @@
         "co2_per_capita": {
           "value": "1.91",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.081738
         },
         "amazon_deforestation": {
           "value": "17259",
@@ -3020,7 +3030,7 @@
           "value": null,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 39.56842105
         },
         "income_share_20": {
           "value": null,
@@ -3031,7 +3041,8 @@
         "co2_per_capita": {
           "value": "1.96",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.1334705
         },
         "amazon_deforestation": {
           "value": "18226",
@@ -3303,7 +3314,7 @@
           "value": 58.4,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 38.59130435
         },
         "income_share_20": {
           "value": 2.5,
@@ -3314,7 +3325,8 @@
         "co2_per_capita": {
           "value": "1.96",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.1097608
         },
         "amazon_deforestation": {
           "value": "18165",
@@ -3586,7 +3598,7 @@
           "value": 58.1,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 38.27931034
         },
         "income_share_20": {
           "value": 2.6,
@@ -3597,7 +3609,8 @@
         "co2_per_capita": {
           "value": "1.95",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.146101
         },
         "amazon_deforestation": {
           "value": "21650",
@@ -3869,7 +3882,7 @@
           "value": 57.6,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 37.175
         },
         "income_share_20": {
           "value": 2.6,
@@ -3880,7 +3893,8 @@
         "co2_per_capita": {
           "value": "1.91",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.3096466
         },
         "amazon_deforestation": {
           "value": "25396",
@@ -4152,7 +4166,7 @@
           "value": 56.5,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 35.984
         },
         "income_share_20": {
           "value": 2.9,
@@ -4163,7 +4177,8 @@
         "co2_per_capita": {
           "value": "1.98",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.4027133
         },
         "amazon_deforestation": {
           "value": "27772",
@@ -4435,7 +4450,7 @@
           "value": 56.3,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.58076923
         },
         "income_share_20": {
           "value": 2.9,
@@ -4446,7 +4461,8 @@
         "co2_per_capita": {
           "value": "1.97",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.4959054
         },
         "amazon_deforestation": {
           "value": "19014",
@@ -4718,7 +4734,7 @@
           "value": 55.6,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 37.23571429
         },
         "income_share_20": {
           "value": 3,
@@ -4729,7 +4745,8 @@
         "co2_per_capita": {
           "value": "1.98",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.5909643
         },
         "amazon_deforestation": {
           "value": "14286",
@@ -5006,7 +5023,7 @@
           "value": 54.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.65714286
         },
         "income_share_20": {
           "value": 3,
@@ -5017,7 +5034,8 @@
         "co2_per_capita": {
           "value": "2.07",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.666746
         },
         "amazon_deforestation": {
           "value": "11651",
@@ -5294,7 +5312,7 @@
           "value": 54,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.96333333
         },
         "income_share_20": {
           "value": 3.2,
@@ -5305,7 +5323,8 @@
         "co2_per_capita": {
           "value": "2.17",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.6861563
         },
         "amazon_deforestation": {
           "value": "12911",
@@ -5582,7 +5601,7 @@
           "value": 53.7,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.12258065
         },
         "income_share_20": {
           "value": 3.2,
@@ -5593,7 +5612,8 @@
         "co2_per_capita": {
           "value": "2.03",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.549688
         },
         "amazon_deforestation": {
           "value": "7464",
@@ -5900,7 +5920,7 @@
           "value": null,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.715625
         },
         "income_share_20": {
           "value": null,
@@ -5911,7 +5931,8 @@
         "co2_per_capita": {
           "value": "2.27",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.750381
         },
         "amazon_deforestation": {
           "value": "7000",
@@ -6218,7 +6239,7 @@
           "value": 52.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.61875
         },
         "income_share_20": {
           "value": 3.3,
@@ -6229,7 +6250,8 @@
         "co2_per_capita": {
           "value": "2.37",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.852329
         },
         "amazon_deforestation": {
           "value": "6418",
@@ -6536,7 +6558,7 @@
           "value": 53.4,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.76060606
         },
         "income_share_20": {
           "value": 3.4,
@@ -6547,7 +6569,8 @@
         "co2_per_capita": {
           "value": "2.53",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.8603024
         },
         "amazon_deforestation": {
           "value": "4571",
@@ -6854,7 +6877,7 @@
           "value": 52.7,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.175
         },
         "income_share_20": {
           "value": 3.5,
@@ -6865,7 +6888,8 @@
         "co2_per_capita": {
           "value": "2.68",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.8412857
         },
         "amazon_deforestation": {
           "value": "5891",
@@ -7172,7 +7196,7 @@
           "value": 52,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.153125
         },
         "income_share_20": {
           "value": 3.6,
@@ -7183,7 +7207,8 @@
         "co2_per_capita": {
           "value": "2.79",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.802484
         },
         "amazon_deforestation": {
           "value": "5012",
@@ -7490,7 +7515,7 @@
           "value": 51.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.25
         },
         "income_share_20": {
           "value": 3.6,
@@ -7501,7 +7526,8 @@
         "co2_per_capita": {
           "value": "2.63",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.7392993
         },
         "amazon_deforestation": {
           "value": "6207",
@@ -7808,7 +7834,7 @@
           "value": 53.4,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.10606061
         },
         "income_share_20": {
           "value": 3.3,
@@ -7819,7 +7845,8 @@
         "co2_per_capita": {
           "value": "2.42",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.685639
         },
         "amazon_deforestation": {
           "value": "7893",
@@ -8126,7 +8153,7 @@
           "value": 53.3,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 35.63333333
         },
         "income_share_20": {
           "value": 3.2,
@@ -8137,7 +8164,8 @@
         "co2_per_capita": {
           "value": "2.43",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.707258
         },
         "amazon_deforestation": {
           "value": "6947",
@@ -8444,7 +8472,7 @@
           "value": 53.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 35.7516129
         },
         "income_share_20": {
           "value": 3.1,
@@ -8455,7 +8483,8 @@
         "co2_per_capita": {
           "value": "2.32",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.751732
         },
         "amazon_deforestation": {
           "value": "7536",
@@ -8762,7 +8791,7 @@
           "value": 53.5,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.065625
         },
         "income_share_20": {
           "value": 3.1,
@@ -8773,7 +8802,8 @@
         "co2_per_capita": {
           "value": "2.28",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.7500806
         },
         "amazon_deforestation": {
           "value": "10129",
@@ -9085,7 +9115,7 @@
           "value": 48.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.24642857
         },
         "income_share_20": {
           "value": 4.5,
@@ -9096,7 +9126,8 @@
         "co2_per_capita": {
           "value": "2.13",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.453724
         },
         "amazon_deforestation": {
           "value": "10851",
@@ -9408,7 +9439,7 @@
           "value": 52.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 36.99047619
         },
         "income_share_20": {
           "value": 3.3,
@@ -9419,7 +9450,8 @@
         "co2_per_capita": {
           "value": "2.38",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.650446
         },
         "amazon_deforestation": {
           "value": "13038",
@@ -9731,7 +9763,7 @@
           "value": 52,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 38.96363636
         },
         "income_share_20": {
           "value": 3.6,
@@ -9742,7 +9774,8 @@
         "co2_per_capita": {
           "value": "2.30",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.649288
         },
         "amazon_deforestation": {
           "value": "11594",
@@ -10080,7 +10113,8 @@
         "co2_per_capita": {
           "value": "2.30",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.670391
         },
         "amazon_deforestation": {
           "value": "9064",
