@@ -10,19 +10,37 @@ interface ExportOptions {
 export const useChartExport = () => {
     const [isExporting, setIsExporting] = useState(false);
     const [exportedUrl, setExportedUrl] = useState<string | null>(null); const addWatermark = useCallback((canvas: HTMLCanvasElement, options: ExportOptions) => {
-        // Create a new canvas for the watermarked version
+        // Define border and padding
+        const borderWidth = 1;
+        const topPadding = 25;
+        const sidePadding = borderWidth;
+        const bottomPadding = borderWidth;
+
+        // Create a new canvas with border and padding
         const newCanvas = document.createElement('canvas');
-        newCanvas.width = canvas.width;
-        newCanvas.height = canvas.height;
+        newCanvas.width = canvas.width + (sidePadding * 2);
+        newCanvas.height = canvas.height + topPadding + bottomPadding;
         const ctx = newCanvas.getContext('2d')!;
 
-        // Draw the original canvas onto the new canvas
-        ctx.drawImage(canvas, 0, 0);
+        // Fill the entire canvas with black (creates the border)
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, newCanvas.width, newCanvas.height);
+
+        // Fill the inner area with white background (including top padding)
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(borderWidth, borderWidth, canvas.width, canvas.height + topPadding - borderWidth);
+
+        // Draw the original canvas onto the new canvas with padding
+        ctx.drawImage(canvas, sidePadding, topPadding);
 
         const { watermarkText = 'BrasilDados', watermarkUrl = 'https://brasildados.online' } = options;
 
-        // Add watermark elements
+        // Add watermark elements (adjust positions for the new canvas size)
         ctx.save();
+
+        // Calculate center positions considering the padding
+        const centerX = newCanvas.width / 2;
+        const centerY = topPadding + (canvas.height / 2);
 
         // Main watermark text - centered and large (subtle transparency)
         ctx.globalAlpha = 0.15;
@@ -30,7 +48,7 @@ export const useChartExport = () => {
         ctx.font = 'bold 48px Arial';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(watermarkText, newCanvas.width / 2, newCanvas.height / 2);
+        ctx.fillText(watermarkText, centerX, centerY);
 
         // URL - smaller and centered below (subtle transparency)
         ctx.font = '24px Arial';
@@ -38,7 +56,7 @@ export const useChartExport = () => {
         ctx.fillStyle = '#000000';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(watermarkUrl, newCanvas.width / 2, (newCanvas.height / 2) + 35);
+        ctx.fillText(watermarkUrl, centerX, centerY + 35);
 
         ctx.restore();
         return newCanvas;
@@ -130,12 +148,15 @@ export const useChartExport = () => {
             Array.from(allAxisTickText).forEach(text => {
                 const originalFill = text.getAttribute('fill');
                 const originalFontWeight = (text as any).style.fontWeight;
+                const originalTextShadow = (text as any).style.textShadow;
 
                 originalStyles.push({ element: text, attribute: 'fill', value: originalFill });
                 originalStyles.push({ element: text, attribute: 'fontWeight', value: originalFontWeight || '' });
+                originalStyles.push({ element: text, attribute: 'textShadow', value: originalTextShadow || '' });
 
                 text.setAttribute('fill', '#000000');
                 (text as any).style.fontWeight = 'normal';
+                (text as any).style.textShadow = 'none'; // Remove shadow for export
             });
 
             // Move presidency period text elements up by 10px for export
@@ -193,6 +214,8 @@ export const useChartExport = () => {
                         (element as any).style.fontWeight = value || '';
                     } else if (attribute === 'transform') {
                         (element as any).style.transform = value || '';
+                    } else if (attribute === 'textShadow') {
+                        (element as any).style.textShadow = value || '';
                     } else if (value !== null) {
                         // Restore original attribute value
                         element.setAttribute(attribute, value);
@@ -209,8 +232,8 @@ export const useChartExport = () => {
                     line.setAttribute('stroke-width', '2');
                 });
 
-                // Force Y-axis tick text back to white
-                const allYAxisTickText = element.querySelectorAll('.recharts-cartesian-axis-tick text');
+                // Restore Y-axis tick text to white only (X-axis ticks will be restored by originalStyles)
+                const allYAxisTickText = element.querySelectorAll('.recharts-cartesian-axis.yAxis .recharts-cartesian-axis-tick text');
                 Array.from(allYAxisTickText).forEach(text => {
                     text.setAttribute('fill', '#ffffff');
                 });

@@ -284,27 +284,19 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
                     connectNulls={true}
                     legendType='plainline'
                   />
-                  // plainline' | 'line' | 'square' | 'rect' | 'circle' | 'cross' | 'diamond' | 'star' | 'triangle' | 'wye' | 'none'
                 )}
               </React.Fragment>
             );
           })}
         </LineChart>
       </ResponsiveContainer>
-
-      {/* Export Button */}
-      <ChartExportButton 
-        chartId={chartId}
-        chartData={{ data, toggles: enabledToggles, title }}
-        fileName={`brasil-dados-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-      />
       
       {/* Logarithmic Scale Toggle Button - only show if no negative values */}
       {canUseLogScale && (
         <button
           data-export-button
           onClick={() => setIsLogScale(!isLogScale)}
-          className={`absolute bottom-2 right-2 px-3 py-1 text-xs font-medium rounded-lg border transition-all duration-200 z-20 ${
+          className={`absolute bottom-9 sm:bottom-12 right-1.5 p-1.5 px-2 text-[9px] sm:text-xs font-medium rounded-lg border transition-all duration-200 z-20 ${
             isLogScale 
               ? 'bg-brazil-yellow-400 text-brazil-navy border-brazil-yellow-400 hover:bg-brazil-yellow-300' 
               : 'bg-white/10 text-white border-white/30 hover:bg-white/20'
@@ -314,6 +306,14 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
           {isLogScale ? 'Logarítmico' : 'Linear'}
         </button>
       )}
+
+      {/* Export Button */}
+      <ChartExportButton 
+        chartId={chartId}
+        className="bottom-0 right-1 z-10"
+        chartData={{ data, toggles: enabledToggles, title }}
+        fileName={`brasil-dados-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+      />
     </div>
   );
 };

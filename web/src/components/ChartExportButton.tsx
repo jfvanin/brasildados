@@ -27,13 +27,12 @@ export const ChartExportButton: React.FC<ChartExportButtonProps> = ({
   };
 
   return (
-    <div className={`relative ${className}`} data-export-button>
+    <div className={`absolute ${className}`} data-export-button>
       <button
         onClick={handleExport}
         disabled={isExporting}
         className={`
-          absolute -top-20 right-5 z-10
-          bg-brazil-navy border border-blue-900 rounded-lg shadow-sm
+          bg-brazil-navy border border-white/30 rounded-lg shadow-sm
           hover:bg-blue-900 hover:shadow-md
           disabled:opacity-50 disabled:cursor-not-allowed
           transition-all duration-200
@@ -45,19 +44,22 @@ export const ChartExportButton: React.FC<ChartExportButtonProps> = ({
         {isExporting ? (
           <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
         ) : (
-          <svg 
-            className="w-4 h-4" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
-            />
-          </svg>
+          <>
+            <svg 
+              className="w-3 h-3 sm:w-4 sm:h-4" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+              />
+            </svg>
+            <span className="ml-2 text-[9px] sm:text-xs">Exportar Gráfico</span>
+          </>
         )}
       </button>
     </div>
