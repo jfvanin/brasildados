@@ -75,3 +75,14 @@ body {
 .recharts-reference-line {
   filter: drop-shadow(0 0 4px rgba(255, 235, 59, 0.6));
 }
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

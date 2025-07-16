@@ -7,6 +7,8 @@ import PresidencyTimeline from './PresidencyTimeline';
 import YearRangeControls from './YearRangeControls';
 
 const Dashboard: React.FC = () => {
+  const [displayAbout, setDisplayAbout] = useState(false);
+  
   // Chart configurations with titles from data
   const chartConfigs: ChartConfig[] = useMemo(() => [
     {
@@ -156,16 +158,32 @@ const Dashboard: React.FC = () => {
     <div className="min-h-screen bg-brazil-gradient">
       <div className="container mx-auto px-0 sm:px-4 py-8">
         {/* Header */}
-        <header className="text-center mb-8 fade-in">
+        <header className="text-center mb-6 fade-in">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-white to-brazil-yellow-200 bg-clip-text text-transparent">
             <b className='text-green-600'>Brasil</b><b className='text-yellow-300'>Dados</b>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             Visualização interativa de indicadores econômicos, sociais e ambientais do Brasil
           </p>
-          <div className="mt-6 text-white/70 text-sm">
-            Dados de {startYear} a {endYear} • {availableYears.length} anos de história
-          </div>
+          <button className="mt-4 text-white/70 hover:text-white transition-colors underline" onClick={() => setDisplayAbout(!displayAbout)}>Entenda</button>
+            <div
+              className={`px-2 text-white/70 text-xs sm:text-sm max-w-[800px] mx-auto transition-all duration-700 ease-in-out overflow-hidden ${displayAbout ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}
+            >
+              <p className="text-white/70 mt-4">
+              Este dashboard nasceu da crença de que informação de qualidade é fundamental para 
+              um debate público mais qualificado. Aqui você pode acompanhar a evolução de 
+              indicadores econômicos, sociais e ambientais, conectando dados com a realidade 
+              que vivemos e ajudando a distinguir fatos de narrativas. Nosso país merece 
+              decisões baseadas em evidências, e este é um serviço gratuito para todos que 
+              acreditam que compreender nosso passado é essencial para construir um futuro melhor.
+              </p>
+              <p className="text-white/70 mt-3">
+              Você pode explorar os dados selecionando os anos no componente a seguir, 
+              e todos os gráficos serão atualizados. Alguns dados permitem seleção de multiplos indicadores, outros não. 
+              Você pode visualizar os dados em escala linear e logarítmica, além de poder exportar o gráfico.
+              </p>
+              <h2 className='mt-3'>Dados de {startYear} a {endYear} • {availableYears.length} anos de história</h2>
+            </div>
         </header>
 
         {/* Master Timeline for Year Range Selection */}
