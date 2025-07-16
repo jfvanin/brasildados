@@ -12,13 +12,14 @@ const Dashboard: React.FC = () => {
   // Chart configurations with titles from data
   const chartConfigs: ChartConfig[] = useMemo(() => [
     {
-      title: 'Indicadores Econômicos Principais',
+      title: 'Principais Indicadores',
       type: 'multiple',
       toggles: [
         { key: 'gdp_growth', title: dataService.getIndicatorTitle('gdp_growth'), enabled: true, color: '#43A047', showGlobalAverage: true },
         { key: 'inflation', title: dataService.getIndicatorTitle('inflation'), enabled: true, color: '#FBC02D' },
         { key: 'unemployment', title: dataService.getIndicatorTitle('unemployment'), enabled: true, color: '#FF7043' },
-        { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#77CBDA' }
+        { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#77CBDA' },
+        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true }
       ],
       dataKeys: ['gdp_growth', 'inflation', 'unemployment', 'selic_rate']
     },
@@ -28,7 +29,6 @@ const Dashboard: React.FC = () => {
       toggles: [
         { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C', showGlobalAverage: true },
         { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
-        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true },
         { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
         { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50', showGlobalAverage: true },
         { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
