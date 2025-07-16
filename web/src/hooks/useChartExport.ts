@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 import html2canvas from 'html2canvas';
+import { ChartDataExport } from '../types';
 
 interface ExportOptions {
     watermarkText?: string;
@@ -9,38 +10,106 @@ interface ExportOptions {
 
 export const useChartExport = () => {
     const [isExporting, setIsExporting] = useState(false);
-    const [exportedUrl, setExportedUrl] = useState<string | null>(null); const addWatermark = useCallback((canvas: HTMLCanvasElement, options: ExportOptions) => {
+    const [exportedUrl, setExportedUrl] = useState<string | null>(null); const addWatermark = useCallback((canvas: HTMLCanvasElement, options: ExportOptions, chartData?: ChartDataExport) => {
         // Define border and padding
         const borderWidth = 1;
         const topPadding = 25;
+        const titleHeight = chartData?.title ? 40 : 0; // Space for title
+        const titleMarginBottom = chartData?.title ? 15 : 0; // Margin between title and chart
+        const footerHeight = 50; // Height for footer message
         const sidePadding = borderWidth;
         const bottomPadding = borderWidth;
 
         // Create a new canvas with border and padding
         const newCanvas = document.createElement('canvas');
         newCanvas.width = canvas.width + (sidePadding * 2);
-        newCanvas.height = canvas.height + topPadding + bottomPadding;
+        newCanvas.height = canvas.height + topPadding + bottomPadding + titleHeight + titleMarginBottom + footerHeight;
         const ctx = newCanvas.getContext('2d')!;
 
         // Fill the entire canvas with black (creates the border)
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, newCanvas.width, newCanvas.height);
 
-        // Fill the inner area with white background (including top padding)
+        // Fill the inner area with white background (including top padding, excluding footer)
         ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(borderWidth, borderWidth, canvas.width, canvas.height + topPadding - borderWidth);
+        ctx.fillRect(borderWidth, borderWidth, canvas.width, canvas.height + topPadding - borderWidth + titleHeight + titleMarginBottom);
+
+        // Draw the title if provided
+        if (chartData?.title) {
+            ctx.save();
+            ctx.fillStyle = '#000000';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            const titleY = borderWidth + topPadding + (titleHeight / 2);
+            ctx.fillText(chartData.title, newCanvas.width / 2, titleY);
+            ctx.restore();
+        }
 
         // Draw the original canvas onto the new canvas with padding
-        ctx.drawImage(canvas, sidePadding, topPadding);
+        ctx.drawImage(canvas, sidePadding, topPadding + titleHeight + titleMarginBottom);
+
+        // Draw footer section
+        const footerY = topPadding + titleHeight + titleMarginBottom + canvas.height;
+        ctx.fillStyle = '#002147';
+        ctx.fillRect(borderWidth, footerY, canvas.width, footerHeight);
+
+        // Add footer text
+        ctx.save();
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '14px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        const footerMessage = 'Explore dados interativos do Brasil em https://brasildados.online - dezenas de indicadores e gráficos dinâmicos!';
+
+        // Calculate if text fits in one line, otherwise use two lines
+        const maxWidth = canvas.width - 20; // 10px padding on each side
+        const textWidth = ctx.measureText(footerMessage).width;
+
+        if (textWidth <= maxWidth) {
+            // Single line
+            ctx.fillText(footerMessage, newCanvas.width / 2, footerY + (footerHeight / 2));
+        } else {
+            // Split into two lines
+            const words = footerMessage.split(' ');
+            let line1 = '';
+            let line2 = '';
+            let foundBreak = false;
+
+            for (let i = 0; i < words.length; i++) {
+                const testLine = line1 + (line1 ? ' ' : '') + words[i];
+                const testWidth = ctx.measureText(testLine).width;
+
+                if (testWidth > maxWidth && line1 !== '') {
+                    foundBreak = true;
+                    line2 = words.slice(i).join(' ');
+                    break;
+                } else {
+                    line1 = testLine;
+                }
+            }
+
+            if (!foundBreak) {
+                // If no natural break found, force split
+                const midPoint = Math.floor(words.length / 2);
+                line1 = words.slice(0, midPoint).join(' ');
+                line2 = words.slice(midPoint).join(' ');
+            }
+
+            // Draw two lines
+            ctx.fillText(line1, newCanvas.width / 2, footerY + (footerHeight / 2) - 8);
+            ctx.fillText(line2, newCanvas.width / 2, footerY + (footerHeight / 2) + 8);
+        }
+        ctx.restore();
 
         const { watermarkText = 'BrasilDados', watermarkUrl = 'https://brasildados.online' } = options;
 
         // Add watermark elements (adjust positions for the new canvas size)
         ctx.save();
 
-        // Calculate center positions considering the padding
+        // Calculate center positions considering the padding and title
         const centerX = newCanvas.width / 2;
-        const centerY = topPadding + (canvas.height / 2);
+        const centerY = topPadding + titleHeight + titleMarginBottom + (canvas.height / 2);
 
         // Main watermark text - centered and large (subtle transparency)
         ctx.globalAlpha = 0.15;
@@ -74,7 +143,7 @@ export const useChartExport = () => {
 
     const exportChart = useCallback(async (
         chartElementId: string,
-        chartData: any,
+        chartData: ChartDataExport,
         options: ExportOptions = {}
     ): Promise<string> => {
         setIsExporting(true);
@@ -183,7 +252,7 @@ export const useChartExport = () => {
                 });
 
                 // Add watermark
-                const watermarkedCanvas = addWatermark(canvas, options);
+                const watermarkedCanvas = addWatermark(canvas, options, chartData);
 
                 // Convert to blob
                 const blob = await new Promise<Blob>((resolve) => {

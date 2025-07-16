@@ -1,9 +1,10 @@
 import React from 'react';
 import { useChartExport } from '../hooks/useChartExport';
+import { ChartDataExport } from '../types';
 
 interface ChartExportButtonProps {
   chartId: string;
-  chartData: any;
+  chartData: ChartDataExport;
   fileName?: string;
   className?: string;
 }

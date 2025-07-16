@@ -20,6 +20,12 @@ export interface BrazilData {
     years: Record<string, YearData>;
 }
 
+export interface ChartDataExport {
+    data: ChartDataPoint[];
+    toggles: ToggleOption[];
+    title: string;
+}
+
 export interface ChartDataPoint {
     year: number;
     [key: string]: number | string;
