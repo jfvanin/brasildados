@@ -290,6 +290,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 43.6
+        },
+        "homicides": {
+          "value": 19.646343,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -565,6 +570,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 43.3
+        },
+        "homicides": {
+          "value": 18.552387,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -840,6 +850,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 42.6
+        },
+        "homicides": {
+          "value": 16.83152,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -1115,6 +1130,11 @@
           "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 42.2
+        },
+        "homicides": {
+          "value": 17.865892,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -1395,6 +1415,11 @@
           "value": 0.844,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 18.743233,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -1675,6 +1700,11 @@
           "value": 0.972,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 21.022089,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -1955,6 +1985,11 @@
           "value": 1.039,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 23.6866,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -2235,6 +2270,11 @@
           "value": 1.115,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 24.30493,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -2515,6 +2555,11 @@
           "value": 1.207,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 24.799057,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -2800,6 +2845,11 @@
           "value": 1.7897,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 25.002106,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)"
         }
       },
       "government": {
@@ -3085,6 +3135,12 @@
           "value": 1.956,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.074846,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.930091
         }
       },
       "government": {
@@ -3370,6 +3426,12 @@
           "value": 2.315,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 27.20061,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 7.0186663
         }
       },
       "government": {
@@ -3655,6 +3717,12 @@
           "value": 3.533,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 27.848196,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.9801316
         }
       },
       "government": {
@@ -3940,6 +4008,12 @@
           "value": 2.888,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 28.271088,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.7978806
         }
       },
       "government": {
@@ -4225,6 +4299,12 @@
           "value": 2.654,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.491837,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.5749803
         }
       },
       "government": {
@@ -4510,6 +4590,12 @@
           "value": 2.2739,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 25.769392,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.365925
         }
       },
       "government": {
@@ -4800,6 +4886,12 @@
           "value": 2.1293,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.340307,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.247133
         }
       },
       "government": {
@@ -5090,6 +5182,12 @@
           "value": 1.7743,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 25.314459,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.0740776
         }
       },
       "government": {
@@ -5380,6 +5478,12 @@
           "value": 2.3074,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.33593,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.0693526
         }
       },
       "government": {
@@ -5670,6 +5774,12 @@
           "value": 1.7277,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.791449,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.1153026
         }
       },
       "government": {
@@ -5990,6 +6100,12 @@
           "value": 1.668,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.994568,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.091143
         }
       },
       "government": {
@@ -6310,6 +6426,12 @@
           "value": 1.8798,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 26.747099,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.1597085
         }
       },
       "government": {
@@ -6630,6 +6752,12 @@
           "value": 2.043,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 28.641361,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.1843886
         }
       },
       "government": {
@@ -6950,6 +7078,12 @@
           "value": 2.36,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 28.640411,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.090741
         }
       },
       "government": {
@@ -7270,6 +7404,12 @@
           "value": 2.656,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 29.853794,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 6.0830593
         }
       },
       "government": {
@@ -7590,6 +7730,12 @@
           "value": 3.9,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 28.850302,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.9224563
         }
       },
       "government": {
@@ -7910,6 +8056,12 @@
           "value": 3.256,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 30.119362,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.967355
         }
       },
       "government": {
@@ -8230,6 +8382,12 @@
           "value": 3.311,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 31.161175,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.894396
         }
       },
       "government": {
@@ -8550,6 +8708,12 @@
           "value": 3.875,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 27.160616,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.651801
         }
       },
       "government": {
@@ -8875,6 +9039,12 @@
           "value": 4.025,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 21.24456,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.396274
         }
       },
       "government": {
@@ -9200,6 +9370,12 @@
           "value": 5.1966,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 22.870605,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.286739
         }
       },
       "government": {
@@ -9525,6 +9701,12 @@
           "value": 5.662,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 21.742752,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.511355
         }
       },
       "government": {
@@ -9850,6 +10032,12 @@
           "value": 5.2785,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 21.096361,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.2869196
         }
       },
       "government": {
@@ -10190,6 +10378,12 @@
           "value": 4.8413,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br (Banco Central do Brasil)"
+        },
+        "homicides": {
+          "value": 20.575377,
+          "title": "Taxa de Homicidios por 100 mil habitantes",
+          "source": "https://data.worldbank.org (Banco Mundial)",
+          "global_average_value": 5.197053
         }
       },
       "government": {
