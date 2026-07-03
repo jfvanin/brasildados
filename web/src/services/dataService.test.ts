@@ -15,6 +15,14 @@ describe('dataService.getIndicatorsCatalog', () => {
         const catalog = dataService.getIndicatorsCatalog();
         expect(catalog.some(entry => entry.key === 'co2_pc')).toBe(false);
     });
+
+    it('excludes internal gender-split and rank keys', () => {
+        const catalog = dataService.getIndicatorsCatalog();
+        ['hdi_f', 'hdi_m', 'se_f', 'pr_m', 'lfpr_f', 'hdi_rank', 'gii_rank', 'gdi_group'].forEach(key => {
+            expect(catalog.some(entry => entry.key === key)).toBe(false);
+        });
+        expect(catalog.some(entry => entry.key === 'mf')).toBe(true); // not a split key
+    });
 });
 
 describe('dataService.getPresidencyStats', () => {

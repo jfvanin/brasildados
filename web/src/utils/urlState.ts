@@ -4,14 +4,23 @@ import { ToggleOption, YearRange } from '../types';
 // to URL query params, so any chart view is linkable.
 // Format: ?inicio=2000&fim=2025&g0=gdp_growth.inflation&g1=hdi
 
+export type ComparisonMetric = 'average' | 'delta';
+
+export interface ComparisonState {
+    indicator: string;
+    metric: ComparisonMetric;
+}
+
 export interface DashboardUrlState {
     yearRange?: Partial<YearRange>;
     chartSelections: Record<number, string[]>; // chart index -> enabled toggle keys
+    comparison?: Partial<ComparisonState>;
 }
 
 export const encodeStateToParams = (
     yearRange: YearRange,
     chartStates: ToggleOption[][],
+    comparison?: ComparisonState,
 ): URLSearchParams => {
     const params = new URLSearchParams();
     params.set('inicio', String(yearRange.startYear));
@@ -20,6 +29,10 @@ export const encodeStateToParams = (
         const enabled = toggles.filter(t => t.enabled && !t.isGroup).map(t => t.key);
         params.set(`g${index}`, enabled.join('.'));
     });
+    if (comparison) {
+        params.set('comp', comparison.indicator);
+        params.set('metrica', comparison.metric);
+    }
     return params;
 };
 
@@ -47,6 +60,14 @@ export const decodeStateFromParams = (search: string): DashboardUrlState => {
             state.chartSelections[index] = value.split('.').filter(Boolean);
         }
     });
+
+    const comp = params.get('comp');
+    const metrica = params.get('metrica');
+    if (comp || metrica) {
+        state.comparison = {};
+        if (comp) state.comparison.indicator = comp;
+        if (metrica === 'average' || metrica === 'delta') state.comparison.metric = metrica;
+    }
 
     return state;
 };

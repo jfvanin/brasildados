@@ -27,6 +27,17 @@ describe('encodeStateToParams / decodeStateFromParams', () => {
         expect(params.get('g0')).toBe('exports_gdp.imports_gdp');
     });
 
+    it('round-trips the presidency comparison state', () => {
+        const params = encodeStateToParams({ startYear: 2000, endYear: 2025 }, [], { indicator: 'hdi', metric: 'delta' });
+        const decoded = decodeStateFromParams(`?${params.toString()}`);
+        expect(decoded.comparison).toEqual({ indicator: 'hdi', metric: 'delta' });
+    });
+
+    it('drops invalid comparison metric but keeps indicator', () => {
+        const decoded = decodeStateFromParams('?comp=hdi&metrica=bogus');
+        expect(decoded.comparison).toEqual({ indicator: 'hdi' });
+    });
+
     it('returns empty state for malformed input', () => {
         const decoded = decodeStateFromParams('?inicio=abc&g0=&gX=foo');
         expect(decoded.yearRange).toBeUndefined();

@@ -186,7 +186,10 @@ class DataService {
                 }
             });
         });
+        // Hide gender-split members and internal/rank keys shown only via grouped toggles
+        const internalKey = /(_f|_m|_rank)$/;
         return Array.from(keys)
+            .filter(key => !internalKey.test(key) && key !== 'gdi_group')
             .map(key => ({ key, title: this.getIndicatorTitle(key) }))
             .sort((a, b) => a.title.localeCompare(b.title, 'pt-BR'));
     }

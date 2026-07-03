@@ -27,18 +27,18 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
     return firstYear !== undefined && event.year >= firstYear && event.year <= lastYear;
   });
 
-  // Check if current data has negative values (incompatible with log scale)
-  const hasNegativeValues = () => {
-    return data.some(point => 
+  // Check if current data has non-positive values (incompatible with log scale)
+  const hasNonPositiveValues = () => {
+    return data.some(point =>
       enabledToggles.some(toggle => {
         const value = point[toggle.key] as number;
-        return typeof value === 'number' && !isNaN(value) && value < 0;
+        return typeof value === 'number' && !isNaN(value) && value <= 0;
       })
     );
   };
 
-  // Auto-disable log scale if negative values are present
-  const canUseLogScale = !hasNegativeValues();
+  // Auto-disable log scale if non-positive values are present
+  const canUseLogScale = !hasNonPositiveValues();
   
   // Reset to linear scale if log scale becomes invalid
   React.useEffect(() => {

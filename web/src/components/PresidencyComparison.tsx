@@ -1,20 +1,22 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { dataService } from '../services/dataService';
 import { PresidencyStat, YearRange } from '../types';
 import { formatAxisTick, formatWithUnit } from '../utils/format';
+import { ComparisonState, ComparisonMetric } from '../utils/urlState';
 
 interface PresidencyComparisonProps {
   yearRange: YearRange;
+  state: ComparisonState;
+  onStateChange: (state: ComparisonState) => void;
 }
 
-type Metric = 'average' | 'delta';
+type Metric = ComparisonMetric;
 
-const DEFAULT_INDICATOR = 'gdp_growth';
-
-const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange }) => {
-  const [indicator, setIndicator] = useState(DEFAULT_INDICATOR);
-  const [metric, setMetric] = useState<Metric>('average');
+const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, state, onStateChange }) => {
+  const { indicator, metric } = state;
+  const setIndicator = (value: string) => onStateChange({ ...state, indicator: value });
+  const setMetric = (value: Metric) => onStateChange({ ...state, metric: value });
 
   const catalog = useMemo(() => dataService.getIndicatorsCatalog(), []);
   const indicatorTitle = dataService.getIndicatorTitle(indicator);

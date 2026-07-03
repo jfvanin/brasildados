@@ -47,7 +47,7 @@ test.describe('BrasilDados dashboard', () => {
         expect(errors).toEqual([]);
     });
 
-    test('presidency comparison switches indicator and metric', async ({ page }) => {
+    test('presidency comparison switches indicator and metric, reflected in URL', async ({ page }) => {
         await page.goto('/');
 
         const select = page.getByLabel('Selecionar indicador');
@@ -55,6 +55,15 @@ test.describe('BrasilDados dashboard', () => {
         await expect(page.locator('.recharts-bar-rectangle').first()).toBeVisible();
 
         await page.getByRole('button', { name: 'Variação no período' }).click();
+        await expect(page.locator('.recharts-bar-rectangle').first()).toBeVisible();
+        await expect(page).toHaveURL(/comp=hdi/);
+        await expect(page).toHaveURL(/metrica=delta/);
+    });
+
+    test('shared link restores presidency comparison state', async ({ page }) => {
+        await page.goto('/?comp=inflation&metrica=delta');
+
+        await expect(page.getByLabel('Selecionar indicador')).toHaveValue('inflation');
         await expect(page.locator('.recharts-bar-rectangle').first()).toBeVisible();
     });
 });

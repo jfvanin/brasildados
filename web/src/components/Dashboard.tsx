@@ -6,7 +6,7 @@ import Chart from './Chart';
 import PresidencyTimeline from './PresidencyTimeline';
 import PresidencyComparison from './PresidencyComparison';
 import YearRangeControls from './YearRangeControls';
-import { encodeStateToParams, decodeStateFromParams, applySelectionsToToggles, sanitizeYearRange } from '../utils/urlState';
+import { encodeStateToParams, decodeStateFromParams, applySelectionsToToggles, sanitizeYearRange, ComparisonState } from '../utils/urlState';
 
 const Dashboard: React.FC = () => {
   const [displayAbout, setDisplayAbout] = useState(false);
@@ -153,11 +153,21 @@ const Dashboard: React.FC = () => {
     )
   );
 
+  // Presidency comparison controls (lifted here so they are shareable via URL)
+  const [comparison, setComparison] = useState<ComparisonState>(() => {
+    const validIndicator = urlState.comparison?.indicator !== undefined &&
+      dataService.getIndicatorsCatalog().some(entry => entry.key === urlState.comparison!.indicator);
+    return {
+      indicator: validIndicator ? urlState.comparison!.indicator! : 'gdp_growth',
+      metric: urlState.comparison?.metric || 'average',
+    };
+  });
+
   // Keep the URL in sync so any view is shareable
   useEffect(() => {
-    const params = encodeStateToParams(selectedYearRange, chartStates);
+    const params = encodeStateToParams(selectedYearRange, chartStates, comparison);
     window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
-  }, [selectedYearRange, chartStates]);
+  }, [selectedYearRange, chartStates, comparison]);
 
   const handleToggle = (chartIndex: number, key: string) => {
   
@@ -316,7 +326,11 @@ const Dashboard: React.FC = () => {
             <p className="text-white/70 text-sm mb-6">
               Compare como cada indicador se comportou em cada governo.
             </p>
-            <PresidencyComparison yearRange={selectedYearRange} />
+            <PresidencyComparison
+              yearRange={selectedYearRange}
+              state={comparison}
+              onStateChange={setComparison}
+            />
           </div>
         </div>
 
