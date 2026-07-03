@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine } from 'recharts';
 import { ChartDataPoint, ToggleOption, PresidencyPeriod } from '../types';
 import { ChartExportButton } from './ChartExportButton';
+import { HISTORICAL_EVENTS } from '../data/events';
+import { formatAxisTick, formatWithUnit } from '../utils/format';
 
 interface ChartProps {
   data: ChartDataPoint[];
@@ -12,23 +14,31 @@ interface ChartProps {
 
 const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }) => {
   const [isLogScale, setIsLogScale] = useState(true);
+  const [showEvents, setShowEvents] = useState(false);
   const enabledToggles = toggles.filter(toggle => toggle.enabled && !toggle.isGroup);
-  
-  // Generate unique chart ID for export
-  const chartId = `chart-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${Date.now()}`;
 
-  // Check if current data has negative values (incompatible with log scale)
-  const hasNegativeValues = () => {
-    return data.some(point => 
+  // Stable chart ID for export (title is unique per dashboard section)
+  const chartId = `chart-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+
+  // Events inside the visible year window
+  const visibleEvents = HISTORICAL_EVENTS.filter(event => {
+    const firstYear = data[0]?.year;
+    const lastYear = data[data.length - 1]?.year;
+    return firstYear !== undefined && event.year >= firstYear && event.year <= lastYear;
+  });
+
+  // Check if current data has non-positive values (incompatible with log scale)
+  const hasNonPositiveValues = () => {
+    return data.some(point =>
       enabledToggles.some(toggle => {
         const value = point[toggle.key] as number;
-        return typeof value === 'number' && !isNaN(value) && value < 0;
+        return typeof value === 'number' && !isNaN(value) && value <= 0;
       })
     );
   };
 
-  // Auto-disable log scale if negative values are present
-  const canUseLogScale = !hasNegativeValues();
+  // Auto-disable log scale if non-positive values are present
+  const canUseLogScale = !hasNonPositiveValues();
   
   // Reset to linear scale if log scale becomes invalid
   React.useEffect(() => {
@@ -103,13 +113,10 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
             {payload.map((entry: any, index: number) => (
               <p key={index} className="text-sm font-medium">
                 <strong>{entry.name}:</strong> {' '}
-                {typeof entry.value === 'number' ? 
-                  entry.value.toLocaleString('pt-BR', {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2
-                  }) : entry.value
+                {typeof entry.value === 'number'
+                  ? formatWithUnit(entry.value, entry.name || '')
+                  : entry.value
                 }
-                {entry.dataKey.includes('growth') || entry.dataKey.includes('inflation') || entry.dataKey.includes('unemployment') ? '%' : ''}
               </p>
             ))}
           </div>
@@ -216,14 +223,7 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
             tick={{ fill: '#fff', fontSize: 12 }}
             tickFormatter={(value) => {
               if (!isLogScale && value === 0) return '0'; // Always show zero clearly in linear scale
-              if (value >= 1000000000) {
-                return (value / 1000000000).toFixed(1) + 'B';
-              } else if (value >= 1000000) {
-                return (value / 1000000).toFixed(1) + 'M';
-              } else if (value >= 1000) {
-                return (value / 1000).toFixed(1) + 'K';
-              }
-              return value.toFixed(1);
+              return formatAxisTick(value);
             }}
           />
           
@@ -247,8 +247,25 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
             />
           )}
           
+          {/* Historical event markers (optional) */}
+          {showEvents && visibleEvents.map(event => (
+            <ReferenceLine
+              key={event.year}
+              x={event.year}
+              stroke="rgba(255,255,255,0.6)"
+              strokeDasharray="4 4"
+              label={{
+                value: event.label,
+                position: 'insideTopLeft',
+                angle: -90,
+                offset: 12,
+                style: { fill: 'rgba(255,255,255,0.75)', fontSize: '10px' }
+              }}
+            />
+          ))}
+
           <Tooltip content={<CustomTooltip />} />
-          <Legend 
+          <Legend
             wrapperStyle={{ color: '#fff', paddingTop: '20px' }}
           />
           
@@ -291,6 +308,22 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
         </LineChart>
       </ResponsiveContainer>
       
+      {/* Historical events toggle */}
+      {visibleEvents.length > 0 && (
+        <button
+          data-export-button
+          onClick={() => setShowEvents(!showEvents)}
+          className={`absolute bottom-9 sm:bottom-12 left-1.5 p-1.5 px-2 text-[9px] sm:text-xs font-medium rounded-lg border transition-all duration-200 z-20 ${
+            showEvents
+              ? 'bg-brazil-yellow-400 text-brazil-navy border-brazil-yellow-400 hover:bg-brazil-yellow-300'
+              : 'bg-white/10 text-white border-white/30 hover:bg-white/20'
+          }`}
+          title={showEvents ? 'Ocultar eventos históricos' : 'Mostrar eventos históricos'}
+        >
+          Eventos
+        </button>
+      )}
+
       {/* Logarithmic Scale Toggle Button - only show if no negative values */}
       {canUseLogScale && (
         <button
