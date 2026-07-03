@@ -22,51 +22,22 @@ const Dashboard: React.FC = () => {
         { key: 'unemployment', title: dataService.getIndicatorTitle('unemployment'), enabled: true, color: '#FF7043' },
         { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#77CBDA' },
         { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true }
-      ]
+      ],
+      dataKeys: ['gdp_growth', 'inflation', 'unemployment', 'selic_rate']
     },
     {
       title: 'Desenvolvimento Humano',
       type: 'exclusive',
       toggles: [
         { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C', showGlobalAverage: true },
-        { key: 'ihdi', title: dataService.getIndicatorTitle('ihdi'), enabled: false, color: '#81C784' },
+        { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
         { key: 'homicides', title: dataService.getIndicatorTitle('homicides'), enabled: false, color: '#FF7043', showGlobalAverage: true },
         { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
         { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50', showGlobalAverage: true },
-        { key: 'eys', title: dataService.getIndicatorTitle('eys'), enabled: false, color: '#77CBDA' },
         { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
         { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: false, color: '#43A047' },
-      ]
-    },
-    {
-      title: 'Desigualdade e Pobreza',
-      type: 'exclusive',
-      toggles: [
-        { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: true, color: '#FBC02D', showGlobalAverage: true },
-        { key: 'coef_ineq', title: dataService.getIndicatorTitle('coef_ineq'), enabled: false, color: '#FF7043' },
-        { key: 'income_share_20', title: dataService.getIndicatorTitle('income_share_20'), enabled: false, color: '#66BB6A' },
-        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true },
-      ]
-    },
-    {
-      title: 'Gênero',
-      type: 'exclusive',
-      toggles: [
-        { key: 'gdi', title: dataService.getIndicatorTitle('gdi'), enabled: true, color: '#388E3C' },
-        { key: 'gii', title: dataService.getIndicatorTitle('gii'), enabled: false, color: '#FBC02D' },
-        { key: 'hdi_fm', title: 'IDH: Mulheres e Homens', enabled: false, color: '#FDD835', isGroup: true },
-        { key: 'hdi_f', title: dataService.getIndicatorTitle('hdi_f'), enabled: false, color: '#FDD835', hidden: true },
-        { key: 'hdi_m', title: dataService.getIndicatorTitle('hdi_m'), enabled: false, color: '#77CBDA', hidden: true },
-        { key: 'gni_pc_fm', title: 'Renda per capita: Mulheres e Homens', enabled: false, color: '#FDD835', isGroup: true },
-        { key: 'gni_pc_f', title: dataService.getIndicatorTitle('gni_pc_f'), enabled: false, color: '#FDD835', hidden: true },
-        { key: 'gni_pc_m', title: dataService.getIndicatorTitle('gni_pc_m'), enabled: false, color: '#77CBDA', hidden: true },
-        { key: 'mmr', title: dataService.getIndicatorTitle('mmr'), enabled: false, color: '#FF7043' },
-        { key: 'abr', title: dataService.getIndicatorTitle('abr'), enabled: false, color: '#66BB6A' },
       ],
-      groups: {
-        'hdi_fm': ['hdi_f', 'hdi_m'],
-        'gni_pc_fm': ['gni_pc_f', 'gni_pc_m']
-      }
+      dataKeys: [ 'hdi', 'gini', 'poverty_3dollar', 'life_expectancy', 'literacy', 'population']
     },
     {
       title: 'Meio Ambiente',
@@ -74,12 +45,11 @@ const Dashboard: React.FC = () => {
       toggles: [
         { key: 'co2', title: dataService.getIndicatorTitle('co2'), enabled: true, color: '#FBC02D' },
         { key: 'co2_per_capita', title: dataService.getIndicatorTitle('co2_per_capita'), enabled: false, color: '#898989', showGlobalAverage: true },
-        { key: 'renewable_energy', title: dataService.getIndicatorTitle('renewable_energy'), enabled: false, color: '#4CAF50', showGlobalAverage: true },
-        { key: 'mf', title: dataService.getIndicatorTitle('mf'), enabled: false, color: '#77CBDA' },
         { key: 'forest_area', title: dataService.getIndicatorTitle('forest_area'), enabled: false, color: '#43A047', showGlobalAverage: true },
         { key: 'amazon_deforestation', title: dataService.getIndicatorTitle('amazon_deforestation'), enabled: false, color: '#D32F2F' },
         { key: 'wildfires', title: dataService.getIndicatorTitle('wildfires'), enabled: false, color: '#FF7043' }
-      ]
+      ],
+      dataKeys: ['co2_per_capita', 'forest_area', 'amazon_deforestation', 'wildfires']
     },
     {
       title: 'Dados Financeiros',
@@ -97,7 +67,8 @@ const Dashboard: React.FC = () => {
       ],
       groups: {
         'trade_balance': ['exports_gdp', 'imports_gdp']
-      }
+      },
+      dataKeys: ['gdp', 'gdp_capita', 'gnipc', 'public_debt_gross', 'trade_balance']
     },
     {
       title: 'Outros Indicadores',
@@ -105,7 +76,6 @@ const Dashboard: React.FC = () => {
       toggles: [
         { key: 'mys', title: dataService.getIndicatorTitle('mys'), enabled: true, color: '#388E3C' },
         { key: 'health_expenditure', title: dataService.getIndicatorTitle('health_expenditure'), enabled: false, color: '#66BB6A', showGlobalAverage: true  },
-        { key: 'physicians', title: dataService.getIndicatorTitle('physicians'), enabled: false, color: '#77CBDA', showGlobalAverage: true },
         { key: 'gov_edu_expenditure', title: dataService.getIndicatorTitle('gov_edu_expenditure'), enabled: false, color: '#81C784', showGlobalAverage: true  },
         { key: 'se', title: 'Mulheres e Homens na Educação', enabled: false, color: '#FDD835', isGroup: true },
         { key: 'se_f', title: dataService.getIndicatorTitle('se_f'), enabled: false, color: '#FDD835', hidden: true},
@@ -121,9 +91,22 @@ const Dashboard: React.FC = () => {
         'se': ['se_m', 'se_f'],
         'pr': ['pr_m', 'pr_f'],
         'lfpr': ['lfpr_m', 'lfpr_f']
-      }
+      },
+      dataKeys: ['health_expenditure', 'gov_edu_expenditure', 'mys']
     }
   ], []);
+
+  const comparisonIndicators = useMemo(() => {
+    const indicators = new Map<string, string>();
+    chartConfigs.forEach(config => {
+      config.toggles.forEach(toggle => {
+        if (!toggle.isGroup && !indicators.has(toggle.key)) {
+          indicators.set(toggle.key, toggle.title);
+        }
+      });
+    });
+    return Array.from(indicators, ([key, title]) => ({ key, title }));
+  }, [chartConfigs]);
 
   // Get data
   const presidencyPeriods = useMemo(() => dataService.getPresidencyPeriods(), []);
@@ -156,7 +139,7 @@ const Dashboard: React.FC = () => {
   // Presidency comparison controls (lifted here so they are shareable via URL)
   const [comparison, setComparison] = useState<ComparisonState>(() => {
     const validIndicator = urlState.comparison?.indicator !== undefined &&
-      dataService.getIndicatorsCatalog().some(entry => entry.key === urlState.comparison!.indicator);
+      comparisonIndicators.some(entry => entry.key === urlState.comparison!.indicator);
     return {
       indicator: validIndicator ? urlState.comparison!.indicator! : 'gdp_growth',
       metric: urlState.comparison?.metric || 'average',
@@ -328,6 +311,7 @@ const Dashboard: React.FC = () => {
             </p>
             <PresidencyComparison
               yearRange={selectedYearRange}
+              indicators={comparisonIndicators}
               state={comparison}
               onStateChange={setComparison}
             />

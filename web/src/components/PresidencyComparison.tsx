@@ -1,24 +1,24 @@
 import React, { useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { dataService } from '../services/dataService';
-import { PresidencyStat, YearRange } from '../types';
+import { IndicatorCatalogEntry, PresidencyStat, YearRange } from '../types';
 import { formatAxisTick, formatWithUnit } from '../utils/format';
 import { ComparisonState, ComparisonMetric } from '../utils/urlState';
 
 interface PresidencyComparisonProps {
   yearRange: YearRange;
+  indicators: IndicatorCatalogEntry[];
   state: ComparisonState;
   onStateChange: (state: ComparisonState) => void;
 }
 
 type Metric = ComparisonMetric;
 
-const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, state, onStateChange }) => {
+const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, indicators, state, onStateChange }) => {
   const { indicator, metric } = state;
   const setIndicator = (value: string) => onStateChange({ ...state, indicator: value });
   const setMetric = (value: Metric) => onStateChange({ ...state, metric: value });
 
-  const catalog = useMemo(() => dataService.getIndicatorsCatalog(), []);
   const indicatorTitle = dataService.getIndicatorTitle(indicator);
 
   const stats = useMemo(
@@ -59,7 +59,7 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
           aria-label="Selecionar indicador"
           className="bg-white/10 text-white border border-white/30 rounded-lg px-3 py-2 text-sm flex-1 max-w-xl [&>option]:text-brazil-navy"
         >
-          {catalog.map(entry => (
+          {indicators.map(entry => (
             <option key={entry.key} value={entry.key}>{entry.title}</option>
           ))}
         </select>

@@ -45,6 +45,7 @@ export interface ChartConfig {
     title: string;
     type: 'multiple' | 'exclusive';
     toggles: ToggleOption[];
+    dataKeys: string[];
     groups?: Record<string, string[] | undefined>; // For exclusive toggles, group keys to toggle
 }
 

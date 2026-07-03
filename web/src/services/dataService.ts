@@ -1,4 +1,4 @@
-import { BrazilData, ChartDataPoint, IndicatorCatalogEntry, PresidencyPeriod, PresidencyStat, PARTY_COLORS, PartyCode, presidentNicks } from '../types';
+import { BrazilData, ChartDataPoint, PresidencyPeriod, PresidencyStat, PARTY_COLORS, PartyCode, presidentNicks } from '../types';
 import brazilData from '../dados_brasil.json';
 
 class DataService {
@@ -173,25 +173,6 @@ class DataService {
         if (raw === null || raw === undefined) return null;
         const value = parseFloat(raw.toString());
         return isNaN(value) ? null : value;
-    }
-
-    // All indicators that have at least one numeric value, sorted by title (for selectors)
-    getIndicatorsCatalog(): IndicatorCatalogEntry[] {
-        const keys = new Set<string>();
-        Object.values(this.data.years).forEach(yearData => {
-            Object.entries(yearData.data).forEach(([key, dataPoint]) => {
-                if (dataPoint.value !== null && dataPoint.value !== undefined &&
-                    !isNaN(parseFloat(dataPoint.value.toString()))) {
-                    keys.add(key);
-                }
-            });
-        });
-        // Hide gender-split members and internal/rank keys shown only via grouped toggles
-        const internalKey = /(_f|_m|_rank)$/;
-        return Array.from(keys)
-            .filter(key => !internalKey.test(key) && key !== 'gdi_group')
-            .map(key => ({ key, title: this.getIndicatorTitle(key) }))
-            .sort((a, b) => a.title.localeCompare(b.title, 'pt-BR'));
     }
 
     // Per-presidency aggregates of one indicator inside the selected year range

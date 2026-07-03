@@ -31,6 +31,3 @@ web/.vite
 # Misc
 *.swp
 *.swo 
-# Playwright
-web/playwright-report/
-web/test-results/
