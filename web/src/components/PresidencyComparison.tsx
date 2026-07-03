@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { dataService } from '../services/dataService';
-import { IndicatorCatalogEntry, PresidencyStat, YearRange } from '../types';
+import { ChartDataPoint, IndicatorCatalogEntry, PresidencyStat, ToggleOption, YearRange } from '../types';
 import { formatAxisTick, formatWithUnit } from '../utils/format';
 import { ComparisonState, ComparisonMetric } from '../utils/urlState';
+import { ChartExportButton } from './ChartExportButton';
 
 interface PresidencyComparisonProps {
   yearRange: YearRange;
@@ -20,6 +21,7 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
   const setMetric = (value: Metric) => onStateChange({ ...state, metric: value });
 
   const indicatorTitle = dataService.getIndicatorTitle(indicator);
+  const chartId = 'chart-presidency-comparison';
 
   const stats = useMemo(
     () => dataService.getPresidencyStats(indicator, yearRange.startYear, yearRange.endYear),
@@ -32,6 +34,23 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
       value: metric === 'average' ? stat.average : stat.delta,
     }))
     .filter((entry): entry is PresidencyStat & { value: number } => entry.value !== null);
+
+  const exportData: ChartDataPoint[] = chartData.map(entry => ({
+    year: entry.startYear,
+    period: `${entry.startYear}-${entry.endYear}`,
+    value: entry.value,
+    president: entry.president,
+    presidentNick: entry.presidentNick,
+    party: entry.party,
+    yearsWithData: entry.yearsWithData,
+  }));
+
+  const exportToggles: ToggleOption[] = [{
+    key: 'value',
+    title: `${indicatorTitle} (${metric === 'average' ? 'Média anual' : 'Variação no período'})`,
+    enabled: true,
+    color: '#43A047',
+  }];
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (!active || !payload || !payload.length) return null;
@@ -65,7 +84,7 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
         </select>
 
         <div className="flex rounded-lg overflow-hidden border border-white/30 self-start">
-          {([['average', 'Média anual'], ['delta', 'Variação no período']] as Array<[Metric, string]>).map(([value, label]) => (
+          {([['delta', 'Variação no período'], ['average', 'Média anual']] as Array<[Metric, string]>).map(([value, label]) => (
             <button
               key={value}
               onClick={() => setMetric(value)}
@@ -87,36 +106,48 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
         </p>
       ) : (
         <div className="w-full h-80 md:h-96 bg-black/20 rounded-xl py-4 p-0 md:px-4">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} margin={{ top: 20, right: 20, left: 1, bottom: 10 }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.1)" strokeDasharray="2 2" />
-              <XAxis
-                dataKey="presidentNick"
-                stroke="#fff"
-                tick={{ fill: '#fff', fontSize: 12 }}
-                axisLine={{ stroke: '#fff', strokeWidth: 2 }}
-              />
-              <YAxis
-                stroke="#fff"
-                tick={{ fill: '#fff', fontSize: 12 }}
-                tickFormatter={formatAxisTick}
-                axisLine={{ stroke: '#fff', strokeWidth: 2 }}
-              />
-              <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.08)' }} />
-              <ReferenceLine y={0} stroke="rgba(255,255,255,0.5)" />
-              <Bar dataKey="value" name={indicatorTitle} radius={[4, 4, 0, 0]}>
-                {chartData.map(entry => (
-                  <Cell key={`${entry.president}-${entry.startYear}`} fill={entry.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+          <div id={chartId} className="relative h-full w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={chartData} margin={{ top: 20, right: 20, left: 1, bottom: 10 }}>
+                <CartesianGrid stroke="rgba(255,255,255,0.1)" strokeDasharray="2 2" />
+                <XAxis
+                  dataKey="presidentNick"
+                  stroke="#fff"
+                  tick={{ fill: '#fff', fontSize: 12 }}
+                  axisLine={{ stroke: '#fff', strokeWidth: 2 }}
+                />
+                <YAxis
+                  stroke="#fff"
+                  tick={{ fill: '#fff', fontSize: 12 }}
+                  tickFormatter={formatAxisTick}
+                  axisLine={{ stroke: '#fff', strokeWidth: 2 }}
+                />
+                <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.08)' }} />
+                <ReferenceLine y={0} stroke="rgba(255,255,255,0.5)" />
+                <Bar dataKey="value" name={indicatorTitle} radius={[4, 4, 0, 0]}>
+                  {chartData.map(entry => (
+                    <Cell key={`${entry.president}-${entry.startYear}`} fill={entry.color} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+            <ChartExportButton
+              chartId={chartId}
+              className="bottom-2 right-2 z-10"
+              chartData={{
+                data: exportData,
+                toggles: exportToggles,
+                title: `Comparativo por Governo - ${indicatorTitle}`,
+              }}
+              fileName={`brasil-dados-comparativo-governo-${indicator}`}
+            />
+          </div>
         </div>
       )}
 
       <p className="text-white/50 text-xs mt-3">
-        Barras coloridas pelo partido do presidente. "Média anual" é a média dos valores no período de cada governo
-        dentro do intervalo selecionado; "Variação no período" é a diferença entre o último e o primeiro valor disponível.
+         "Variação no período" é a diferença entre o último e o primeiro valor disponível; "Média anual" é a média dos valores no período de cada governo
+        dentro do intervalo selecionado;
       </p>
     </div>
   );

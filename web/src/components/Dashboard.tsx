@@ -6,7 +6,7 @@ import Chart from './Chart';
 import PresidencyTimeline from './PresidencyTimeline';
 import PresidencyComparison from './PresidencyComparison';
 import YearRangeControls from './YearRangeControls';
-import { encodeStateToParams, decodeStateFromParams, applySelectionsToToggles, sanitizeYearRange, ComparisonState } from '../utils/urlState';
+import { encodeStateToParams, decodeStateFromParams, sanitizeYearRange, ComparisonState } from '../utils/urlState';
 
 const Dashboard: React.FC = () => {
   const [displayAbout, setDisplayAbout] = useState(false);
@@ -116,15 +116,11 @@ const Dashboard: React.FC = () => {
   const startYear = availableYears[0] || 1990;
   const endYear = availableYears[availableYears.length - 1] || 2024;
 
-  // Restore shared state from the URL (indicators + year range), falling back to defaults
+  // Restore selected years from the URL, falling back to defaults
   const urlState = useMemo(() => decodeStateFromParams(window.location.search), []);
 
-  const [chartStates, setChartStates] = useState<ToggleOption[][]>(() =>
-    applySelectionsToToggles(
-      chartConfigs.map(config => config.toggles),
-      urlState.chartSelections,
-      chartConfigs.map(config => config.groups)
-    )
+  const [chartStates, setChartStates] = useState<ToggleOption[][]>(
+    chartConfigs.map(config => config.toggles)
   );
 
   // Year range filtering state
@@ -136,21 +132,17 @@ const Dashboard: React.FC = () => {
     )
   );
 
-  // Presidency comparison controls (lifted here so they are shareable via URL)
-  const [comparison, setComparison] = useState<ComparisonState>(() => {
-    const validIndicator = urlState.comparison?.indicator !== undefined &&
-      comparisonIndicators.some(entry => entry.key === urlState.comparison!.indicator);
-    return {
-      indicator: validIndicator ? urlState.comparison!.indicator! : 'gdp_growth',
-      metric: urlState.comparison?.metric || 'average',
-    };
+  // Presidency comparison controls stay local; only years are reflected in the URL
+  const [comparison, setComparison] = useState<ComparisonState>({
+    indicator: 'gdp_growth',
+    metric: 'delta',
   });
 
-  // Keep the URL in sync so any view is shareable
+  // Keep only the year range in sync with the URL
   useEffect(() => {
-    const params = encodeStateToParams(selectedYearRange, chartStates, comparison);
+    const params = encodeStateToParams(selectedYearRange);
     window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
-  }, [selectedYearRange, chartStates, comparison]);
+  }, [selectedYearRange]);
 
   const handleToggle = (chartIndex: number, key: string) => {
   
@@ -181,6 +173,13 @@ const Dashboard: React.FC = () => {
 
   const handleResetYearRange = () => {
     setSelectedYearRange({ startYear, endYear });
+  };
+
+  const handleScrollToComparison = () => {
+    document.getElementById('presidency-comparison')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   };
 
   const getChartData = (chartIndex: number) => {
@@ -251,6 +250,23 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
+        <div className="mb-8 sm:mb-12 fade-in">
+          <button
+            type="button"
+            onClick={handleScrollToComparison}
+            className="group flex min-h-[72px] w-full flex-col items-center justify-center bg-green-500/70 px-4 py-3 text-center shadow-2xl backdrop-blur-sm transition-all duration-200 hover:bg-green-500/85 rounded-2xl border border-white/20 focus:outline-none focus:ring-2 focus:ring-brazil-yellow-400 focus:ring-offset-2 focus:ring-offset-brazil-navy"
+            aria-label="Ir para o comparativo por governo"
+          >
+            <span className="text-lg font-medium leading-tight text-white/95">
+              Compare resultados por presidente
+            </span>
+            <span className="relative mt-6 block h-2 w-20" aria-hidden="true">
+              <span className="absolute left-1/2 top-1 h-1 w-8 origin-right -translate-x-full rotate-45 rounded-full bg-white/90 transition-transform duration-200 group-hover:translate-y-0.5" />
+              <span className="absolute left-1/2 top-1 h-1 w-8 origin-left rotate-[-45deg] rounded-full bg-white/90 transition-transform duration-200 group-hover:translate-y-0.5" />
+            </span>
+          </button>
+        </div>
+
         {/* Charts */}
         {chartConfigs.map((config, chartIndex) => (
           <div key={chartIndex} className="mb-8 sm:mb-16 fade-in" style={{animationDelay: `${chartIndex * 0.2}s`}}>
@@ -295,7 +311,7 @@ const Dashboard: React.FC = () => {
         ))}
 
         {/* Presidency comparison */}
-        <div className="mb-8 sm:mb-16 fade-in">
+        <div id="presidency-comparison" className="mb-8 sm:mb-16 fade-in scroll-mt-6">
           <div className="bg-white/10 backdrop-blur-sm md:rounded-2xl p-3 sm:p-6 md:p-8 md:border md:border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center gap-3">
               <div className="w-2 h-8 bg-gradient-to-b from-brazil-yellow-400 to-brazil-green-500 rounded-full"></div>
