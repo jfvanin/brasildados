@@ -1,4 +1,4 @@
-import { BrazilData, ChartDataPoint, PresidencyPeriod, PARTY_COLORS, PartyCode, presidentNicks } from '../types';
+import { BrazilData, ChartDataPoint, PresidencyPeriod, PresidencyStat, PARTY_COLORS, PartyCode, presidentNicks } from '../types';
 import brazilData from '../dados_brasil.json';
 
 class DataService {
@@ -165,6 +165,47 @@ class DataService {
     // Get main dashboard subtitle/description
     getMainSubtitle(): string {
         return 'Visualização interativa de indicadores econômicos, sociais e ambientais do Brasil';
+    }
+
+    // Numeric value of an indicator for a year, or null when absent/non-numeric
+    private getNumericValue(indicator: string, year: number): number | null {
+        const raw = this.data.years[year.toString()]?.data[indicator]?.value;
+        if (raw === null || raw === undefined) return null;
+        const value = parseFloat(raw.toString());
+        return isNaN(value) ? null : value;
+    }
+
+    // Per-presidency aggregates of one indicator inside the selected year range
+    getPresidencyStats(indicator: string, startYear?: number, endYear?: number): PresidencyStat[] {
+        const stats: PresidencyStat[] = [];
+
+        this.getPresidencyPeriods().forEach(period => {
+            const from = Math.max(period.startYear, startYear ?? period.startYear);
+            const to = Math.min(period.endYear, endYear ?? period.endYear);
+            if (from > to) return;
+
+            const values: number[] = [];
+            for (let year = from; year <= to; year++) {
+                const value = this.getNumericValue(indicator, year);
+                if (value !== null) values.push(value);
+            }
+            if (values.length === 0) return;
+
+            const average = values.reduce((sum, value) => sum + value, 0) / values.length;
+            stats.push({
+                president: period.president,
+                presidentNick: period.presidentNick,
+                party: period.party,
+                color: period.color,
+                startYear: from,
+                endYear: to,
+                average,
+                delta: values.length >= 2 ? values[values.length - 1] - values[0] : null,
+                yearsWithData: values.length,
+            });
+        });
+
+        return stats;
     }
 
     // Check if indicator has global average values

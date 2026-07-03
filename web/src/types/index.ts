@@ -49,6 +49,29 @@ export interface ChartConfig {
     groups?: Record<string, string[] | undefined>; // For exclusive toggles, group keys to toggle
 }
 
+export interface HistoricalEvent {
+    year: number;
+    label: string;
+}
+
+// Aggregated indicator statistics for one presidency period
+export interface PresidencyStat {
+    president: string;
+    presidentNick: string;
+    party: string;
+    color: string;
+    startYear: number; // clipped to the selected range
+    endYear: number;
+    average: number;
+    delta: number | null; // last minus first available value in the period (null if fewer than 2 values)
+    yearsWithData: number;
+}
+
+export interface IndicatorCatalogEntry {
+    key: string;
+    title: string;
+}
+
 export interface PresidencyPeriod {
     president: string;
     presidentNick: string; // Nickname or last name of the president
