@@ -1,46 +1,49 @@
 # Dashboard - Dados do Brasil
 
-Este é um dashboard interativo desenvolvido em Next.js, React, TypeScript e Tailwind CSS para visualização de dados econômicos, sociais e ambientais do Brasil. O conteúdo e as tabelas são renderizados no servidor, com páginas indexáveis para cada indicador.
+Este é um dashboard interativo desenvolvido em Next.js com React, TypeScript e Tailwind CSS para visualização de dados econômicos, sociais e ambientais do Brasil.
 
 ## 🚀 Características
 
-- **Visualizações Interativas**: Gráficos de linha com toggles para habilitar/desabilitar indicadores
-- **Timeline Presidencial**: Linha do tempo com presidentes e partidos, colorizada por partido político
+- **Visualizações Interativas**: gráficos de linha com controles para habilitar ou desabilitar indicadores
+- **Renderização no Servidor**: conteúdo e tabelas disponíveis no HTML para melhorar SEO
+- **Timeline Presidencial**: linha do tempo com presidentes e partidos
+- **Páginas de Indicadores**: páginas individuais com descrição, fonte, tabela histórica e download CSV
 - **Dados Abrangentes**: 5 categorias de indicadores:
   - Indicadores Econômicos Principais
-  - Dados Financeiros
   - Desenvolvimento Humano
   - Meio Ambiente
+  - Dados Financeiros
   - Outros Indicadores
-  - Mais a ser adicionado
 
 ## 🛠️ Tecnologias
 
-- **Next.js (App Router)** - SSR, rotas de indicadores e SEO
-- **React 18** - Interface interativa
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Estilização
-- **Recharts** - Biblioteca de gráficos
+- **Next.js** - App Router e renderização no servidor
+- **React** - interface interativa
+- **TypeScript** - tipagem estática
+- **Tailwind CSS** - estilização
+- **Recharts** - gráficos
 
 ## 🎨 Design
 
-- **Cores**: Azul-marinho de fundo com tons de verde e amarelo (cores do Brasil)
-- **Responsividade**: Adapta-se a diferentes tamanhos de tela
-- **Interatividade**: Toggles para controlar visualização dos dados
-- **Timeline**: Representação visual dos períodos presidenciais
+- **Cores**: azul-marinho com tons de verde e amarelo
+- **Responsividade**: adaptação para diferentes tamanhos de tela
+- **Interatividade**: controles para selecionar indicadores e períodos
+- **Timeline**: representação visual dos períodos presidenciais
 
 ## 📊 Funcionalidades
 
 ### Gráficos Interativos
 
-- Cada gráfico possui toggles na parte superior para habilitar/desabilitar indicadores
-- Tooltips mostram informações detalhadas incluindo o presidente no período
-- Cores dos dados variam conforme o partido político do presidente
+- Controles para habilitar ou desabilitar indicadores
+- Tooltips com dados detalhados e informações presidenciais
+- Escalas linear e logarítmica
+- Eventos históricos e explicações sobre cada indicador
+- Exportação dos gráficos
 
 ### Fontes dos Dados
 
-- Seção no final da página listando todas as fontes dos dados
-- Sem repetições, organizadas alfabeticamente
+- Fontes exibidas em cada gráfico e nas páginas dos indicadores
+- Seção final com todas as fontes utilizadas
 
 ## 🚀 Como executar
 
@@ -62,18 +65,29 @@ npm run dev
 npm run build
 ```
 
+4. **Executar o build de produção:**
+
+```bash
+npm start
+```
+
 ## 🗄️ Fonte dos Dados
 
-Os dados são carregados do arquivo `dados_brasil.json` que contém informações históricas do Brasil com as seguintes fontes:
+Os dados são carregados do arquivo `src/dados_brasil.json`, que contém valores históricos, fontes, informações presidenciais e descrições dos indicadores.
+
+As principais fontes incluem:
 
 - Human Development Report (UNDP)
-- World Bank
+- Banco Mundial
+- IBGE
+- Banco Central
+- INPE
 - Outras fontes governamentais e internacionais
 
 ## 🎯 Características Técnicas
 
-- **Interface de Backend Simulada**: Estruturado como se houvesse um backend, usando service pattern
-- **Tipagem Completa**: TypeScript para maior segurança e manutenibilidade
-- **Componentização**: Componentes reutilizáveis e bem organizados
-- **Responsividade**: Design mobile-first com Tailwind CSS
-- **Performance**: Uso de useMemo para otimização de cálculos pesados
+- **Next.js App Router**: página principal com SSR e páginas individuais de indicadores
+- **Componentização**: componentes reutilizáveis e interativos
+- **Tipagem**: TypeScript para maior segurança e manutenção
+- **Responsividade**: design mobile-first com Tailwind CSS
+- **SEO**: metadata, dados estruturados, sitemap, robots e conteúdo histórico em HTML
