@@ -4,6 +4,7 @@ import { ChartDataPoint, ToggleOption, PresidencyPeriod } from '../types';
 import { ChartExportButton } from './ChartExportButton';
 import { HISTORICAL_EVENTS } from '../data/events';
 import { formatAxisTick, formatWithUnit } from '../utils/format';
+import { dataService } from '../services/dataService';
 
 interface ChartProps {
   data: ChartDataPoint[];
@@ -15,10 +16,24 @@ interface ChartProps {
 const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }) => {
   const [isLogScale, setIsLogScale] = useState(true);
   const [showEvents, setShowEvents] = useState(false);
+  const [showIndicatorInfo, setShowIndicatorInfo] = useState(false);
   const enabledToggles = toggles.filter(toggle => toggle.enabled && !toggle.isGroup);
+  const enabledIndicatorInfo = enabledToggles
+    .map(toggle => ({ toggle, info: dataService.getIndicatorInfo(toggle.key) }))
+    .filter(entry => entry.info !== null);
 
   // Stable chart ID for export (title is unique per dashboard section)
   const chartId = `chart-${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+  const indicatorInfoId = `${chartId}-indicator-info`;
+
+  React.useEffect(() => {
+    if (!showIndicatorInfo) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setShowIndicatorInfo(false);
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, [showIndicatorInfo]);
 
   // Events inside the visible year window
   const visibleEvents = HISTORICAL_EVENTS.filter(event => {
@@ -256,7 +271,7 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
               strokeDasharray="4 4"
               label={{
                 value: event.label,
-                position: 'insideTopLeft',
+                position: 'insideBottomLeft',
                 angle: -90,
                 offset: 12,
                 style: { fill: 'rgba(255,255,255,0.75)', fontSize: '10px' }
@@ -269,59 +284,114 @@ const Chart: React.FC<ChartProps> = ({ data, toggles, title, presidencyPeriods }
             wrapperStyle={{ color: '#fff', paddingTop: '20px' }}
           />
           
-          {enabledToggles.map((toggle) => {
+          {enabledToggles.flatMap((toggle) => {
             // Check if global average data exists for this indicator
             const hasGlobalData = toggle.showGlobalAverage && data.some(point => point[`${toggle.key}_global`] !== undefined);
-            
-            return (
-              <React.Fragment key={toggle.key}>
-                {/* Main indicator line */}
+
+            const lines = [
+              <Line
+                key={toggle.key}
+                type="monotone"
+                dataKey={toggle.key}
+                stroke={toggle.color}
+                strokeWidth={3}
+                dot={{ fill: toggle.color, strokeWidth: 2, r: 2.5 }}
+                activeDot={{ r: 4, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
+                name={toggle.title}
+                connectNulls={true}
+                isAnimationActive={false}
+              />,
+            ];
+
+            if (hasGlobalData) {
+              lines.push(
                 <Line
+                  key={`${toggle.key}_global`}
                   type="monotone"
-                  dataKey={toggle.key}
+                  dataKey={`${toggle.key}_global`}
                   stroke={toggle.color}
-                  strokeWidth={3}
-                  dot={{ fill: toggle.color, strokeWidth: 2, r: 2.5 }}
-                  activeDot={{ r: 4, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
-                  name={toggle.title}
+                  strokeWidth={1.5}
+                  strokeDasharray="8 4"
+                  dot={false}
+                  activeDot={{ r: 3, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
+                  name={`${toggle.title} (Média Global)`}
                   connectNulls={true}
-                />
-                
-                {/* Global average line (dashed) if data exists */}
-                {hasGlobalData && (
-                  <Line
-                    type="monotone"
-                    dataKey={`${toggle.key}_global`}
-                    stroke={toggle.color}
-                    strokeWidth={1.5}
-                    strokeDasharray="8 4"
-                    dot={false}
-                    activeDot={{ r: 3, stroke: toggle.color, strokeWidth: 2, fill: '#fff' }}
-                    name={`${toggle.title} (Média Global)`}
-                    connectNulls={true}
-                    legendType='plainline'
-                  />
-                )}
-              </React.Fragment>
-            );
+                  legendType="plainline"
+                  isAnimationActive={false}
+                />,
+              );
+            }
+
+            return lines;
           })}
         </LineChart>
       </ResponsiveContainer>
       
-      {/* Historical events toggle */}
-      {visibleEvents.length > 0 && (
-        <button
+      <div className="absolute bottom-0 left-1.5 z-20 flex gap-2" data-export-button>
+        {visibleEvents.length > 0 && (
+          <button
+            onClick={() => setShowEvents(!showEvents)}
+            className={`rounded-lg border p-1.5 px-2 text-[9px] font-medium transition-all duration-200 sm:text-xs ${
+              showEvents
+                ? 'border-brazil-yellow-400 bg-brazil-yellow-400 text-brazil-navy hover:bg-brazil-yellow-300'
+                : 'border-white/30 bg-white/10 text-white hover:bg-white/20'
+            }`}
+            title={showEvents ? 'Ocultar eventos históricos' : 'Mostrar eventos históricos'}
+          >
+            Eventos
+          </button>
+        )}
+
+        {enabledIndicatorInfo.length > 0 && (
+          <button
+            onClick={() => setShowIndicatorInfo(!showIndicatorInfo)}
+            className={`rounded-lg border p-1.5 px-2 text-[9px] font-medium transition-all duration-200 sm:text-xs ${
+              showIndicatorInfo
+                ? 'border-brazil-yellow-400 bg-brazil-yellow-400 text-brazil-navy hover:bg-brazil-yellow-300'
+                : 'border-white/30 bg-white/10 text-white hover:bg-white/20'
+            }`}
+            aria-expanded={showIndicatorInfo}
+            aria-controls={indicatorInfoId}
+            title="Entenda os indicadores exibidos"
+          >
+            O que significa?
+          </button>
+        )}
+      </div>
+
+      {showIndicatorInfo && enabledIndicatorInfo.length > 0 && (
+        <div
+          id={indicatorInfoId}
+          role="dialog"
+          aria-label="Explicação dos indicadores"
+          className="absolute bottom-20 left-1.5 z-30 max-h-64 w-[calc(100%-0.75rem)] max-w-md overflow-y-auto rounded-xl border border-gray-200 bg-white p-4 text-brazil-navy shadow-2xl sm:bottom-24"
           data-export-button
-          onClick={() => setShowEvents(!showEvents)}
-          className={`absolute bottom-9 sm:bottom-12 left-1.5 p-1.5 px-2 text-[9px] sm:text-xs font-medium rounded-lg border transition-all duration-200 z-20 ${
-            showEvents
-              ? 'bg-brazil-yellow-400 text-brazil-navy border-brazil-yellow-400 hover:bg-brazil-yellow-300'
-              : 'bg-white/10 text-white border-white/30 hover:bg-white/20'
-          }`}
-          title={showEvents ? 'Ocultar eventos históricos' : 'Mostrar eventos históricos'}
         >
-          Eventos
-        </button>
+          <div className="mb-3 flex items-start justify-between gap-3">
+            <h3 className="font-bold">Entenda os indicadores</h3>
+            <button
+              type="button"
+              onClick={() => setShowIndicatorInfo(false)}
+              className="rounded px-1 text-lg leading-none text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+              aria-label="Fechar explicação"
+            >
+              ×
+            </button>
+          </div>
+          <div className="space-y-4">
+            {enabledIndicatorInfo.map(({ toggle, info }) => (
+              <section key={toggle.key}>
+                <h4 className="text-sm font-bold" style={{ color: toggle.color }}>{toggle.title}</h4>
+                <p className="mt-1 text-xs leading-relaxed text-gray-700">{info!.description}</p>
+                {info!.interpretation && (
+                  <p className="mt-1 text-xs leading-relaxed text-gray-600">
+                    <strong>Como interpretar:</strong> {info!.interpretation}
+                  </p>
+                )}
+              </section>
+            ))}
+          </div>
+        </div>
       )}
 
       {/* Logarithmic Scale Toggle Button - only show if no negative values */}

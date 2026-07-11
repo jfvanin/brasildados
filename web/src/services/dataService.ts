@@ -1,4 +1,4 @@
-import { BrazilData, ChartDataPoint, PresidencyPeriod, PresidencyStat, PARTY_COLORS, PartyCode, presidentNicks } from '../types';
+import { BrazilData, ChartDataPoint, IndicatorInfo, PresidencyPeriod, PresidencyStat, PARTY_COLORS, PartyCode, presidentNicks } from '../types';
 import brazilData from '../dados_brasil.json';
 
 class DataService {
@@ -34,6 +34,22 @@ class DataService {
 
             return dataPoint;
         });
+    }
+
+    getIndicatorSeries(indicator: string) {
+        return this.getAvailableYears().map(year => {
+            const point = this.data.years[year.toString()]?.data[indicator];
+            return {
+                year,
+                value: point?.value ?? null,
+                globalAverage: point?.global_average_value ?? null,
+                source: point?.source || null,
+            };
+        });
+    }
+
+    getIndicatorInfo(indicator: string): IndicatorInfo | null {
+        return this.data.indicator_info?.[indicator] ?? null;
     }
 
     // Get chart data for specific indicators with year range filtering

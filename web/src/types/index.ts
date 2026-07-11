@@ -17,7 +17,13 @@ export interface YearData {
 
 export interface BrazilData {
     meta: Record<string, DataPoint>;
+    indicator_info: Record<string, IndicatorInfo>;
     years: Record<string, YearData>;
+}
+
+export interface IndicatorInfo {
+    description: string;
+    interpretation?: string;
 }
 
 export interface ChartDataExport {
@@ -69,7 +75,11 @@ export interface PresidencyStat {
 
 export interface IndicatorCatalogEntry {
     key: string;
+    slug?: string;
     title: string;
+    category?: string;
+    source?: string | null;
+    hasGlobalAverage?: boolean;
 }
 
 export interface PresidencyPeriod {

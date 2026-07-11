@@ -6,6 +6,8 @@ web/node_modules/
 dist/
 build/
 web/build/
+web/.next/
+web/tsconfig.tsbuildinfo
 
 # Logs
 *.log
@@ -30,4 +32,4 @@ web/.vite
 
 # Misc
 *.swp
-*.swo 
+*.swo

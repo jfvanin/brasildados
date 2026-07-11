@@ -21,6 +21,144 @@
       "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
     }
   },
+  "indicator_info": {
+    "gdp_growth": {
+      "description": "Mede a variação percentual do Produto Interno Bruto real em relação ao ano anterior.",
+      "interpretation": "Em geral, crescimento positivo e sustentável é favorável; quedas indicam retração da atividade econômica."
+    },
+    "inflation": {
+      "description": "Mede a variação anual do nível médio de preços ao consumidor pelo IPCA.",
+      "interpretation": "Em geral, inflação menor e estável é preferível; inflação muito alta reduz o poder de compra, enquanto deflação persistente também pode ser problemática."
+    },
+    "unemployment": {
+      "description": "Representa a parcela da força de trabalho que está sem emprego e procurando trabalho.",
+      "interpretation": "Em geral, quanto menor, melhor, desde que a queda não seja causada pela saída de pessoas da força de trabalho."
+    },
+    "selic_rate": {
+      "description": "É a taxa básica de juros da economia brasileira, definida pelo Banco Central e usada como referência para crédito e investimentos.",
+      "interpretation": "Não existe uma direção universalmente melhor: juros mais altos ajudam a conter a inflação, mas encarecem o crédito; juros mais baixos estimulam a atividade, mas podem aumentar pressões inflacionárias."
+    },
+    "poverty_3dollar": {
+      "description": "Indica a proporção da população que vive com menos de US$ 3 por dia, segundo a metodologia da fonte.",
+      "interpretation": "Quanto menor, melhor, pois representa menos pessoas em situação de pobreza."
+    },
+    "hdi": {
+      "description": "O IDH combina renda, educação e expectativa de vida para resumir o nível de desenvolvimento humano.",
+      "interpretation": "Quanto maior, melhor; o índice varia de 0 a 1."
+    },
+    "gini": {
+      "description": "Mede a desigualdade na distribuição de renda: valores maiores representam maior concentração.",
+      "interpretation": "Quanto menor, melhor em termos de igualdade de renda."
+    },
+    "homicides": {
+      "description": "Número de homicídios registrados para cada 100 mil habitantes.",
+      "interpretation": "Quanto menor, melhor, pois indica menor violência letal."
+    },
+    "life_expectancy": {
+      "description": "Estimativa do número médio de anos que uma pessoa recém-nascida viveria sob as condições de mortalidade do período.",
+      "interpretation": "Em geral, quanto maior, melhor."
+    },
+    "literacy": {
+      "description": "Percentual da população adulta que consegue ler e escrever segundo os critérios da fonte.",
+      "interpretation": "Quanto maior, melhor."
+    },
+    "under5_mortality": {
+      "description": "Número de crianças que morrem antes dos cinco anos para cada mil nascidos vivos.",
+      "interpretation": "Quanto menor, melhor."
+    },
+    "population": {
+      "description": "Estimativa do total de habitantes do Brasil no ano.",
+      "interpretation": "Não existe uma direção melhor por si só; o efeito depende da estrutura etária, produtividade, serviços públicos e condições sociais."
+    },
+    "co2": {
+      "description": "Quantidade total de dióxido de carbono emitida pelo país no período.",
+      "interpretation": "Do ponto de vista climático, quanto menor, melhor; a leitura deve considerar população, atividade econômica e matriz energética."
+    },
+    "co2_per_capita": {
+      "description": "Emissões de dióxido de carbono divididas pela população, expressas por habitante.",
+      "interpretation": "Do ponto de vista climático, quanto menor, melhor."
+    },
+    "forest_area": {
+      "description": "Percentual do território nacional coberto por áreas classificadas como floresta pela fonte.",
+      "interpretation": "Em geral, quanto maior, melhor para conservação ambiental, embora a qualidade e a integridade da floresta também importem."
+    },
+    "amazon_deforestation": {
+      "description": "Área de vegetação desmatada na Amazônia Legal durante o período, em quilômetros quadrados.",
+      "interpretation": "Quanto menor, melhor para a preservação ambiental."
+    },
+    "wildfires": {
+      "description": "Número de focos de incêndio detectados no Brasil no período.",
+      "interpretation": "Em geral, quanto menor, melhor; o número de focos não representa diretamente a área total queimada."
+    },
+    "gdp": {
+      "description": "Valor total dos bens e serviços finais produzidos no país durante o período.",
+      "interpretation": "Crescimento real costuma ser favorável, mas o valor total deve ser analisado junto à inflação, população e distribuição de renda."
+    },
+    "gdp_capita": {
+      "description": "Produto Interno Bruto dividido pela população, usado como aproximação da produção ou renda média por habitante.",
+      "interpretation": "Em geral, quanto maior em termos reais, melhor, mas o indicador não mostra como a renda é distribuída."
+    },
+    "brl_to_usd": {
+      "description": "Cotação de fechamento que expressa quantos reais são necessários para comprar um dólar dos Estados Unidos.",
+      "interpretation": "Não existe uma direção universalmente melhor: alta indica desvalorização do real e baixa indica valorização, com efeitos diferentes sobre inflação, exportações e importações."
+    },
+    "exports_gdp": {
+      "description": "Valor das exportações de bens e serviços como percentual do Produto Interno Bruto.",
+      "interpretation": "Não existe uma direção melhor isoladamente; valores maiores indicam maior peso das exportações na economia."
+    },
+    "imports_gdp": {
+      "description": "Valor das importações de bens e serviços como percentual do Produto Interno Bruto.",
+      "interpretation": "Não existe uma direção melhor isoladamente; o indicador reflete abertura econômica, demanda interna e dependência de bens externos."
+    },
+    "gnipc": {
+      "description": "Renda Nacional Bruta por habitante ajustada pela paridade do poder de compra.",
+      "interpretation": "Em geral, quanto maior, melhor, mas o valor médio não revela a distribuição da renda."
+    },
+    "public_debt_gross": {
+      "description": "Dívida bruta do governo geral expressa como percentual do Produto Interno Bruto.",
+      "interpretation": "Em geral, valores menores reduzem a vulnerabilidade fiscal, mas sustentabilidade, custo, prazo e finalidade da dívida também importam."
+    },
+    "external_debt": {
+      "description": "Total das obrigações financeiras do país com credores no exterior.",
+      "interpretation": "Não existe uma direção melhor isoladamente; deve ser comparada à renda, exportações, reservas e capacidade de pagamento."
+    },
+    "mys": {
+      "description": "Média de anos de estudo concluídos pela população adulta considerada pela fonte.",
+      "interpretation": "Em geral, quanto maior, melhor."
+    },
+    "health_expenditure": {
+      "description": "Gastos totais em saúde como percentual do Produto Interno Bruto.",
+      "interpretation": "Não existe uma direção melhor por si só; resultados, acesso, eficiência e necessidades de saúde precisam ser considerados."
+    },
+    "gov_edu_expenditure": {
+      "description": "Gasto do governo em educação como percentual do Produto Interno Bruto.",
+      "interpretation": "Não existe uma direção melhor por si só; qualidade, cobertura, eficiência e resultados educacionais também importam."
+    },
+    "se_f": {
+      "description": "Percentual feminino no indicador de participação no ensino secundário adotado pela fonte.",
+      "interpretation": "Deve ser analisado em conjunto com a participação masculina e com a busca por igualdade de acesso."
+    },
+    "se_m": {
+      "description": "Percentual masculino no indicador de participação no ensino secundário adotado pela fonte.",
+      "interpretation": "Deve ser analisado em conjunto com a participação feminina e com a busca por igualdade de acesso."
+    },
+    "pr_f": {
+      "description": "Percentual de cadeiras no parlamento nacional ocupadas por mulheres.",
+      "interpretation": "Valores maiores indicam maior representação feminina; a comparação com a composição da população ajuda a avaliar paridade."
+    },
+    "pr_m": {
+      "description": "Percentual de cadeiras no parlamento nacional ocupadas por homens.",
+      "interpretation": "Deve ser analisado junto à representação feminina e à busca por paridade política."
+    },
+    "lfpr_f": {
+      "description": "Percentual de mulheres em idade ativa que participa da força de trabalho, trabalhando ou procurando emprego.",
+      "interpretation": "Valores maiores podem indicar maior inclusão econômica, mas devem ser analisados com emprego, desemprego, renda e condições de trabalho."
+    },
+    "lfpr_m": {
+      "description": "Percentual de homens em idade ativa que participa da força de trabalho, trabalhando ou procurando emprego.",
+      "interpretation": "Deve ser analisado com emprego, desemprego, renda e condições de trabalho; não há uma direção melhor isoladamente."
+    }
+  },
   "years": {
     "1990": {
       "data": {
@@ -10593,9 +10731,10 @@
           "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS (Banco Mundial)"
         },
         "inflation": {
-          "value": 4.3,
-          "title": "inflation",
-          "source": ""
+          "value": 4.26,
+          "title": "Inflação - IPCA (variação anual %)",
+          "source": "https://www.ibge.gov.br (IBGE)",
+          "global_average_value": null
         }
       },
       "government": {

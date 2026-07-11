@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { PresidencyPeriod, YearRange } from '../types';
 
 interface PresidencyTimelineProps {
@@ -22,6 +23,22 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
   const [isDragging, setIsDragging] = useState<'start' | 'end' | null>(null);
   const [hoveredPeriod, setHoveredPeriod] = useState<PresidencyPeriod | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+
+  const getTooltipPosition = () => {
+    const width = 300;
+    const height = 130;
+    const margin = 12;
+    const pointerOffset = 16;
+    const left = Math.min(
+      Math.max(tooltipPosition.x - width / 2, margin),
+      window.innerWidth - width - margin,
+    );
+    const top = tooltipPosition.y - height - pointerOffset >= margin
+      ? tooltipPosition.y - height - pointerOffset
+      : Math.min(tooltipPosition.y + pointerOffset, window.innerHeight - height - margin);
+
+    return { left, top };
+  };
 
   const totalYears = endYear - startYear + 1;
   // const displayStartYear = selectedRange?.startYear || startYear;
@@ -285,13 +302,11 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
     </div>
 
     {/* President Tooltip */}
-    {hoveredPeriod && (
-      <div 
-        className="fixed z-50 pointer-events-none"
-        style={{
-          left: `${Math.min(tooltipPosition.x + 15, window.innerWidth - 320)}px`,
-          top: `${Math.min(tooltipPosition.y + 15, window.innerHeight - 150)}px`,
-        }}
+    {hoveredPeriod && createPortal(
+      <div
+        className="fixed z-[100] pointer-events-none"
+        style={getTooltipPosition()}
+        role="tooltip"
       >
         <div className="bg-white rounded-lg shadow-xl border border-gray-200 p-4 max-w-xs min-w-[280px]">
           <div className="flex items-center gap-3">
@@ -332,7 +347,8 @@ const PresidencyTimeline: React.FC<PresidencyTimelineProps> = ({
             </div>
           </div>
         </div>
-      </div>
+      </div>,
+      document.body,
     )}
     </div>
   );

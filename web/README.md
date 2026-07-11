@@ -1,6 +1,6 @@
 # Dashboard - Dados do Brasil
 
-Este é um dashboard interativo desenvolvido em ReactJS com TypeScript e Tailwind CSS para visualização de dados econômicos, sociais e ambientais do Brasil.
+Este é um dashboard interativo desenvolvido em Next.js, React, TypeScript e Tailwind CSS para visualização de dados econômicos, sociais e ambientais do Brasil. O conteúdo e as tabelas são renderizados no servidor, com páginas indexáveis para cada indicador.
 
 ## 🚀 Características
 
@@ -16,7 +16,8 @@ Este é um dashboard interativo desenvolvido em ReactJS com TypeScript e Tailwin
 
 ## 🛠️ Tecnologias
 
-- **ReactJS 18** - Framework principal
+- **Next.js (App Router)** - SSR, rotas de indicadores e SEO
+- **React 18** - Interface interativa
 - **TypeScript** - Tipagem estática
 - **Tailwind CSS** - Estilização
 - **Recharts** - Biblioteca de gráficos
@@ -52,7 +53,7 @@ npm install
 2. **Executar em modo de desenvolvimento:**
 
 ```bash
-npm start
+npm run dev
 ```
 
 3. **Compilar para produção:**

@@ -1,100 +1,22 @@
+'use client';
+
 import React, { useState, useMemo, useEffect } from 'react';
 import { dataService } from '../services/dataService';
-import { ToggleOption, ChartConfig, YearRange } from '../types';
+import { ToggleOption, YearRange } from '../types';
 import ToggleSection from './ToggleSection';
 import Chart from './Chart';
 import PresidencyTimeline from './PresidencyTimeline';
 import PresidencyComparison from './PresidencyComparison';
 import YearRangeControls from './YearRangeControls';
-import { encodeStateToParams, decodeStateFromParams, sanitizeYearRange, ComparisonState } from '../utils/urlState';
+import IndicatorDataTable from './IndicatorDataTable';
+import { CHART_CONFIGS } from '../data/chartConfig';
+import { encodeStateToParams, ComparisonState } from '../utils/urlState';
 
-const Dashboard: React.FC = () => {
+interface DashboardProps { initialYearRange: YearRange }
+
+const Dashboard: React.FC<DashboardProps> = ({ initialYearRange }) => {
   const [displayAbout, setDisplayAbout] = useState(false);
-  
-  // Chart configurations with titles from data
-  const chartConfigs: ChartConfig[] = useMemo(() => [
-    {
-      title: 'Principais Indicadores',
-      type: 'multiple',
-      toggles: [
-        { key: 'gdp_growth', title: dataService.getIndicatorTitle('gdp_growth'), enabled: true, color: '#43A047', showGlobalAverage: true },
-        { key: 'inflation', title: dataService.getIndicatorTitle('inflation'), enabled: true, color: '#FBC02D' },
-        { key: 'unemployment', title: dataService.getIndicatorTitle('unemployment'), enabled: true, color: '#FF7043' },
-        { key: 'selic_rate', title: dataService.getIndicatorTitle('selic_rate'), enabled: false, color: '#77CBDA' },
-        { key: 'poverty_3dollar', title: dataService.getIndicatorTitle('poverty_3dollar'), enabled: false, color: '#AAAAAA', showGlobalAverage: true }
-      ],
-      dataKeys: ['gdp_growth', 'inflation', 'unemployment', 'selic_rate']
-    },
-    {
-      title: 'Desenvolvimento Humano',
-      type: 'exclusive',
-      toggles: [
-        { key: 'hdi', title: dataService.getIndicatorTitle('hdi'), enabled: true, color: '#388E3C', showGlobalAverage: true },
-        { key: 'gini', title: dataService.getIndicatorTitle('gini'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
-        { key: 'homicides', title: dataService.getIndicatorTitle('homicides'), enabled: false, color: '#FF7043', showGlobalAverage: true },
-        { key: 'life_expectancy', title: dataService.getIndicatorTitle('life_expectancy'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
-        { key: 'literacy', title: dataService.getIndicatorTitle('literacy'), enabled: false, color: '#4CAF50', showGlobalAverage: true },
-        { key: 'under5_mortality', title: dataService.getIndicatorTitle('under5_mortality'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
-        { key: 'population', title: dataService.getIndicatorTitle('population'), enabled: false, color: '#43A047' },
-      ],
-      dataKeys: [ 'hdi', 'gini', 'poverty_3dollar', 'life_expectancy', 'literacy', 'population']
-    },
-    {
-      title: 'Meio Ambiente',
-      type: 'exclusive',
-      toggles: [
-        { key: 'co2', title: dataService.getIndicatorTitle('co2'), enabled: true, color: '#FBC02D' },
-        { key: 'co2_per_capita', title: dataService.getIndicatorTitle('co2_per_capita'), enabled: false, color: '#898989', showGlobalAverage: true },
-        { key: 'forest_area', title: dataService.getIndicatorTitle('forest_area'), enabled: false, color: '#43A047', showGlobalAverage: true },
-        { key: 'amazon_deforestation', title: dataService.getIndicatorTitle('amazon_deforestation'), enabled: false, color: '#D32F2F' },
-        { key: 'wildfires', title: dataService.getIndicatorTitle('wildfires'), enabled: false, color: '#FF7043' }
-      ],
-      dataKeys: ['co2_per_capita', 'forest_area', 'amazon_deforestation', 'wildfires']
-    },
-    {
-      title: 'Dados Financeiros',
-      type: 'exclusive',
-      toggles: [
-        { key: 'gdp', title: dataService.getIndicatorTitle('gdp'), enabled: true, color: '#43A047' },
-        { key: 'gdp_capita', title: dataService.getIndicatorTitle('gdp_capita'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
-        { key: 'brl_to_usd', title: dataService.getIndicatorTitle('brl_to_usd'), enabled: false, color: '#FDD835' },
-        { key: 'trade_balance', title: 'Balança Comercial', enabled: false, color: '#FDD835', isGroup: true },
-        { key: 'exports_gdp', title: dataService.getIndicatorTitle('exports_gdp'), enabled: false, color: '#43A047', hidden: true },
-        { key: 'imports_gdp', title: dataService.getIndicatorTitle('imports_gdp'), enabled: false, color: '#FDD835', hidden: true },
-        { key: 'gnipc', title: dataService.getIndicatorTitle('gnipc'), enabled: false, color: '#81C784' },
-        { key: 'public_debt_gross', title: dataService.getIndicatorTitle('public_debt_gross'), enabled: false, color: '#D32F2F' },
-        { key: 'external_debt', title: dataService.getIndicatorTitle('external_debt'), enabled: false, color: '#FF7043' }
-      ],
-      groups: {
-        'trade_balance': ['exports_gdp', 'imports_gdp']
-      },
-      dataKeys: ['gdp', 'gdp_capita', 'gnipc', 'public_debt_gross', 'trade_balance']
-    },
-    {
-      title: 'Outros Indicadores',
-      type: 'exclusive',
-      toggles: [
-        { key: 'mys', title: dataService.getIndicatorTitle('mys'), enabled: true, color: '#388E3C' },
-        { key: 'health_expenditure', title: dataService.getIndicatorTitle('health_expenditure'), enabled: false, color: '#66BB6A', showGlobalAverage: true  },
-        { key: 'gov_edu_expenditure', title: dataService.getIndicatorTitle('gov_edu_expenditure'), enabled: false, color: '#81C784', showGlobalAverage: true  },
-        { key: 'se', title: 'Mulheres e Homens na Educação', enabled: false, color: '#FDD835', isGroup: true },
-        { key: 'se_f', title: dataService.getIndicatorTitle('se_f'), enabled: false, color: '#FDD835', hidden: true},
-        { key: 'se_m', title: dataService.getIndicatorTitle('se_m'), enabled: false, color: '#77CBDA', hidden: true },
-        { key: 'pr', title: 'Mulheres e Homens no Parlamento', enabled: false, color: '#FDD835', isGroup: true },
-        { key: 'pr_f', title: dataService.getIndicatorTitle('pr_f'), enabled: false, color: '#FDD835', hidden: true },
-        { key: 'pr_m', title: dataService.getIndicatorTitle('pr_m'), enabled: false, color: '#77CBDA', hidden: true },
-        { key: 'lfpr', title: 'Mulheres e Homens na Força de Trabalho', enabled: false, color: '#FDD835', isGroup: true },
-        { key: 'lfpr_f', title: dataService.getIndicatorTitle('lfpr_f'), enabled: false, color: '#FDD835', hidden: true},
-        { key: 'lfpr_m', title: dataService.getIndicatorTitle('lfpr_m'), enabled: false, color: '#77CBDA', hidden: true},
-      ],
-      groups: {
-        'se': ['se_m', 'se_f'],
-        'pr': ['pr_m', 'pr_f'],
-        'lfpr': ['lfpr_m', 'lfpr_f']
-      },
-      dataKeys: ['health_expenditure', 'gov_edu_expenditure', 'mys']
-    }
-  ], []);
+  const chartConfigs = CHART_CONFIGS;
 
   const comparisonIndicators = useMemo(() => {
     const indicators = new Map<string, string>();
@@ -116,21 +38,12 @@ const Dashboard: React.FC = () => {
   const startYear = availableYears[0] || 1990;
   const endYear = availableYears[availableYears.length - 1] || 2024;
 
-  // Restore selected years from the URL, falling back to defaults
-  const urlState = useMemo(() => decodeStateFromParams(window.location.search), []);
-
   const [chartStates, setChartStates] = useState<ToggleOption[][]>(
     chartConfigs.map(config => config.toggles)
   );
 
   // Year range filtering state
-  const [selectedYearRange, setSelectedYearRange] = useState<YearRange>(() =>
-    sanitizeYearRange(
-      urlState.yearRange,
-      { startYear: 2000, endYear },
-      { startYear, endYear }
-    )
-  );
+  const [selectedYearRange, setSelectedYearRange] = useState<YearRange>(initialYearRange);
 
   // Presidency comparison controls stay local; only years are reflected in the URL
   const [comparison, setComparison] = useState<ComparisonState>({
@@ -326,6 +239,8 @@ const Dashboard: React.FC = () => {
                 selectedRange={selectedYearRange}
                 isInteractive={false}
               />
+
+              <IndicatorDataTable category={config.title} indicators={config.toggles} />
             </div>
           </div>
         ))}
