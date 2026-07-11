@@ -115,9 +115,9 @@ const Dashboard: React.FC<DashboardProps> = ({ initialYearRange }) => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-white to-brazil-yellow-200 bg-clip-text text-transparent">
             <b className='text-green-600'>Brasil</b><b className='text-yellow-300'>Dados</b>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+          <h2 className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             Visualização interativa de indicadores econômicos, sociais e ambientais do Brasil
-          </p>
+          </h2>
           <button className="mt-4 text-white/70 hover:text-white transition-colors underline" onClick={() => setDisplayAbout(!displayAbout)}>Entenda</button>
             <div
               className={`px-2 text-white/70 text-xs sm:text-sm max-w-[800px] mx-auto transition-all duration-700 ease-in-out overflow-hidden ${displayAbout ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}
