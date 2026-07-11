@@ -7,6 +7,8 @@ dist/
 build/
 web/build/
 web/.next/
+web/.open-next/
+web/.wrangler/
 web/tsconfig.tsbuildinfo
 
 # Logs

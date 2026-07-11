@@ -71,6 +71,14 @@ npm run build
 npm start
 ```
 
+Para gerar e testar o Worker da Cloudflare:
+
+```bash
+npm run preview
+```
+
+O deploy usa o adaptador OpenNext e as configurações de `wrangler.jsonc`.
+
 ## 🗄️ Fonte dos Dados
 
 Os dados são carregados do arquivo `src/dados_brasil.json`, que contém valores históricos, fontes, informações presidenciais e descrições dos indicadores.
