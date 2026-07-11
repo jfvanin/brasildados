@@ -105,7 +105,7 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
           Sem dados para este indicador no período selecionado.
         </p>
       ) : (
-        <div className="w-full h-80 md:h-96 bg-black/20 rounded-xl py-4 p-0 md:px-4">
+        <div className="w-full h-80 md:h-96 bg-black/20 rounded-xl py-4 p-0 md:px-4 pb-12">
           <div id={chartId} className="relative h-full w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={chartData} margin={{ top: 20, right: 20, left: 1, bottom: 10 }}>
@@ -133,7 +133,7 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
             </ResponsiveContainer>
             <ChartExportButton
               chartId={chartId}
-              className="bottom-2 right-2 z-10"
+              className="bottom-2 right-2 z-10 -mb-10"
               chartData={{
                 data: exportData,
                 toggles: exportToggles,
@@ -146,7 +146,7 @@ const PresidencyComparison: React.FC<PresidencyComparisonProps> = ({ yearRange, 
       )}
 
       <p className="text-white/50 text-xs mt-3">
-         "Variação no período" é a diferença entre o último e o primeiro valor disponível; "Média anual" é a média dos valores no período de cada governo
+         "Variação no período" é a diferença entre o último resultado do governo anterior e o último valor do governo em questão; "Média anual" é a média dos valores no período de cada governo
         dentro do intervalo selecionado;
       </p>
     </div>

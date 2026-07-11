@@ -218,6 +218,12 @@ const Dashboard: React.FC = () => {
               acreditam que compreender nosso passado é essencial para construir um futuro melhor.
               </p>
               <p className="text-white/70 mt-3">
+              Para os anos mais recentes, alguns indicadores ainda não estão disponíveis nas fontes oficiais que utilizamos — 
+              como Banco Mundial, IBGE e ONU. Nesses casos, optamos por manter o dado em branco em vez de usar fontes 
+              alternativas de menor rigor, priorizando sempre a precisão e a compatibilidade com os padrões internacionais 
+              de mensuração. Acreditamos que um dado ausente é mais honesto do que um dado impreciso.
+              </p>
+              <p className="text-white/70 mt-3">
               Você pode explorar os dados selecionando os anos no componente a seguir, 
               e todos os gráficos serão atualizados. Alguns dados permitem seleção de multiplos indicadores, outros não. 
               Você pode visualizar os dados em escala linear e logarítmica, além de poder exportar o gráfico.
@@ -258,7 +264,7 @@ const Dashboard: React.FC = () => {
             aria-label="Ir para o comparativo por governo"
           >
             <span className="text-lg font-medium leading-tight text-white/95">
-              Compare resultados por presidente
+              Compare resultados por governo
             </span>
             <span className="relative mt-6 block h-2 w-20" aria-hidden="true">
               <span className="absolute left-1/2 top-1 h-1 w-8 origin-right -translate-x-full rotate-45 rounded-full bg-white/90 transition-transform duration-200 group-hover:translate-y-0.5" />
@@ -287,6 +293,20 @@ const Dashboard: React.FC = () => {
                 toggles={chartStates[chartIndex]}
                 onToggle={(key) => handleToggle(chartIndex, key)}
               />
+
+              <div className="mb-4 text-xs text-white/50">
+                <h3 className="text-md font-semibold text-white mb-3">Fonte:</h3>
+                {Array.from(
+                  new Set(
+                    chartStates[chartIndex]
+                      .filter(t => t.enabled && !t.isGroup)
+                      .map(t => dataService.getIndicatorSource(t.key))
+                      .filter((s): s is string => !!s)
+                  )
+                ).map((source, i) => (
+                  <span key={i} className="block">{source}</span>
+                ))}
+              </div>
 
               {/* Chart */}
               <div className="mb-6 bg-black/20 rounded-xl py-4 p-0 md:px-4">

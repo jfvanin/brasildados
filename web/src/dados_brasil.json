@@ -228,12 +228,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 93.6
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 49.8,
           "title": "Consumo de energia renovável (% do total final)",
@@ -265,9 +259,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.47",
+          "value": "1.466092",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.266701
         },
         "amazon_deforestation": {
           "value": "13730",
@@ -507,12 +502,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 93.3
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 48.9,
           "title": "Consumo de energia renovável (% do total final)",
@@ -544,10 +533,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.51",
+          "value": "1.5119112",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.278877
+          "global_average_value": 4.282473
         },
         "amazon_deforestation": {
           "value": "11030",
@@ -787,12 +776,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 92.7
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 48.7,
           "title": "Consumo de energia renovável (% do total final)",
@@ -824,10 +807,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.51",
+          "value": "1.5141841",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.091575
+          "global_average_value": 4.090168
         },
         "amazon_deforestation": {
           "value": "13786",
@@ -1067,12 +1050,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 90.8
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 48.2,
           "title": "Consumo de energia renovável (% do total final)",
@@ -1104,9 +1081,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.56",
+          "value": "1.5581249",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.06862
         },
         "amazon_deforestation": {
           "value": "14896",
@@ -1346,12 +1324,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 89.6
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 48.3,
           "title": "Consumo de energia renovável (% do total final)",
@@ -1383,9 +1355,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.59",
+          "value": "1.5948403",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.047994
         },
         "amazon_deforestation": {
           "value": "14896",
@@ -1630,12 +1603,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 87.8
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 46.1,
           "title": "Consumo de energia renovável (% do total final)",
@@ -1667,10 +1634,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.66",
+          "value": "1.66122",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.0862265
+          "global_average_value": 4.0835447
         },
         "amazon_deforestation": {
           "value": "29059",
@@ -1915,12 +1882,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 86
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 44.5,
           "title": "Consumo de energia renovável (% do total final)",
@@ -1952,10 +1913,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.76",
+          "value": "1.7619148",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.152334
+          "global_average_value": 4.1481075
         },
         "amazon_deforestation": {
           "value": "18161",
@@ -2200,12 +2161,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 84
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 43.7,
           "title": "Consumo de energia renovável (% do total final)",
@@ -2237,10 +2192,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.84",
+          "value": "1.8417497",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.118613
+          "global_average_value": 4.1149697
         },
         "amazon_deforestation": {
           "value": "13227",
@@ -2485,12 +2440,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 82.3
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 43.8,
           "title": "Consumo de energia renovável (% do total final)",
@@ -2522,9 +2471,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.88",
+          "value": "1.8760941",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.044522
         },
         "amazon_deforestation": {
           "value": "17383",
@@ -2769,12 +2719,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 79.3
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 44,
           "title": "Consumo de energia renovável (% do total final)",
@@ -2806,10 +2750,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.91",
+          "value": "1.9066226",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.081738
+          "global_average_value": 4.0791173
         },
         "amazon_deforestation": {
           "value": "17259",
@@ -3059,12 +3003,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 76.7
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 42.7,
           "title": "Consumo de energia renovável (% do total final)",
@@ -3096,10 +3034,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.96",
+          "value": "1.9548683",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.1334705
+          "global_average_value": 4.1076345
         },
         "amazon_deforestation": {
           "value": "18226",
@@ -3350,12 +3288,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 74.1
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 41.3,
           "title": "Consumo de energia renovável (% do total final)",
@@ -3387,10 +3319,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.96",
+          "value": "1.9634905",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.1097608
+          "global_average_value": 4.1442804
         },
         "amazon_deforestation": {
           "value": "18165",
@@ -3641,12 +3573,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 71.5
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 42.9,
           "title": "Consumo de energia renovável (% do total final)",
@@ -3678,10 +3604,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.95",
+          "value": "1.948225",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.146101
+          "global_average_value": 4.30703
         },
         "amazon_deforestation": {
           "value": "21650",
@@ -3932,12 +3858,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 68.6
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 45.1,
           "title": "Consumo de energia renovável (% do total final)",
@@ -3969,10 +3889,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.91",
+          "value": "1.9080932",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.3096466
+          "global_average_value": 4.3992558
         },
         "amazon_deforestation": {
           "value": "25396",
@@ -4223,12 +4143,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 66.2
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 45.2,
           "title": "Consumo de energia renovável (% do total final)",
@@ -4260,10 +4174,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.98",
+          "value": "1.9785615",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.4027133
+          "global_average_value": 4.493561
         },
         "amazon_deforestation": {
           "value": "27772",
@@ -4514,12 +4428,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 63.3
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 46.1,
           "title": "Consumo de energia renovável (% do total final)",
@@ -4551,10 +4459,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.97",
+          "value": "1.9728968",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.4959054
+          "global_average_value": 4.585831
         },
         "amazon_deforestation": {
           "value": "19014",
@@ -4805,12 +4713,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 60.6
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 46.7,
           "title": "Consumo de energia renovável (% do total final)",
@@ -4842,10 +4744,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "1.98",
+          "value": "1.976238",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.5909643
+          "global_average_value": 4.661509
         },
         "amazon_deforestation": {
           "value": "14286",
@@ -5101,12 +5003,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 58
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 47.2,
           "title": "Consumo de energia renovável (% do total final)",
@@ -5138,9 +5034,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.07",
+          "value": "2.0714328",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.682571
         },
         "amazon_deforestation": {
           "value": "11651",
@@ -5396,12 +5293,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 55.8
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 47,
           "title": "Consumo de energia renovável (% do total final)",
@@ -5433,10 +5324,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.17",
+          "value": "2.167588",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.6861563
+          "global_average_value": 4.545518
         },
         "amazon_deforestation": {
           "value": "12911",
@@ -5692,12 +5583,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 54
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 48.9,
           "title": "Consumo de energia renovável (% do total final)",
@@ -5729,10 +5614,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.03",
+          "value": "2.0292346",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.549688
+          "global_average_value": 4.750936
         },
         "amazon_deforestation": {
           "value": "7464",
@@ -6018,12 +5903,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 51.7
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 46.8,
           "title": "Consumo de energia renovável (% do total final)",
@@ -6055,10 +5934,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.27",
+          "value": "2.2729204",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.750381
+          "global_average_value": 4.848876
         },
         "amazon_deforestation": {
           "value": "7000",
@@ -6344,12 +6223,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 50.6
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 45.2,
           "title": "Consumo de energia renovável (% do total final)",
@@ -6381,10 +6254,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.37",
+          "value": "2.3653224",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.852329
+          "global_average_value": 4.854014
         },
         "amazon_deforestation": {
           "value": "6418",
@@ -6670,12 +6543,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 47.8
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 43.5,
           "title": "Consumo de energia renovável (% do total final)",
@@ -6707,10 +6574,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.53",
+          "value": "2.5268083",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.8603024
+          "global_average_value": 4.837743
         },
         "amazon_deforestation": {
           "value": "4571",
@@ -6996,12 +6863,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 46.1
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 42.3,
           "title": "Consumo de energia renovável (% do total final)",
@@ -7033,10 +6894,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.68",
+          "value": "2.6782215",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.8412857
+          "global_average_value": 4.8045974
         },
         "amazon_deforestation": {
           "value": "5891",
@@ -7322,12 +7183,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 44.9
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 41.7,
           "title": "Consumo de energia renovável (% do total final)",
@@ -7359,9 +7214,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.78",
+          "value": "2.7814436",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": 4.7391157
         },
         "amazon_deforestation": {
           "value": "5012",
@@ -7647,12 +7503,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 43.7
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 43.7,
           "title": "Consumo de energia renovável (% do total final)",
@@ -7684,10 +7534,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.62",
+          "value": "2.6189272",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.7392993
+          "global_average_value": 4.6824865
         },
         "amazon_deforestation": {
           "value": "6207",
@@ -7973,12 +7823,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 42.4
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 45.4,
           "title": "Consumo de energia renovável (% do total final)",
@@ -8010,10 +7854,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.42",
+          "value": "2.4197884",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.685639
+          "global_average_value": 4.705259
         },
         "amazon_deforestation": {
           "value": "7893",
@@ -8299,12 +8143,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 41.3
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 45.3,
           "title": "Consumo de energia renovável (% do total final)",
@@ -8336,10 +8174,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.43",
+          "value": "2.429146",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.707258
+          "global_average_value": 4.752195
         },
         "amazon_deforestation": {
           "value": "6947",
@@ -8625,12 +8463,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 40.2
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 46.9,
           "title": "Consumo de energia renovável (% do total final)",
@@ -8653,7 +8485,7 @@
           "value": 53.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": 35.7516129
+          "global_average_value": 35.79
         },
         "income_share_20": {
           "value": 3.1,
@@ -8662,10 +8494,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.31",
+          "value": "2.3123908",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.751732
+          "global_average_value": 4.7478137
         },
         "amazon_deforestation": {
           "value": "7536",
@@ -8951,12 +8783,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 39.5
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 47.5,
           "title": "Consumo de energia renovável (% do total final)",
@@ -8979,7 +8805,7 @@
           "value": 53.5,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": 36.065625
+          "global_average_value": 35.02
         },
         "income_share_20": {
           "value": 3.1,
@@ -8988,10 +8814,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.30",
+          "value": "2.2979572",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.7500806
+          "global_average_value": 4.4577436
         },
         "amazon_deforestation": {
           "value": "10129",
@@ -9282,12 +9108,6 @@
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 38.7
         },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
-        },
         "renewable_energy": {
           "value": 50,
           "title": "Consumo de energia renovável (% do total final)",
@@ -9310,7 +9130,7 @@
           "value": 48.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": 36.24642857
+          "global_average_value": 34.94
         },
         "income_share_20": {
           "value": 4.5,
@@ -9319,10 +9139,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.15",
+          "value": "2.1470218",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.453724
+          "global_average_value": 4.634748
         },
         "amazon_deforestation": {
           "value": "10851",
@@ -9593,13 +9413,13 @@
           "value": 5.4969801902771,
           "title": "Gasto do governo em educação (% do PIB)",
           "source": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS (Banco Mundial)",
-          "global_average_value": 4.23262732662743
+          "global_average_value": 4.19910710491722
         },
         "health_expenditure": {
           "value": 9.63646507,
           "title": "Gasto em saúde (% do PIB)",
           "source": "https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS (Banco Mundial)",
-          "global_average_value": 10.2589567439461
+          "global_average_value": 10.2930273748612
         },
         "physicians": {
           "value": 2.142,
@@ -9612,12 +9432,6 @@
           "title": "Taxa de mortalidade até 5 anos (por 1.000 nascidos vivos)",
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 38.2
-        },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
         },
         "renewable_energy": {
           "value": 46.5,
@@ -9641,7 +9455,7 @@
           "value": 52.9,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": 36.99047619
+          "global_average_value": 35.09
         },
         "income_share_20": {
           "value": 3.3,
@@ -9650,10 +9464,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.37",
+          "value": "2.3696554",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.650446
+          "global_average_value": 4.6784525
         },
         "amazon_deforestation": {
           "value": "13038",
@@ -9921,16 +9735,16 @@
           "global_average_value": 87.3925170898438
         },
         "gov_edu_expenditure": {
-          "value": null,
+          "value": 5.61920976638794,
           "title": "Gasto do governo em educação (% do PIB)",
           "source": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS (Banco Mundial)",
-          "global_average_value": 3.84722961564427
+          "global_average_value": 3.86129930773508
         },
         "health_expenditure": {
-          "value": 9.14277458,
+          "value": 9.38739491,
           "title": "Gasto em saúde (% do PIB)",
           "source": "https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS (Banco Mundial)",
-          "global_average_value": 9.96604629867977
+          "global_average_value": 10.0057568290408
         },
         "physicians": {
           "value": null,
@@ -9943,12 +9757,6 @@
           "title": "Taxa de mortalidade até 5 anos (por 1.000 nascidos vivos)",
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
           "global_average_value": 38.2
-        },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
         },
         "renewable_energy": {
           "value": null,
@@ -9972,7 +9780,7 @@
           "value": 52,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": 38.96363636
+          "global_average_value": 35.44
         },
         "income_share_20": {
           "value": 3.6,
@@ -9981,10 +9789,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.28",
+          "value": "2.2826612",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.649288
+          "global_average_value": 4.707772
         },
         "amazon_deforestation": {
           "value": "11594",
@@ -10270,13 +10078,13 @@
           "value": null,
           "title": "Gasto do governo em educação (% do PIB)",
           "source": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS (Banco Mundial)",
-          "global_average_value": 3.51483161383978
+          "global_average_value": 3.56927475138052
         },
         "health_expenditure": {
-          "value": null,
+          "value": 9.73092747,
           "title": "Gasto em saúde (% do PIB)",
           "source": "https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS (Banco Mundial)",
-          "global_average_value": 10.0162846684385
+          "global_average_value": 10.0604485010516
         },
         "physicians": {
           "value": null,
@@ -10288,13 +10096,7 @@
           "value": 14.4,
           "title": "Taxa de mortalidade até 5 anos (por 1.000 nascidos vivos)",
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
-          "global_average_value": 36.7
-        },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 38.3
         },
         "renewable_energy": {
           "value": null,
@@ -10303,7 +10105,7 @@
           "global_average_value": null
         },
         "forest_area": {
-          "value": null,
+          "value": 58.98187,
           "title": "Área florestal (% da terra)",
           "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS (Banco Mundial)",
           "global_average_value": null
@@ -10318,7 +10120,7 @@
           "value": 51.6,
           "title": "Índice de desigualdade social (Gini)",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 35.24
         },
         "income_share_20": {
           "value": 3.7,
@@ -10327,10 +10129,10 @@
           "global_average_value": null
         },
         "co2_per_capita": {
-          "value": "2.29",
+          "value": "2.2922719",
           "title": "Emissões de CO2 per capita (toneladas)",
           "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
-          "global_average_value": 4.670391
+          "global_average_value": 4.729075
         },
         "amazon_deforestation": {
           "value": "9064",
@@ -10430,14 +10232,14 @@
           "global_average_value": 8141808945
         },
         "life_expectancy": {
-          "value": null,
-          "title": "Expectativa de vida ao nascer",
+          "value": 76.023,
+          "title": "Expectativa de vida (anos)",
           "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 73.4818
         },
         "literacy": {
-          "value": null,
-          "title": "Taxa de alfabetização (% adultos)",
+          "value": 94.739998,
+          "title": "Taxa de alfabetização (%)",
           "source": "https://data.worldbank.org/indicator/SE.ADT.LITR.ZS (Banco Mundial)",
           "global_average_value": 87.7406997680664
         },
@@ -10460,16 +10262,10 @@
           "global_average_value": null
         },
         "under5_mortality": {
-          "value": null,
+          "value": 14.2,
           "title": "Taxa de mortalidade até 5 anos (por 1.000 nascidos vivos)",
           "source": "https://data.worldbank.org/indicator/SH.DYN.MORT (Banco Mundial)",
-          "global_average_value": null
-        },
-        "co2_pc": {
-          "value": null,
-          "title": "Emissões de CO₂ (toneladas métricas per capita)",
-          "source": "https://data.worldbank.org/indicator/EN.ATM.CO2E.PC (Banco Mundial)",
-          "global_average_value": null
+          "global_average_value": 37.4
         },
         "renewable_energy": {
           "value": null,
@@ -10490,14 +10286,14 @@
           "global_average_value": 4.80587275250158
         },
         "gini": {
-          "value": null,
-          "title": "Índice de desigualdade social (Gini)",
+          "value": 50.3,
+          "title": "Coeficiente de Gini",
           "source": "https://data.worldbank.org/indicator/SI.POV.GINI (Banco Mundial)",
           "global_average_value": null
         },
         "income_share_20": {
-          "value": null,
-          "title": "Participação da renda dos 20% mais pobres",
+          "value": 3.9,
+          "title": "Participação na renda - 20% mais pobres (%)",
           "source": "https://data.worldbank.org/indicator/SI.DST.FRST.20 (Banco Mundial)",
           "global_average_value": null
         },
@@ -10527,8 +10323,8 @@
           "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
         },
         "poverty_3dollar": {
-          "value": null,
-          "title": "Pobreza - população vivendo com menos de U$3/dia (%)",
+          "value": 3,
+          "title": "Pobreza extrema (% pop, $3.65/dia)",
           "source": "https://data.worldbank.org/indicator/SI.POV.DDAY (Banco Mundial)",
           "global_average_value": 10.3
         },
@@ -10703,9 +10499,10 @@
           "source": "https://hdr.undp.org/ (Human Development Report - ONU)"
         },
         "co2_per_capita": {
-          "value": "2.28",
+          "value": "2.2783718",
           "title": "Emissões de CO2 per capita (toneladas)",
-          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)"
+          "source": "https://ourworldindata.org (Our World in Data - Global Carbon Atlas)",
+          "global_average_value": null
         },
         "co2": {
           "value": "483.01",
@@ -10754,6 +10551,51 @@
           "value": 5.5024,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "gdp": {
+          "value": 2279920092492.13,
+          "title": "Produto Interno Bruto (PIB)",
+          "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD (Banco Mundial)",
+          "global_average_value": 118350166039396
+        },
+        "gdp_capita": {
+          "value": 10713.285687,
+          "title": "PIB per capita",
+          "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD (Banco Mundial)",
+          "global_average_value": 14405.84845955
+        },
+        "gdp_growth": {
+          "value": 2.285746,
+          "title": "Crescimento do PIB (%)",
+          "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG (Banco Mundial)",
+          "global_average_value": 2.921273
+        },
+        "exports_gdp": {
+          "value": 17.820723,
+          "title": "Exportações de bens e serviços (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS (Banco Mundial)",
+          "global_average_value": 29.48075
+        },
+        "imports_gdp": {
+          "value": 17.470759,
+          "title": "Importações (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS (Banco Mundial)",
+          "global_average_value": 28.499194
+        },
+        "population": {
+          "value": 212812405,
+          "title": "População total",
+          "source": "https://data.worldbank.org/indicator/SP.POP.TOTL (Banco Mundial)"
+        },
+        "unemployment": {
+          "value": 5.97,
+          "title": "Desemprego (% da força de trabalho)",
+          "source": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS (Banco Mundial)"
+        },
+        "inflation": {
+          "value": 4.3,
+          "title": "inflation",
+          "source": ""
         }
       },
       "government": {

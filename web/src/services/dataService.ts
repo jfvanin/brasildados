@@ -124,6 +124,18 @@ class DataService {
         return indicator;
     }
 
+    // Get source for a specific indicator
+    getIndicatorSource(indicator: string): string | null {
+        const years = Object.keys(this.data.years);
+        for (const year of years) {
+            const data = this.data.years[year].data[indicator];
+            if (data && data.source) {
+                return data.source;
+            }
+        }
+        return null;
+    }
+
     // Get all unique sources
     getAllSources(): string[] {
         const sources = new Set<string>();
@@ -178,8 +190,9 @@ class DataService {
     // Per-presidency aggregates of one indicator inside the selected year range
     getPresidencyStats(indicator: string, startYear?: number, endYear?: number): PresidencyStat[] {
         const stats: PresidencyStat[] = [];
+        const periods = this.getPresidencyPeriods();
 
-        this.getPresidencyPeriods().forEach(period => {
+        periods.forEach((period, index) => {
             const from = Math.max(period.startYear, startYear ?? period.startYear);
             const to = Math.min(period.endYear, endYear ?? period.endYear);
             if (from > to) return;
@@ -192,6 +205,20 @@ class DataService {
             if (values.length === 0) return;
 
             const average = values.reduce((sum, value) => sum + value, 0) / values.length;
+            const lastValue = values[values.length - 1];
+
+            // Find last available value from the previous government period
+            let prevLastValue: number | null = null;
+            if (index > 0) {
+                const prevPeriod = periods[index - 1];
+                for (let year = prevPeriod.endYear; year >= prevPeriod.startYear; year--) {
+                    const v = this.getNumericValue(indicator, year);
+                    if (v !== null) { prevLastValue = v; break; }
+                }
+            }
+
+            const delta = prevLastValue !== null ? lastValue - prevLastValue : null;
+
             stats.push({
                 president: period.president,
                 presidentNick: period.presidentNick,
@@ -200,7 +227,7 @@ class DataService {
                 startYear: from,
                 endYear: to,
                 average,
-                delta: values.length >= 2 ? values[values.length - 1] - values[0] : null,
+                delta,
                 yearsWithData: values.length,
             });
         });
