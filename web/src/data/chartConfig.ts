@@ -59,6 +59,7 @@ export const CHART_CONFIGS: ChartConfig[] = [
       { key: 'mys', title: dataService.getIndicatorTitle('mys'), enabled: true, color: '#388E3C' },
       { key: 'health_expenditure', title: dataService.getIndicatorTitle('health_expenditure'), enabled: false, color: '#66BB6A', showGlobalAverage: true },
       { key: 'gov_edu_expenditure', title: dataService.getIndicatorTitle('gov_edu_expenditure'), enabled: false, color: '#81C784', showGlobalAverage: true },
+      { key: 'military_expenditure', title: dataService.getIndicatorTitle('military_expenditure'), enabled: false, color: '#FBC02D', showGlobalAverage: true },
       { key: 'se', title: 'Mulheres e Homens na Educação', enabled: false, color: '#FDD835', isGroup: true },
       { key: 'se_f', title: dataService.getIndicatorTitle('se_f'), enabled: false, color: '#FDD835', hidden: true },
       { key: 'se_m', title: dataService.getIndicatorTitle('se_m'), enabled: false, color: '#77CBDA', hidden: true },

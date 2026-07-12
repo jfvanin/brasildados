@@ -157,6 +157,10 @@
     "lfpr_m": {
       "description": "Percentual de homens em idade ativa que participa da força de trabalho, trabalhando ou procurando emprego.",
       "interpretation": "Deve ser analisado com emprego, desemprego, renda e condições de trabalho; não há uma direção melhor isoladamente."
+    },
+    "military_expenditure": {
+      "description": "Gasto do governo em defesa como percentual do Produto Interno Bruto.",
+      "interpretation": "Não existe uma direção melhor isoladamente; deve ser analisado junto a segurança, ameaças, prioridades e contexto fiscal."
     }
   },
   "years": {
@@ -427,6 +431,12 @@
           "value": 19.646343,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 2.36384102519699,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 3.32148195955439
         }
       },
       "government": {
@@ -701,6 +711,12 @@
           "value": 18.552387,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.96333333333333,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 3.02682106493074
         }
       },
       "government": {
@@ -975,6 +991,12 @@
           "value": 16.83152,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.52152886115445,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.94492627860512
         }
       },
       "government": {
@@ -1249,6 +1271,12 @@
           "value": 17.865892,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.92792281498297,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.77386580505906
         }
       },
       "government": {
@@ -1528,6 +1556,12 @@
           "value": 18.743233,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 2.016007789121,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.59069346283394
         }
       },
       "government": {
@@ -1807,6 +1841,12 @@
           "value": 21.022089,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.86213698033379,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.3633948003724
         }
       },
       "government": {
@@ -2086,6 +2126,12 @@
           "value": 23.6866,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.65484349950291,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.28907220270957
         }
       },
       "government": {
@@ -2365,6 +2411,12 @@
           "value": 24.30493,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.57768831551774,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.29950446503762
         }
       },
       "government": {
@@ -2644,6 +2696,12 @@
           "value": 24.799057,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.66229191975824,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.24501536419107
         }
       },
       "government": {
@@ -2928,6 +2986,12 @@
           "value": 25.002106,
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)"
+        },
+        "military_expenditure": {
+          "value": 1.64547466656987,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.19926966284069
         }
       },
       "government": {
@@ -3213,6 +3277,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.930091
+        },
+        "military_expenditure": {
+          "value": 1.73072614713627,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.18999769803642
         }
       },
       "government": {
@@ -3498,6 +3568,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 7.0186663
+        },
+        "military_expenditure": {
+          "value": 1.95188244532532,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.22473973298058
         }
       },
       "government": {
@@ -3783,6 +3859,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.9801316
+        },
+        "military_expenditure": {
+          "value": 1.89577119915617,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.32666466443486
         }
       },
       "government": {
@@ -4068,6 +4150,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.7978806
+        },
+        "military_expenditure": {
+          "value": 1.50347763554507,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.38641347451472
         }
       },
       "government": {
@@ -4353,6 +4441,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.5749803
+        },
+        "military_expenditure": {
+          "value": 1.46126840890621,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.38608795188733
         }
       },
       "government": {
@@ -4638,6 +4732,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.365925
+        },
+        "military_expenditure": {
+          "value": 1.52401346273319,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.38917881630725
         }
       },
       "government": {
@@ -4928,6 +5028,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.247133
+        },
+        "military_expenditure": {
+          "value": 1.48108495636286,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.34854459946783
         }
       },
       "government": {
@@ -5218,6 +5324,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.0740776
+        },
+        "military_expenditure": {
+          "value": 1.46629209992902,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.30971453295961
         }
       },
       "government": {
@@ -5508,6 +5620,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.0693526
+        },
+        "military_expenditure": {
+          "value": 1.44192408837717,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.37114959840504
         }
       },
       "government": {
@@ -5798,6 +5916,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.1153026
+        },
+        "military_expenditure": {
+          "value": 1.53862567601211,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.60122870895825
         }
       },
       "government": {
@@ -6118,6 +6242,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.091143
+        },
+        "military_expenditure": {
+          "value": 1.53940698128362,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.50301936785317
         }
       },
       "government": {
@@ -6438,6 +6568,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.1597085
+        },
+        "military_expenditure": {
+          "value": 1.41185115924524,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.39544956163749
         }
       },
       "government": {
@@ -6758,6 +6894,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.1843886
+        },
+        "military_expenditure": {
+          "value": 1.37865646470437,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.35905515616562
         }
       },
       "government": {
@@ -7078,6 +7220,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.090741
+        },
+        "military_expenditure": {
+          "value": 1.32944608382557,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.29183781112608
         }
       },
       "government": {
@@ -7398,6 +7546,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 6.0830593
+        },
+        "military_expenditure": {
+          "value": 1.330244423168,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.24233102971248
         }
       },
       "government": {
@@ -7718,6 +7872,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.9224563
+        },
+        "military_expenditure": {
+          "value": 1.36551715396161,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.23999802951576
         }
       },
       "government": {
@@ -8038,6 +8198,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.967355
+        },
+        "military_expenditure": {
+          "value": 1.34797541299482,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.19443495805395
         }
       },
       "government": {
@@ -8358,6 +8524,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.894396
+        },
+        "military_expenditure": {
+          "value": 1.41402166797586,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.14681644089747
         }
       },
       "government": {
@@ -8678,6 +8850,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.651801
+        },
+        "military_expenditure": {
+          "value": 1.46967772350671,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.12008294927132
         }
       },
       "government": {
@@ -9003,6 +9181,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.396274
+        },
+        "military_expenditure": {
+          "value": 1.38279724638797,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.16519067075308
         }
       },
       "government": {
@@ -9328,6 +9512,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.286739
+        },
+        "military_expenditure": {
+          "value": 1.32666026860555,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.31412817021261
         }
       },
       "government": {
@@ -9653,6 +9843,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.511355
+        },
+        "military_expenditure": {
+          "value": 1.14903763026142,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.16772839583425
         }
       },
       "government": {
@@ -9978,6 +10174,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.2869196
+        },
+        "military_expenditure": {
+          "value": 1.05240083845945,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.2170734989681
         }
       },
       "government": {
@@ -10318,6 +10520,12 @@
           "title": "Taxa de Homicidios por 100 mil habitantes",
           "source": "https://data.worldbank.org (Banco Mundial)",
           "global_average_value": 5.197053
+        },
+        "military_expenditure": {
+          "value": 1.00237538990131,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.31033868997908
         }
       },
       "government": {
@@ -10651,6 +10859,12 @@
           "value": 6.1923,
           "title": "Real x Dólar (Valor em fechamento do ano)",
           "source": "https://api.bcb.gov.br/ (Banco Central do Brasil)"
+        },
+        "military_expenditure": {
+          "value": 0.972774559040702,
+          "title": "Gasto do governo em defesa (% do PIB)",
+          "source": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS (Banco Mundial)",
+          "global_average_value": 2.47357557008391
         }
       },
       "government": {
