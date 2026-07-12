@@ -5,9 +5,8 @@
 ## Project Structure
 
 - The main web application code is in the `web` folder.
-- The production build is generated in `web/build`.
 - The dashboard loads its data from `src/dados_brasil.json`.
-- The frontend is built with **ReactJS**, **TypeScript**, and **Tailwind CSS** for styling.
+- The frontend is built with **NextJS** with **ReactJS**, **TypeScript**, and **Tailwind CSS** for styling.
 
 ## Data Generation & Scripts
 
@@ -30,7 +29,7 @@
 2. Start the development server:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
    The app will be available at [http://localhost:3000](http://localhost:3000) (or your configured port).
@@ -39,7 +38,7 @@
    ```bash
    npm run build
    ```
-   The final build will be in `web/build`.
+   The final build will be in `web/.next`.
 
 ## About the Data
 
@@ -52,6 +51,7 @@
 
 ## Technologies Used
 
+- NextJS
 - ReactJS
 - TypeScript
 - Tailwind CSS
@@ -63,4 +63,4 @@
 
 ---
 
-**Author:** jose
+**Author:** José
