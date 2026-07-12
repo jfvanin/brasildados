@@ -53,6 +53,7 @@ const Dashboard: React.FC<DashboardProps> = ({ initialYearRange }) => {
 
   // Keep only the year range in sync with the URL
   useEffect(() => {
+    if (selectedYearRange === initialYearRange) return; // Avoid unnecessary URL updates
     const params = encodeStateToParams(selectedYearRange);
     window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
   }, [selectedYearRange]);
